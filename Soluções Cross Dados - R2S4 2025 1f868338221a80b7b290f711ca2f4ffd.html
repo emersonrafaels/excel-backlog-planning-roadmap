@@ -1,0 +1,683 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Soluções Cross Dados - R2S4 2025</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1f868338-221a-80b7-b290-f711ca2f4ffd" class="page sans"><header><h1 class="page-title">Soluções Cross Dados - R2S4 2025</h1><p class="page-description"></p></header><div class="page-body"><h2 id="1f868338-221a-819b-8cf0-f7614e33fb2a" class=""><strong>Seção: IBS 360 - Plataforma</strong></h2><h3 id="1f968338-221a-8041-aec9-f8db996a3821" class=""><strong>História: Testes com a API do Microsoft Graph para Enriquecimento do Login do IBS 360</strong></h3><ul id="1f968338-221a-80b4-b6ce-d01bad74aba1" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f968338-221a-801b-8996-f53f9499694f" class="">Nós acreditamos que <strong>realizando testes com a API do Microsoft Graph no IBS 360</strong>, para <strong>usuários logados no sistema</strong>, resultará em <strong>um enriquecimento da experiência de login, permitindo acesso a informações como nome, hierarquia e foto do usuário</strong>. Além que conhecer a hierarquia do usuário, permitirá verificar usuários que são diretores e superintendentes comerciais. </p><p id="1f968338-221a-80f7-98f0-edd242981a91" class="">Saberemos que isso é verdade através de <strong>validação técnica da API e testes de usabilidade com usuários finais</strong>.</p></li></ul><ul id="1f968338-221a-800c-a3f6-fc3db6efbb42" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f968338-221a-8078-80a8-df91726f18b0" class="">Como time responsável pelo <strong>IBS 360</strong>, queremos <strong>testar a API do Microsoft Graph</strong>, garantindo que conseguimos resgatar informações relevantes dos usuários para melhorar a personalização da experiência dentro da plataforma.</p></li></ul><ul id="1f968338-221a-8062-ada8-e2415e8b8122" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong><p id="1f968338-221a-80c7-8ae8-c8477b9fac58" class="">Os <strong>usuários do IBS 360</strong> terão <strong>um login mais intuitivo, com informações como nome completo, área de atuação, gestor direto disponíveis no sistema e foto.</strong></p><p id="1f968338-221a-807b-a687-ffe061d7e874" class=""><strong>Diretores </strong>e <strong>Superintendentes </strong>comerciais serão <strong>reconhecidos (reconhecendo suas hierarquias comerciais)</strong>, e irão <strong>visualizar apenas </strong>as <strong>suas </strong>respectivas <strong>agências</strong>.</p></li></ul><ul id="1f968338-221a-8011-bb3a-f7157116b2b2" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio:</strong><p id="1f968338-221a-8091-8473-fc0201b1001f" class="">Atualmente, o IBS 360 <strong>não exibe informações adicionais sobre os usuários</strong> no momento do login, somente o nome completo. Ao utilizar a API do Microsoft Graph, poderemos <strong>fornecer uma experiência mais personalizada, permitindo a exibição de dados úteis diretamente na interface do sistema</strong>.</p><p id="1f968338-221a-8038-89fb-f16e65c25a9f" class=""><strong>Diretores </strong>e <strong>Superintentes comerciais devem visualizar apenas o seu parque de agências</strong>, filtrando por DINEG ou Supt.</p></li></ul><ul id="1f968338-221a-8060-8415-d82a66f559ed" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f968338-221a-80c1-94c3-f0514facfb86" class="numbered-list" start="1"><li>A <strong>API do Microsoft Graph está disponível para testes e implementação</strong>.</li></ol><ol type="1" id="1f968338-221a-8008-ac1a-f1d355a6f9af" class="numbered-list" start="2"><li>As <strong>permissões de acesso à API foram concedidas corretamente</strong>.</li></ol><ol type="1" id="1f968338-221a-8018-b10d-da17b8e9037c" class="numbered-list" start="3"><li>O <strong>IBS 360 tem infraestrutura para armazenar e exibir essas informações</strong>.</li></ol></li></ul><ul id="1f968338-221a-80cf-be45-da5e13270e2d" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f968338-221a-80f7-ba79-f8eec43ef231" class="numbered-list" start="1"><li><strong>Os dados extraídos do Microsoft Graph devem estar de acordo com as permissões e regras de privacidade corporativa</strong>.</li></ol><ol type="1" id="1f968338-221a-803f-b02a-dcad8700be3b" class="numbered-list" start="2"><li><strong>A consulta à API deve ser otimizada para evitar impactos na performance do login</strong>.</li></ol><ol type="1" id="1f968338-221a-8072-b2bd-f95416683dbe" class="numbered-list" start="3"><li><strong>Os dados extraídos devem ser armazenados apenas temporariamente para garantir conformidade com políticas de segurança</strong>.</li></ol></li></ul><ul id="1f968338-221a-8049-a84d-eecff8024698" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ol type="1" id="1f968338-221a-80bb-85da-c6c005043671" class="numbered-list" start="1"><li>Implementação da <strong>integração com a API do Microsoft Graph</strong>.</li></ol><ol type="1" id="1f968338-221a-8031-8fb7-cec6db9a7c6a" class="numbered-list" start="2"><li>Extração e exibição de <strong>informações como nome, área, gestor direto e foto do usuário</strong>.</li></ol><ol type="1" id="1f968338-221a-80f8-9645-ef2928579842" class="numbered-list" start="3"><li>Testes de <strong>performance e segurança da API</strong>.</li></ol></li></ul><ul id="1f968338-221a-8071-aa7c-ed5f53b699f9" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f968338-221a-8084-973b-fffedcad0eb1" class="numbered-list" start="1"><li><strong>Configurar a integração do IBS 360 com a API do Microsoft Graph</strong>.</li></ol><ol type="1" id="1f968338-221a-8034-84f8-e529af746104" class="numbered-list" start="2"><li><strong>Validar quais informações podem ser resgatadas e utilizadas no sistema</strong>.</li></ol><ol type="1" id="1f968338-221a-80fb-8546-d476d415c541" class="numbered-list" start="3"><li><strong>Implementar a exibição das informações no login do IBS 360</strong>.</li></ol><ol type="1" id="1f968338-221a-80b6-ad45-ef86368ecf6d" class="numbered-list" start="4"><li><strong>Testar a estabilidade e o impacto da integração na performance do sistema</strong>.</li></ol></li></ul><ul id="1f968338-221a-80c3-866f-ef3d345c50ed" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f968338-221a-80bf-8bed-e549d142a2a4" class="numbered-list" start="1"><li><strong>Validar se as informações do usuário são extraídas corretamente via API</strong>.</li></ol><ol type="1" id="1f968338-221a-8043-b208-dc62e26dbb8f" class="numbered-list" start="2"><li><strong>Garantir que o login continua rápido e funcional mesmo com a integração</strong>.</li></ol><ol type="1" id="1f968338-221a-8019-b253-f91d050f038c" class="numbered-list" start="3"><li><strong>Verificar se os dados exibidos estão corretos e seguem as regras de segurança</strong>.</li></ol></li></ul><ul id="1f968338-221a-806e-8f83-c800deffc856" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão</strong><ul id="1f968338-221a-8000-8248-ee8e7eaf3826" class="bulleted-list"><li style="list-style-type:circle"><strong>Inicio</strong>:<ul id="1f968338-221a-80c9-9379-f9ab1822633a" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado</strong>: R1 S3 2025</li></ul><ul id="1f968338-221a-804b-9d6e-ffe040b0f5f9" class="bulleted-list"><li style="list-style-type:square"><strong>Real: </strong>R1 S3 2025</li></ul></li></ul><ul id="1f968338-221a-807f-8e19-d78b30446eb9" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="1f968338-221a-8088-a936-d3393a062263" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado</strong>: R1 S3 2025</li></ul><ul id="1f968338-221a-805f-9d4b-d451cc6a318e" class="bulleted-list"><li style="list-style-type:square"><strong>Real: </strong>R1 S3 2025</li></ul></li></ul><ul id="1f968338-221a-8069-abc4-ce9a47f92f5f" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado: </strong>Descoberta que a API do Graph é capaz de retornar: Nome, Cargo, Hierarquia e Foto do Colaborador buscado.</li></ul></li></ul><h3 id="1f968338-221a-8081-9e51-d7686dcb9b11" class=""><strong>História: Solicitação de Liberação de Firewall para uso completo do Lab de Devices</strong></h3><ul id="1f968338-221a-80b4-ba56-fb8432f6a4f0" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f968338-221a-803e-95f5-cf6741690e36" class="">Nós acreditamos que <strong>liberando o firewall, poderemos testar o IBS Mobile completamente através do Lab de Devices</strong>, resultando em <strong>possibilidade de executar testes mais precisos e aprimorar a usabilidade da plataforma no mobile</strong>. Saberemos que isso é verdade através de <strong>testes realizados com sucesso no Lab de Devices e a possibilidade de identificar forças e fraquezas do IBS no Mobile</strong>.</p></li></ul><ul id="1f968338-221a-80a0-8183-d9ae4be9f747" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f968338-221a-8096-9cbb-d0927a89c3ee" class="">Como time responsável pelo <strong>IBS 360</strong>, queremos <strong>configurar as permissões necessárias no firewall</strong>, garantindo que possamos realizar testes de usabilidade do sistema no ambiente mobile de forma controlada e segura.</p></li></ul><ul id="1f968338-221a-80a6-b9da-dc60b225e1fc" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong><p id="1f968338-221a-8093-8675-eace284544bd" class="">O time de desenvolvimento <strong>terá acesso ao Lab de Devices</strong> para validar a usabilidade do IBS 360 <strong>em dispositivos móveis</strong>, garantindo melhor experiência para os usuários finais.</p></li></ul><ul id="1f968338-221a-80ad-9717-eca6f02e6a3c" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio:</strong><p id="1f968338-221a-804f-87e9-c88927d9cb98" class="">O <strong>IBS 360 será acessado via mobile</strong> por <strong>diretores e gestores</strong>. Para garantir uma experiência fluida, é <strong>essencial realizar testes diretamente no Lab de Devices do Itaú</strong>, permitindo <strong>identificar ajustes e melhorias</strong> antes do deploy final.</p></li></ul><ul id="1f968338-221a-8012-93cd-ef12bf4ac3bd" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f968338-221a-8088-91aa-f38df903e4d9" class="numbered-list" start="1"><li><strong>Já possuir acesso ao Lab de Devices do Itaú.</strong></li></ol><ol type="1" id="1f968338-221a-808d-a47a-cb77f8c0afe7" class="numbered-list" start="2"><li><strong>As regras de firewall devem ser ajustadas para permitir a execução dos testes</strong>.</li></ol></li></ul><ul id="1f968338-221a-80b7-8f43-fa6a5a910630" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f968338-221a-8012-86b5-cb625627b73c" class="numbered-list" start="1"><li><strong>A liberação de firewall deve ser feita sem comprometer políticas de segurança da instituição</strong>.</li></ol></li></ul><ul id="1f968338-221a-8033-a794-eed8c58e056e" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ol type="1" id="1f968338-221a-8069-9e80-c721eca95fc9" class="numbered-list" start="1"><li><strong>Ajuste de regras de firewall</strong> para liberar o acesso ao ambiente de testes mobile.</li></ol><ol type="1" id="1f968338-221a-805e-94a2-f977db2f3285" class="numbered-list" start="2"><li><strong>Validação dos acessos e teste de funcionalidades</strong> no Lab de Devices.</li></ol></li></ul><ul id="1f968338-221a-8022-93f8-eae4de3c0696" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f968338-221a-804c-b185-d8d6c6f90199" class="numbered-list" start="1"><li><strong>Ajustar firewall para permitir testes mobile do IBS 360</strong>.</li></ol><ol type="1" id="1f968338-221a-8091-b3b8-dd305b8cb92d" class="numbered-list" start="2"><li><strong>Realizar testes iniciais de compatibilidade mobile.</strong></li></ol></li></ul><ul id="1f968338-221a-801d-82fd-e5f2bbcc0660" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f968338-221a-80d6-b49f-d5bf21b620cd" class="numbered-list" start="1"><li><strong>Validar se o time de desenvolvimento consegue acessar o Lab de Devices.</strong></li></ol><ol type="1" id="1f968338-221a-8049-80fb-cdcb2ec8df8b" class="numbered-list" start="2"><li><strong>Testar se o firewall permite a execução dos testes mobile</strong>.</li></ol><ol type="1" id="1f968338-221a-80ba-844e-c594cd41ec5f" class="numbered-list" start="3"><li><strong>Garantir que o IBS 360 está operando corretamente nos dispositivos do Lab de Devices</strong>.</li></ol></li></ul><ul id="1f968338-221a-8085-b56a-c7f316178531" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão</strong><ul id="1f968338-221a-80eb-a766-c6d472925d69" class="bulleted-list"><li style="list-style-type:circle"><strong>Inicio</strong>:<ul id="1f968338-221a-8003-bc3e-d89a1c4118f9" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado</strong>: R1 S3 2025</li></ul><ul id="1f968338-221a-8011-82d1-df5211f1b9e2" class="bulleted-list"><li style="list-style-type:square"><strong>Real: </strong>R1 S3 2025</li></ul></li></ul><ul id="1f968338-221a-8060-afd2-de75c6034822" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="1f968338-221a-80d3-8101-cef3fe434369" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado</strong>: R1 S3 2025</li></ul><ul id="1f968338-221a-8037-9b9e-c64785d8a89f" class="bulleted-list"><li style="list-style-type:square"><strong>Real: </strong></li></ul></li></ul><ul id="1f968338-221a-8065-b5a5-dd2fe3a55bf5" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado</strong>: Aguardaremos o retorno do José Auguto. Enquanto isso, os testes de mobile devem ser realizados com as próprias ferramentas de dev, bem como mobiles físicos.</li></ul></li></ul><h3 id="1f968338-221a-8091-9ff4-e81c32f3c4bb" class=""><strong>História: Redução de Pendência no IUConfia - Repo ID</strong></h3><ul id="1f968338-221a-8011-8c73-dbd0c9006eb7" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f968338-221a-80f1-a21e-c86fe5280bbe" class="">Nós acreditamos que <strong>incluindo o Repo ID na estrutura do IBS 360</strong>, pelo <strong>time de desenvolvimento e arquitetura</strong>, resultará em <strong>um sistema mais alinhado às exigências de compliance do Itaú, garantindo rastreabilidade e governança adequada</strong>. Saberemos que isso é verdade através de <strong>validação da conformidade pelo IUConfia e melhoria na pontuação de segurança</strong>.</p></li></ul><ul id="1f968338-221a-8061-9c88-ed59bfa1173f" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f968338-221a-8084-b32d-c291f81b3a4d" class="">Como <strong>time responsável pelo IBS 360</strong>, queremos <strong>incluir a identificação do Repo ID na estrutura da aplicação</strong>, garantindo que <strong>o sistema esteja devidamente rastreado e documentado conforme as diretrizes de governança do banco</strong>.</p></li></ul><ul id="1f968338-221a-8010-803f-fde68bc9b7dd" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f968338-221a-808b-8a9f-d8d2cf8ddc1f" class="numbered-list" start="1"><li>O <strong>Repo ID precisa ser incluído de forma que não impacte as funcionalidades existentes</strong>.</li></ol><ol type="1" id="1f968338-221a-80c3-bb6b-cb8e57cc992b" class="numbered-list" start="2"><li><strong>A atualização deve ser validada pelo IUConfia para garantir conformidade</strong>.</li></ol><ol type="1" id="1f968338-221a-8096-a844-ca54cbdc9c4e" class="numbered-list" start="3"><li><strong>Todos os serviços e componentes do IBS 360 devem estar associados ao Repo ID correto</strong>.</li></ol></li></ul><ul id="1f968338-221a-80fb-9253-e5576f730141" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f968338-221a-80d7-a433-e9261a2950b1" class="numbered-list" start="1"><li><strong>A inclusão do Repo ID deve seguir as diretrizes de segurança do Itaú</strong>.</li></ol><ol type="1" id="1f968338-221a-802f-b5c7-cc85d07940b3" class="numbered-list" start="2"><li><strong>A estrutura do IBS 360 deve permanecer íntegra e funcional após a mudança</strong>.</li></ol><ol type="1" id="1f968338-221a-80ca-aa70-f36c3a2fbc63" class="numbered-list" start="3"><li><strong>A inclusão deve abranger todos os ambientes do IBS 360 (desenvolvimento, homologação e produção)</strong>.</li></ol></li></ul><ul id="1f968338-221a-805c-9cc6-e2c075195ed7" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f968338-221a-80e9-99fb-faf8c106807f" class="numbered-list" start="1"><li><strong>Atualizar a estrutura do IBS 360 para incluir o Repo ID</strong>.</li></ol><ol type="1" id="1f968338-221a-80fd-a468-c0b71d3a284d" class="numbered-list" start="2"><li><strong>Validar a implementação com os requisitos do IUConfia</strong>.</li></ol><ol type="1" id="1f968338-221a-80ff-8816-d279dd4d30b1" class="numbered-list" start="3"><li><strong>Testar e garantir que a funcionalidade do sistema não seja afetada</strong>.</li></ol><ol type="1" id="1f968338-221a-80d2-9b31-c1733c604b76" class="numbered-list" start="4"><li><strong>Documentar a inclusão do Repo ID para futuras auditorias</strong>.</li></ol></li></ul><ul id="1f968338-221a-80c1-a084-db9ff8049d78" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f968338-221a-80c3-b623-fae05fcbd295" class="numbered-list" start="1"><li><strong>Verificar se o Repo ID foi corretamente implementado</strong>.</li></ol><ol type="1" id="1f968338-221a-804a-9e2f-c0cd3cc9dc7e" class="numbered-list" start="2"><li><strong>Confirmar que a inclusão do Repo ID não impacta a operação do IBS 360</strong>.</li></ol><ol type="1" id="1f968338-221a-8025-82dd-e8b75aa4bac8" class="numbered-list" start="3"><li><strong>Avaliar a pontuação do IUConfia para validar conformidade</strong>.</li></ol><ol type="1" id="1f968338-221a-80e2-b4d4-f70849d74ca0" class="numbered-list" start="4"><li><strong>Executar testes de rastreabilidade e governança no sistema</strong>.</li></ol></li></ul><ul id="1f968338-221a-8004-a2a1-e45b41bdc7fa" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão</strong><ul id="1f968338-221a-8052-b2c6-f2c304681518" class="bulleted-list"><li style="list-style-type:circle"><strong>Inicio</strong>:<ul id="1f968338-221a-80b4-ae78-d223497b1890" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado</strong>: R1 S3 2025</li></ul><ul id="1f968338-221a-8014-8e8b-da00d6bd0e12" class="bulleted-list"><li style="list-style-type:square"><strong>Real: </strong>R1 S3 2025</li></ul></li></ul><ul id="1f968338-221a-8054-82c4-c059369c433e" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="1f968338-221a-80f5-ae5d-c290cf2e8968" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado</strong>: R1 S3 2025</li></ul><ul id="1f968338-221a-801f-9f46-e9537ade6272" class="bulleted-list"><li style="list-style-type:square"><strong>Real: </strong></li></ul></li></ul><ul id="1f968338-221a-8044-b36d-e0b489620540" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong></li></ul></li></ul><h3 id="1f968338-221a-8016-bc3d-dd72b4d2873d" class=""><strong>História: Redução de Pendência no IUConfia - Redução dos Privilégios das Roles do S3</strong></h3><ul id="1f968338-221a-803c-bc0d-c9a3caa25ea1" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f968338-221a-801a-ae14-c8fc275a61c7" class="">Nós acreditamos que <strong>reduzindo os privilégios das roles do S3 no IBS 360</strong>, pelo <strong>time de desenvolvimento e arquitetura</strong>, resultará em <strong>um ambiente mais seguro, alinhado às políticas de governança do Itaú, minimizando riscos operacionais</strong>. Saberemos que isso é verdade através de <strong>validação do IUConfia e melhoria na pontuação de segurança</strong>.</p></li></ul><ul id="1f968338-221a-80a2-b847-c2305a4533f8" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f968338-221a-806b-a3c0-c6fa4ad18c58" class="">Como <strong>time responsável pelo IBS 360</strong>, queremos <strong>ajustar os privilégios das roles do S3</strong>, garantindo que <strong>os acessos sejam minimizados ao necessário, reduzindo riscos e atendendo às exigências de segurança do banco</strong>.</p></li></ul><ul id="1f968338-221a-80aa-94cd-fad71bbc669c" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f968338-221a-8047-9e64-c9cf9da371fc" class="numbered-list" start="1"><li><strong>A revisão das roles deve garantir que os acessos mínimos necessários sejam mantidos</strong>.</li></ol><ol type="1" id="1f968338-221a-8038-88d1-c3b109131e2c" class="numbered-list" start="2"><li><strong>A mudança não pode impactar a operação do IBS 360</strong>.</li></ol><ol type="1" id="1f968338-221a-80c6-ad3c-e80d46b81c41" class="numbered-list" start="3"><li><strong>A segurança e rastreabilidade dos acessos devem ser garantidas</strong>.</li></ol></li></ul><ul id="1f968338-221a-8084-b27a-ce3b3d1c1a21" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f968338-221a-8056-8b19-d842d9f419b2" class="numbered-list" start="1"><li><strong>As roles do S3 devem ser ajustadas para atender às exigências de segurança</strong>.</li></ol><ol type="1" id="1f968338-221a-8003-96d2-d4ad2fcf1f08" class="numbered-list" start="2"><li><strong>A alteração não pode comprometer o funcionamento da aplicação</strong>.</li></ol><ol type="1" id="1f968338-221a-8031-b1fb-f234bf13000d" class="numbered-list" start="3"><li><strong>Todos os acessos desnecessários devem ser removidos sem afetar a usabilidade do sistema</strong>.</li></ol></li></ul><ul id="1f968338-221a-80fa-a946-cfdabc729829" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f968338-221a-8069-8ba4-f3716edaa32e" class="numbered-list" start="1"><li><strong>Revisar as roles atuais e identificar privilégios excessivos</strong>.</li></ol><ol type="1" id="1f968338-221a-808d-b266-fd04b41fe40c" class="numbered-list" start="2"><li><strong>Implementar ajustes para reduzir os acessos conforme necessário</strong>.</li></ol><ol type="1" id="1f968338-221a-8005-a83f-e5120a20cbd8" class="numbered-list" start="3"><li><strong>Validar as mudanças com a equipe de segurança do banco</strong>.</li></ol><ol type="1" id="1f968338-221a-8084-b604-ea9c742281ca" class="numbered-list" start="4"><li><strong>Documentar as alterações para auditorias e futuras revisões de segurança</strong>.</li></ol></li></ul><ul id="1f968338-221a-800b-9ba3-ebf3661f92c8" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f968338-221a-80a2-a401-d1a106588135" class="numbered-list" start="1"><li><strong>Verificar se os acessos foram reduzidos sem comprometer o funcionamento do IBS 360</strong>.</li></ol><ol type="1" id="1f968338-221a-8031-8890-f8bb3ab25d99" class="numbered-list" start="2"><li><strong>Confirmar que os ajustes atendem às políticas de segurança do Itaú</strong>.</li></ol><ol type="1" id="1f968338-221a-8038-ae71-c6c555745055" class="numbered-list" start="3"><li><strong>Avaliar a pontuação do IUConfia após a implementação das mudanças</strong>.</li></ol><ol type="1" id="1f968338-221a-8035-bce5-f8120f91f756" class="numbered-list" start="4"><li><strong>Executar testes de acessibilidade para garantir que usuários autorizados continuam tendo acesso adequado</strong>.</li></ol></li></ul><ul id="1f968338-221a-80a0-b8ae-e1295afcaea8" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão</strong><ul id="1f968338-221a-805b-ac96-c21bb60c5637" class="bulleted-list"><li style="list-style-type:circle"><strong>Inicio</strong>:<ul id="1f968338-221a-802d-b3a3-efb909596ce1" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado</strong>: R1 S3 2025</li></ul><ul id="1f968338-221a-80dd-b9e3-cceeaa24312c" class="bulleted-list"><li style="list-style-type:square"><strong>Real: </strong>R1 S3 2025</li></ul></li></ul><ul id="1f968338-221a-80ab-bfb5-e3491651ea1f" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="1f968338-221a-8095-b089-c5d1c9b2efda" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado</strong>: R1 S3 2025</li></ul><ul id="1f968338-221a-8045-bcee-e843c50e5dfd" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong></li></ul></li></ul><ul id="1f968338-221a-8010-aad7-fcc4613d96e8" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado: </strong></li></ul></li></ul><hr id="1f868338-221a-8103-9996-f73a87022f9a"/><h2 id="1f868338-221a-8157-bf16-c43c3cdce3ac" class=""><strong>Seção: IBS 360 - FrontEnd</strong></h2><hr id="1f868338-221a-81d8-b2a8-ca5120de771e"/><h2 id="1f868338-221a-8133-bcde-c8582cb6c630" class=""><strong>Seção: IBS 360 - Gestão do Parque</strong></h2><h3 id="1f868338-221a-8089-9c4b-cbf2771f4e5a" class=""><strong>História: [Delivery] Eliminação das Manualidades no Processo de Atualização da Base 360</strong></h3><ul id="1f868338-221a-8040-ae35-d4a540c6f989" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="1f868338-221a-804e-ad22-ec40681f7da8" class="">Acreditamos que, ao <strong>automatizar todas as etapas manuais que ainda existem no processo de atualização da Base 360</strong>, para <strong>o time responsável pela geração e publicação da base e para os consumidores que dependem da disponibilidade garantida dos dados</strong>, resultará em <strong>maior eficiência operacional, redução de erros humanos e menor tempo de disponibilização da base atualizada nos ambientes Dev, Homologação e Produção</strong>. Saberemos que isso é verdade quando <strong>todo o processo puder ser executado ponta a ponta por pipelines automatizados e rastreáveis, sem depender de intervenção humana</strong>.</p><ul id="1f868338-221a-8093-b11a-fd5b25599fe0" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="1f868338-221a-8062-acca-c3f2e6c778a7" class="">Como time responsável pela <strong>orquestração da Base 360</strong>, queremos <strong>substituir as etapas manuais do fluxo por automações</strong>, desde a <strong>verificação de qualidade, até a atualização dos outputs nos repositórios finais (SharePoint Dev, Hom, Prod)</strong>. Isso inclui <strong>a eliminação da necessidade de movimentação manual de arquivos</strong>, <strong>execuções locais ou por planilhas</strong>, garantindo que o <strong>pipeline complete o ciclo de forma contínua, validada e auditável</strong>.</p><p id="1f868338-221a-801c-b1c8-fa8fcc8ad165" class="">Essa automação <strong>reduz risco operacional, aumenta a confiabilidade e libera o time para focar em atividades de maior valor</strong>, como evolução da base, governança e suporte aos consumidores.</p><ul id="1f868338-221a-804d-b3d2-df507be6d952" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="1f868338-221a-80f5-bf12-e81210de1771" class="">O <strong>time responsável pela base 360</strong> terá <strong>um pipeline robusto, sem necessidade de ações manuais para validar, gerar e disponibilizar os outputs</strong>, enquanto <strong>os consumidores finais terão os dados entregues com mais agilidade, segurança e rastreabilidade</strong>.</p><ul id="1f868338-221a-8051-8a72-dec6ca134a8f" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio:</strong></li></ul><p id="1f868338-221a-80af-bca0-e6bf3908c22d" class="">Atualmente, o <strong>processo da Base 360 ainda possui etapas manuais</strong>, como <strong>execução local, verificação visual de arquivos e movimentação manual entre ambientes</strong>, o que <strong>aumenta o risco de erro humano, retrabalho e demora na disponibilização</strong>. A automação desse processo <strong>fecha o ciclo de governança, eficiência e escalabilidade da base</strong>, consolidando a Base 360 como um <strong>produto de dados moderno e confiável</strong>.</p><ul id="1f868338-221a-8079-9790-ccefb19ce482" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f868338-221a-809a-b64a-ef242c838f95" class="numbered-list" start="1"><li>O pipeline atual é <strong>capaz de ser refatorado para rodar ponta a ponta de forma automatizada</strong>.</li></ol><ol type="1" id="1f868338-221a-801e-b941-f06badb5f54e" class="numbered-list" start="2"><li>A estrutura de ambientes (Dev, Hom, Prod) já está <strong>definida e operacional no SharePoint</strong>.</li></ol><ol type="1" id="1f868338-221a-8048-a7f5-eca150d3f0af" class="numbered-list" start="3"><li>As <strong>regras de Data Quality já foram implementadas</strong> e são parte da validação automática.</li></ol></li></ul><ul id="1f868338-221a-8041-ba70-e33ac087454f" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f868338-221a-807b-9ede-d4bdd348b4bd" class="numbered-list" start="1"><li>O pipeline deve <strong>executar todas as etapas do processo sem necessidade de ação manual</strong>.</li></ol><ol type="1" id="1f868338-221a-8056-873a-e343d3912b19" class="numbered-list" start="2"><li>O pipeline deve <strong>realizar validação de Data Quality antes da publicação</strong>.</li></ol><ol type="1" id="1f868338-221a-80fa-8342-fa3cf1273dfa" class="numbered-list" start="3"><li>O pipeline deve <strong>direcionar os dados para o ambiente correto conforme o contexto de execução (Dev, Hom, Prod)</strong>.</li></ol><ol type="1" id="1f868338-221a-8007-8677-d9b86486d52c" class="numbered-list" start="4"><li>Logs detalhados devem ser <strong>gerados e armazenados para rastreabilidade</strong>.</li></ol></li></ul><ul id="1f868338-221a-8055-bbd9-fa2eeb7c402c" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ol type="1" id="1f868338-221a-80e9-b7be-c0547ef43ecb" class="numbered-list" start="1"><li>Automação do pipeline de <strong>verificação, transformação, particionamento e publicação dos dados</strong>.</li></ol><ol type="1" id="1f868338-221a-8080-b2b3-ff08084ea8b0" class="numbered-list" start="2"><li>Integração com <strong>os repositórios de Dev, Homologação e Produção no SharePoint</strong>.</li></ol><ol type="1" id="1f868338-221a-8001-90bd-e5eea790fd15" class="numbered-list" start="3"><li><strong>Geração de logs estruturados</strong> e rastreáveis para cada execução.</li></ol><ol type="1" id="1f868338-221a-8017-b886-d1242e9a5b1c" class="numbered-list" start="4"><li>Integração com <strong>monitoramento e alertas em caso de falha</strong>.</li></ol></li></ul><ul id="1f868338-221a-804d-9091-e691e85f4a87" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f868338-221a-8005-8775-d3e4f5fa0d09" class="numbered-list" start="1"><li><strong>Mapeamento das Etapas Manuais Atuais</strong><ul id="1f868338-221a-8038-a5ae-eda64a11c456" class="bulleted-list"><li style="list-style-type:disc">Levantar <strong>quais etapas ainda dependem de ação humana no processo</strong>.</li></ul></li></ol><ol type="1" id="1f868338-221a-805c-9e42-ca3b0b0928e1" class="numbered-list" start="2"><li><strong>Automação das Etapas Manuais</strong><ul id="1f868338-221a-8072-b85b-eff564c40a16" class="bulleted-list"><li style="list-style-type:disc">Refatorar o pipeline para <strong>incorporar as etapas manuais no fluxo automatizado</strong>.</li></ul></li></ol><ol type="1" id="1f868338-221a-80ac-9707-f4c41e4635cd" class="numbered-list" start="3"><li><strong>Integração com Ambientes de Output</strong><ul id="1f868338-221a-80b9-9872-c26c527030b0" class="bulleted-list"><li style="list-style-type:disc">Garantir que os outputs sejam <strong>direcionados automaticamente para Dev, Hom e Prod</strong>.</li></ul></li></ol><ol type="1" id="1f868338-221a-8046-afc1-effebda948ed" class="numbered-list" start="4"><li><strong>Validação e Logs</strong><ul id="1f868338-221a-805a-a254-f22d4174fe91" class="bulleted-list"><li style="list-style-type:disc">Garantir que <strong>todos os passos do processo gerem logs rastreáveis em CloudWatch</strong>.</li></ul></li></ol><ol type="1" id="1f868338-221a-805c-93b2-e66c0959b869" class="numbered-list" start="5"><li><strong>Testes Finais e Homologação</strong><ul id="1f868338-221a-803a-8081-dc396613976d" class="bulleted-list"><li style="list-style-type:disc">Validar o pipeline ponta a ponta, simulando falhas e sucessos.</li></ul></li></ol><ol type="1" id="1f868338-221a-8091-a353-cde7f3b23a9e" class="numbered-list" start="6"><li><strong>Documentação e Handover</strong><ul id="1f868338-221a-8095-bb72-c0a139abc0c4" class="bulleted-list"><li style="list-style-type:disc">Documentar o novo fluxo e <strong>entregar para operação e monitoramento contínuo</strong>.</li></ul></li></ol></li></ul><ul id="1f868338-221a-8054-b06e-c3d8c4e38265" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f868338-221a-8077-b975-d5e77cb7208a" class="numbered-list" start="1"><li>Executar o pipeline completo <strong>sem intervenção manual</strong>.</li></ol><ol type="1" id="1f868338-221a-8007-818a-d538ebba67ab" class="numbered-list" start="2"><li>Validar <strong>a correta publicação em cada ambiente</strong>.</li></ol><ol type="1" id="1f868338-221a-80b7-8f34-d83539832121" class="numbered-list" start="3"><li>Forçar falhas de Data Quality para <strong>garantir o bloqueio automático</strong>.</li></ol><ol type="1" id="1f868338-221a-80cd-bad2-fe28c96bfb58" class="numbered-list" start="4"><li>Verificar a <strong>geração e armazenamento dos logs detalhados em CloudWatch</strong>.</li></ol><ol type="1" id="1f868338-221a-80cb-a0c6-ddc5a2f9eba2" class="numbered-list" start="5"><li>Garantir que <strong>a última partição válida seja utilizada em caso de falha</strong>.</li></ol></li></ul><ul id="1f868338-221a-80cf-a79e-d53c6fb680f5" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong><ul id="1f868338-221a-806b-90d3-df8776fbb4b7" class="bulleted-list"><li style="list-style-type:circle"><strong>Eliminação completa de ações manuais no fluxo da Base 360</strong>.</li></ul><ul id="1f868338-221a-8054-92af-dd652ebd5ab4" class="bulleted-list"><li style="list-style-type:circle"><strong>Aumento da confiabilidade e segurança na publicação dos dados</strong>.</li></ul><ul id="1f868338-221a-80a6-8321-ce305a7f3992" class="bulleted-list"><li style="list-style-type:circle"><strong>Melhoria na eficiência operacional, reduzindo tempo de entrega da base</strong>.</li></ul><ul id="1f868338-221a-80b1-be25-dd9747f13b11" class="bulleted-list"><li style="list-style-type:circle"><strong>Maior rastreabilidade e controle através de logs estruturados</strong>.</li></ul><ul id="1f868338-221a-8059-95b4-cba7eb154c16" class="bulleted-list"><li style="list-style-type:circle"><strong>Fortalecimento da governança e escalabilidade da Base 360</strong>.</li></ul></li></ul><hr id="1f868338-221a-81ae-9cc5-eed17bebcecf"/><h2 id="1f868338-221a-8137-8312-ff1cf6594531" class=""><strong>Seção: IBS 360 - Geocompasso</strong></h2><hr id="1f868338-221a-8142-a7d8-e7083ebd955c"/><h2 id="1f868338-221a-813e-9732-c67e309b5019" class=""><strong>Seção: Radar Imobiliário</strong></h2><hr id="1f868338-221a-810a-b161-c449b5599c2e"/><h2 id="1f868338-221a-81e4-a696-cac6cd3462bf" class=""><strong>Seção: Inteligência Imobiliária</strong></h2><h3 id="1f868338-221a-812c-bf33-d6bddf55e92b" class=""><strong>História: [Delivery] Criação e Configuração dos Componentes da Arquitetura AWS para o Modelo de Planejamento de Negociações</strong></h3><ul id="1f868338-221a-8107-baa1-d90e01e38116" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="1f868338-221a-8101-9d8b-efa7cdd0efea" class="">Acreditamos que, ao <strong>criar e configurar os componentes de infraestrutura definidos na arquitetura aprovada para integração do modelo de Planejamento de Negociações</strong>, especialmente <strong>as funções Lambda, API Gateway e repositórios de dados</strong>, para <strong>suportar a execução escalável e segura do modelo no Radar Imobiliário</strong>, resultará em <strong>uma base técnica robusta, auditável e pronta para receber chamadas do painel e responder com simulações do modelo de otimização</strong>. Saberemos que isso é verdade quando <strong>as Lambdas estiverem executando corretamente o modelo, integradas com API Gateway e S3, com logs em CloudWatch e segurança garantida via IAM e Secrets Manager</strong>.</p><ul id="1f868338-221a-815f-b546-ec88c9c4293a" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="1f868338-221a-8171-9043-e46d4186d1b9" class="">Como time responsável pela implementação da arquitetura validada, queremos <strong>criar e configurar os componentes AWS necessários para a execução do modelo de Planejamento de Negociações</strong>, garantindo que <strong>as funções Lambda estejam seguras, escaláveis, integradas com a API e com armazenamento no S3</strong>, prontos para serem consumidos pelo painel do Radar Imobiliário no IBS 360.</p><ul id="1f868338-221a-81b2-88d6-c7a5094e80ad" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="1f868338-221a-811f-933b-cfa47b25d4c6" class="">Os usuários do Radar Imobiliário ainda não verão a interface final, mas <strong>toda a lógica de execução será sustentada por essa infraestrutura técnica</strong>, garantindo <strong>respostas rápidas, rastreáveis e com alta disponibilidade no momento da entrega final do painel de execução do modelo</strong>.</p><ul id="1f868338-221a-81f9-8727-eff0591c8207" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio:</strong></li></ul><p id="1f868338-221a-81ef-b205-cb863e1101ca" class="">Com a arquitetura já aprovada, esta entrega operacionaliza a infraestrutura necessária para <strong>a execução de simulações e retornos do modelo de otimização</strong>, permitindo que os times FrontEnd e de Advanced Analytics iniciem os testes de ponta a ponta com segurança e confiabilidade.</p><ul id="1f868338-221a-812f-9947-f758262686e2" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f868338-221a-819e-97c1-f29f94b3e91a" class="numbered-list" start="1"><li>A arquitetura com API Gateway, Lambdas, S3 e Secrets já foi validada com o arquiteto de soluções.</li></ol><ol type="1" id="1f868338-221a-8180-b00f-f28786ebb7c1" class="numbered-list" start="2"><li>Os acessos e permissões AWS já foram concedidos ao time executor.</li></ol><ol type="1" id="1f868338-221a-81df-b79b-c84b5785d99f" class="numbered-list" start="3"><li>O código do modelo está disponível ou em processo de entrega pelo time de Advanced Analytics.</li></ol></li></ul><ul id="1f868338-221a-815f-92d9-ede60d35cd87" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f868338-221a-8157-9059-d9cf4c8c3cf8" class="numbered-list" start="1"><li>A Lambda principal deve receber parâmetros via JSON, processar e retornar a resposta em tempo hábil (ex: até 15 segundos).</li></ol><ol type="1" id="1f868338-221a-8182-a65f-c3de2449a1b6" class="numbered-list" start="2"><li>Logs devem ser registrados no CloudWatch com correlação por UUID de requisição.</li></ol><ol type="1" id="1f868338-221a-81f9-9d3c-eebdd4dc5d05" class="numbered-list" start="3"><li>As permissões devem seguir o princípio do menor privilégio via IAM.</li></ol></li></ul><ul id="1f868338-221a-8186-8717-ea5664b76683" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ol type="1" id="1f868338-221a-8112-a60b-d55ca64982c6" class="numbered-list" start="1"><li>Criação de <strong>funções Lambda</strong> com pacotes customizados para execução do modelo.</li></ol><ol type="1" id="1f868338-221a-81a6-8846-f0367f061ce0" class="numbered-list" start="2"><li>Configuração do <strong>API Gateway</strong> para expor um endpoint REST autenticado.</li></ol><ol type="1" id="1f868338-221a-8171-9bd9-f57e41d4fa43" class="numbered-list" start="3"><li>Utilização do <strong>Amazon S3</strong> para armazenar insumos e respostas de simulações.</li></ol><ol type="1" id="1f868338-221a-8177-b9b9-f553ff8eda74" class="numbered-list" start="4"><li><strong>CloudWatch</strong> para logs e alarmes técnicos.</li></ol><ol type="1" id="1f868338-221a-8198-ba3b-f2b738df23cc" class="numbered-list" start="5"><li><strong>Secrets Manager</strong> para armazenamento seguro de tokens e variáveis sensíveis.</li></ol><ol type="1" id="1f868338-221a-8186-9685-d0806ceb8dea" class="numbered-list" start="6"><li><strong>IAM Roles</strong> dedicadas para cada serviço, com políticas específicas de acesso.</li></ol></li></ul><ul id="1f868338-221a-8198-9507-c30d0fc3da97" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f868338-221a-811f-bbcb-d7cf93b78e31" class="numbered-list" start="1"><li><strong>Provisionamento da Infraestrutura</strong><ul id="1f868338-221a-815c-a7bf-c36e610e02b5" class="bulleted-list"><li style="list-style-type:disc">Criar buckets no S3 para insumos e outputs do modelo.</li></ul><ul id="1f868338-221a-818b-9608-cef286aa81d7" class="bulleted-list"><li style="list-style-type:disc">Configurar Secrets Manager com tokens e segredos do modelo.</li></ul></li></ol><ol type="1" id="1f868338-221a-8192-b5b0-d09dceca79eb" class="numbered-list" start="2"><li><strong>Desenvolvimento e Deploy das Lambdas</strong><ul id="1f868338-221a-8140-a25d-c7a64430db3b" class="bulleted-list"><li style="list-style-type:disc">Criar Lambda principal para execução do modelo com logging estruturado.</li></ul><ul id="1f868338-221a-819d-a628-f2b68ff7ad1f" class="bulleted-list"><li style="list-style-type:disc">Criar Lambda auxiliar (se necessário) para manipulação de dados ou resposta.</li></ul><ul id="1f868338-221a-818b-aaf7-d97ea911fa38" class="bulleted-list"><li style="list-style-type:disc">Empacotar dependências com Docker ou Layer.</li></ul></li></ol><ol type="1" id="1f868338-221a-8181-8d54-d10a64195107" class="numbered-list" start="3"><li><strong>Configuração do API Gateway</strong><ul id="1f868338-221a-81fd-877b-d4c4b0664dfa" class="bulleted-list"><li style="list-style-type:disc">Expor endpoint REST com autenticação (IAM ou token).</li></ul><ul id="1f868338-221a-81a4-98cb-ff184c449bc5" class="bulleted-list"><li style="list-style-type:disc">Vincular com Lambda principal e definir estrutura de payload.</li></ul></li></ol><ol type="1" id="1f868338-221a-8176-b90e-c2b419a2d79f" class="numbered-list" start="4"><li><strong>Monitoramento e Segurança</strong><ul id="1f868338-221a-8159-9b53-c87b12ae9dd7" class="bulleted-list"><li style="list-style-type:disc">Ativar logs no CloudWatch e criar alarmes básicos (erros, timeout, etc.).</li></ul><ul id="1f868338-221a-81be-91fc-d317ad04b0c5" class="bulleted-list"><li style="list-style-type:disc">Validar papéis IAM com acesso mínimo necessário.</li></ul></li></ol><ol type="1" id="1f868338-221a-818f-906d-ddb8688779f8" class="numbered-list" start="5"><li><strong>Testes e Execução</strong><ul id="1f868338-221a-8125-ab25-e91a30088ca7" class="bulleted-list"><li style="list-style-type:disc">Testar execução ponta-a-ponta: envio → processamento → retorno.</li></ul><ul id="1f868338-221a-81e7-920d-d1ba61bf9ce8" class="bulleted-list"><li style="list-style-type:disc">Validar integração com painel Streamlit (mock inicial).</li></ul></li></ol><ol type="1" id="1f868338-221a-8180-813e-eff5b272fc9d" class="numbered-list" start="6"><li><strong>Documentação e Entrega</strong><ul id="1f868338-221a-8128-a700-fd003debcd71" class="bulleted-list"><li style="list-style-type:disc">Documentar endpoints, estrutura de payload e políticas de acesso.</li></ul><ul id="1f868338-221a-81fe-b491-c1745da12af4" class="bulleted-list"><li style="list-style-type:disc">Registrar boas práticas para futuros mantenedores.</li></ul></li></ol></li></ul><ul id="1f868338-221a-8163-8d49-f6d2e1898c58" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f868338-221a-81f4-993f-e4771c20b4ad" class="numbered-list" start="1"><li>Executar uma requisição via API Gateway com payload simulado e validar resposta.</li></ol><ol type="1" id="1f868338-221a-81d9-b457-de7dbf92be02" class="numbered-list" start="2"><li>Validar que a Lambda retorna resposta dentro do tempo esperado.</li></ol><ol type="1" id="1f868338-221a-8151-a9da-cbf4601b8b31" class="numbered-list" start="3"><li>Verificar se logs completos aparecem no CloudWatch com UUID por requisição.</li></ol><ol type="1" id="1f868338-221a-8181-ba3c-dd0b01dae4cf" class="numbered-list" start="4"><li>Confirmar que nenhuma permissão excessiva foi atribuída às roles da Lambda.</li></ol><ol type="1" id="1f868338-221a-81b3-9f8a-ff705e62cdc4" class="numbered-list" start="5"><li>Simular falhas e verificar logs e alertas gerados corretamente.</li></ol></li></ul><ul id="1f868338-221a-81a3-807d-fdcf9bb42731" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong><ul id="1f868338-221a-81ec-9316-f17321338c2e" class="bulleted-list"><li style="list-style-type:circle"><strong>Infraestrutura preparada para execução segura e escalável do modelo.</strong></li></ul><ul id="1f868338-221a-817c-ba07-d11ab1ec354a" class="bulleted-list"><li style="list-style-type:circle"><strong>Possibilidade de integração imediata com o FrontEnd para testes completos.</strong></li></ul><ul id="1f868338-221a-816d-92bb-dd32c8c1df3c" class="bulleted-list"><li style="list-style-type:circle"><strong>Redução de riscos técnicos futuros por uso de arquitetura modular e monitorada.</strong></li></ul><ul id="1f868338-221a-8179-b075-f8bb9a1b5068" class="bulleted-list"><li style="list-style-type:circle"><strong>Base sólida para expansão futura do uso de modelos otimizadores no IBS 360.</strong></li></ul></li></ul><ul id="1f868338-221a-81a6-9e1f-fb5022710eec" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão</strong><ul id="1f868338-221a-81ab-bebd-cccf5e1dcf96" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="1f868338-221a-814c-a44e-c573319f6cfb" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R2 S2 2025</li></ul><ul id="1f868338-221a-813f-a6c8-d5c0178c949d" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> R2 S2 2025</li></ul></li></ul><ul id="1f868338-221a-81cb-a534-d0213e912e9c" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="1f868338-221a-8164-ad7e-ef12c22a031b" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R2 S3 2025</li></ul><ul id="1f868338-221a-8195-ad7a-d7d1c14a675b" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong></li></ul></li></ul><ul id="1f868338-221a-810b-a087-c02488845a34" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong> Lambda em produção, integrada com API Gateway, logada no CloudWatch e validada com chamadas reais de teste.</li></ul></li></ul><h3 id="1f868338-221a-81db-a64f-c310065cc763" class=""><strong>História: [Delivery] Início do Desenvolvimento do Frontend para Usuários do Planejamento de Negociações com Base no Protótipo Validado</strong></h3><ul id="1f868338-221a-81bd-b8d8-dd1b11eed961" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="1f868338-221a-81ed-8181-e462546dab06" class="">Acreditamos que, ao <strong>iniciar o desenvolvimento do Frontend do Painel de Planejamento de Negociações no Radar Imobiliário</strong>, para os <strong>usuários do processo de Planejamento de Negociações Imobiliárias</strong>, seguindo <strong>o protótipo validado pelo time de negócios</strong>, com <strong>campos alimentados pelos dados da base do ETL1 (time Murillo), GPA e Osiris</strong>, resultará em <strong>uma solução que permite aos usuários interagir com os dados reais e simular cenários estratégicos de renegociação</strong>. Saberemos que isso é verdade quando, ao final da <strong>R2 S3 2025</strong>, os usuários puderem <strong>selecionar os dados necessários e acionar o botão de envio para processar a simulação</strong>.</p><ul id="1f868338-221a-816d-a0e5-c65b3ed2bfea" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="1f868338-221a-8183-abff-db305482c99f" class="">Como time de desenvolvimento do IBS 360, iniciaremos na <strong>R2 S2 2025</strong> o desenvolvimento do <strong>Painel de Planejamento de Negociações</strong>, implementando <strong>o layout validado pelo time de negócios</strong> e integrando <strong>os campos com os dados provenientes da base ETL1, GPA e Osiris</strong>. O objetivo é, ao final da <strong>R2 S3 2025</strong>, disponibilizar uma <strong>primeira versão funcional que permita ao usuário preencher os campos necessários e acionar a simulação com um botão &quot;Enviar&quot;</strong>.</p><ul id="1f868338-221a-81f3-bcdb-cdde23e79d3c" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="1f868338-221a-8128-90b8-fe73e36a1a11" class="">Os <strong>usuários do Planejamento de Negociações Imobiliárias</strong> poderão <strong>selecionar os dados necessários no painel, diretamente do IBS 360, e acionar a simulação com um clique</strong>, iniciando a jornada prática de uso da solução para suportar decisões de renegociação de contratos.</p><ul id="1f868338-221a-8179-aa40-c32c6fcf956d" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio:</strong></li></ul><p id="1f868338-221a-81d1-abf6-d77d21f33277" class="">O protótipo aprovado pelo time de negócios define a jornada ideal para os usuários realizarem simulações estratégicas. O painel será alimentado por <strong>dados reais já disponibilizados pela base ETL1 (integrações com GPA e Osiris)</strong>, viabilizando uma experiência conectada com os dados mais atualizados da operação. A entrega da primeira versão com botão de envio permitirá <strong>desbloquear a próxima fase de integração completa com o modelo de otimização</strong>.</p><ul id="1f868338-221a-8154-b11e-e0f4b9e8c712" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f868338-221a-810f-aabc-c1c9cde9067d" class="numbered-list" start="1"><li>O protótipo validado está disponível para guiar o desenvolvimento.</li></ol><ol type="1" id="1f868338-221a-811c-8815-cc71e8a28860" class="numbered-list" start="2"><li>A base ETL1 consolidada pelo time Murillo já está acessível e contém dados da GPA e do Osiris.</li></ol><ol type="1" id="1f868338-221a-81fd-8847-d5fae42de7c8" class="numbered-list" start="3"><li>O desenvolvimento será iniciado na <strong>R2 S2 2025</strong>, com meta de entrega da primeira versão funcional na <strong>R2 S3 2025</strong>.</li></ol></li></ul><ul id="1f868338-221a-8182-a6aa-c9b8aaba2303" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f868338-221a-81c4-9337-dd7f18f4a23b" class="numbered-list" start="1"><li>O painel deve refletir fielmente o layout e fluxo do protótipo aprovado.</li></ol><ol type="1" id="1f868338-221a-81bd-bbdc-d90045e20d24" class="numbered-list" start="2"><li>Todos os campos devem ser preenchidos com dados reais das bases integradas.</li></ol><ol type="1" id="1f868338-221a-81f1-a13f-ca5642b260d3" class="numbered-list" start="3"><li>O botão &quot;Enviar&quot; deve estar funcional ao final da R2 S3, enviando os dados para processamento.</li></ol></li></ul><ul id="1f868338-221a-81ea-bc47-fd657602c142" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ol type="1" id="1f868338-221a-81c3-852e-df82253234bf" class="numbered-list" start="1"><li>Desenvolvimento do painel em <strong>Streamlit</strong>, no padrão do IBS 360.</li></ol><ol type="1" id="1f868338-221a-8103-9387-da6f69a8cd7e" class="numbered-list" start="2"><li>Consumo da base ETL1 para preenchimento dos campos.</li></ol><ol type="1" id="1f868338-221a-816f-a653-e38056de40a0" class="numbered-list" start="3"><li>Implementação do botão &quot;Enviar&quot; para simular o fluxo de envio dos parâmetros.</li></ol></li></ul><ul id="1f868338-221a-817d-a345-e6c046f2867f" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f868338-221a-81b8-b19e-fa5cf2be954a" class="numbered-list" start="1"><li><strong>Revisão do Protótipo e Alinhamento com Negócios</strong><ul id="1f868338-221a-817f-8be6-e4f894328201" class="bulleted-list"><li style="list-style-type:disc">Revisar campos, fluxos e interações definidas.</li></ul></li></ol><ol type="1" id="1f868338-221a-8130-9dc0-f1b7ce662918" class="numbered-list" start="2"><li><strong>Integração com a Base ETL1</strong><ul id="1f868338-221a-8177-87cb-f1027ef89970" class="bulleted-list"><li style="list-style-type:disc">Mapear os campos necessários e integrar com os dados reais.</li></ul></li></ol><ol type="1" id="1f868338-221a-818c-bbd4-c499495cabf4" class="numbered-list" start="3"><li><strong>Desenvolvimento da Interface do Painel</strong><ul id="1f868338-221a-81a1-91a0-e413e48922d2" class="bulleted-list"><li style="list-style-type:disc">Implementar o layout do protótipo.</li></ul><ul id="1f868338-221a-8179-a83a-eb05c84010d5" class="bulleted-list"><li style="list-style-type:disc">Renderizar os campos com dados dinâmicos da base.</li></ul><ul id="1f868338-221a-8180-a486-eab03798b302" class="bulleted-list"><li style="list-style-type:disc">Desenvolver o botão &quot;Enviar&quot; para envio dos parâmetros.</li></ul></li></ol><ol type="1" id="1f868338-221a-81c9-82b8-c224fe111204" class="numbered-list" start="4"><li><strong>Testes e Validação Funcional</strong><ul id="1f868338-221a-81d6-ac54-f78d9ddc2ece" class="bulleted-list"><li style="list-style-type:disc">Validar preenchimento e interação com o botão.</li></ul><ul id="1f868338-221a-8151-92aa-da211d5b5309" class="bulleted-list"><li style="list-style-type:disc">Garantir performance e estabilidade.</li></ul></li></ol><ol type="1" id="1f868338-221a-8177-90e9-dab04bf98786" class="numbered-list" start="5"><li><strong>Apresentação para Negócios</strong><ul id="1f868338-221a-813c-ab77-d6f13a33ca95" class="bulleted-list"><li style="list-style-type:disc">Demonstrar a primeira versão funcional para validação.</li></ul></li></ol></li></ul><ul id="1f868338-221a-81c6-89d3-d9a2a9ae2a92" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f868338-221a-81ee-9677-cadfacd95e96" class="numbered-list" start="1"><li>Validar que todos os campos do protótipo estão presentes e preenchidos com dados reais.</li></ol><ol type="1" id="1f868338-221a-81d7-9451-ce23ed27f898" class="numbered-list" start="2"><li>Confirmar que o botão &quot;Enviar&quot; funciona corretamente, simulando o envio de dados.</li></ol><ol type="1" id="1f868338-221a-8124-b37f-cdd7ee27e288" class="numbered-list" start="3"><li>Avaliar a experiência do usuário no fluxo completo de preenchimento e envio.</li></ol></li></ul><ul id="1f868338-221a-81f5-bd7d-ec3fc9aba822" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong><ul id="1f868338-221a-8195-87c9-c207a1d367f5" class="bulleted-list"><li style="list-style-type:circle"><strong>Primeira versão funcional disponível para uso pelos usuários de Planejamento de Negociações.</strong></li></ul><ul id="1f868338-221a-812d-bd71-d082fc1e9d31" class="bulleted-list"><li style="list-style-type:circle"><strong>Desbloqueio para testes reais com dados operacionais.</strong></li></ul><ul id="1f868338-221a-81a5-bc6c-d8f87b7c1609" class="bulleted-list"><li style="list-style-type:circle"><strong>Engajamento dos usuários em validar a solução antes da integração definitiva com o modelo.</strong></li></ul></li></ul><ul id="1f868338-221a-81a3-91b2-dca810a4180d" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão</strong><ul id="1f868338-221a-81d7-9fd3-ea4a9960154b" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="1f868338-221a-811c-825f-c3fc263ac2fc" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R2 S2 2025</li></ul><ul id="1f868338-221a-8168-b7cb-e89742668b75" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> </li></ul></li></ul><ul id="1f868338-221a-81b6-b7ae-c9f98a2ce0a4" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="1f868338-221a-81b5-97c2-ea3f3389ef70" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R2 S3 2025</li></ul><ul id="1f868338-221a-8147-9020-f6d512978725" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong></li></ul></li></ul><ul id="1f868338-221a-81b1-8f24-f061724ef6d8" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong> Primeira versão funcional entregue, permitindo aos usuários selecionar dados e acionar o botão de envio para simulações.</li></ul></li></ul><hr id="1f868338-221a-8148-8918-c1380a88df4c"/><h2 id="1f868338-221a-81b4-9980-f5c98083671a" class=""><strong>Seção: Score de Agências</strong></h2><hr id="1f868338-221a-81aa-b335-ccf47953984d"/><h2 id="1f868338-221a-819c-bcaa-cc2b804be09e" class=""><strong>Seção: App Planejamento de Pessoas</strong></h2><hr id="1f868338-221a-816a-aea6-f5d27dde792e"/><h2 id="1f868338-221a-81be-8765-e2f8dd529b94" class=""><strong>Seção: Arquitetura Cross</strong></h2><h3 id="1f868338-221a-81be-a2e9-cf701e69bc43" class=""><strong>História: [Discovery] Arquitetura Ideal para 2025</strong></h3><ul id="1f868338-221a-814a-a9c5-e8a30f15bb71" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição</strong>:<p id="1f868338-221a-812b-a9d2-c37124e5440b" class="">Como time de arquitetura/infraestrutura, queremos iniciar um discovery para definir a arquitetura ideal para 2025 das soluções cross dados, abordando questionamentos relacionados ao app de planejamento de pessoas, features como o geocompasso, modelos de ciência de dados para agências, e modelos de ciência de dados gerais.</p></li></ul><ul id="1f868338-221a-8174-88a8-f6b6b7659645" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio</strong>:<p id="1f868338-221a-81b6-a43f-d832d7eb3ba0" class="">O discovery visa estabelecer as diretrizes para a arquitetura de soluções cross-dados para 2025, alinhando estratégias com as demandas crescentes de aplicativos e modelos de ciência de dados, garantindo eficiência, escalabilidade e sustentabilidade.</p></li></ul><ul id="1f868338-221a-81d4-a607-f7219591eed1" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas</strong>:<ol type="1" id="1f868338-221a-81b9-9e9c-fcb6de0bd8fc" class="numbered-list" start="1"><li>Identificar requisitos técnicos e de negócio para cada tipo de solução (app de planejamento, modelos para agências, modelos gerais).</li></ol><ol type="1" id="1f868338-221a-8113-8181-c4e28f7f6d74" class="numbered-list" start="2"><li>Explorar tecnologias, frameworks e padrões arquiteturais que atendam às demandas projetadas para 2025.</li></ol></li></ul><ul id="1f868338-221a-81ff-8fa5-d9b618e274cf" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas</strong>:<ol type="1" id="1f868338-221a-8179-b964-f472519f7595" class="numbered-list" start="1"><li>Levantar os principais desafios e objetivos para o app de planejamento de pessoas em 2025.</li></ol><ol type="1" id="1f868338-221a-8132-81c8-e139a75c0403" class="numbered-list" start="2"><li>Definir os requisitos arquiteturais para modelos de ciência de dados que envolvem agências.</li></ol><ol type="1" id="1f868338-221a-81bd-b3cf-de8e4bf2d3ab" class="numbered-list" start="3"><li>Mapear as necessidades de modelos de ciência de dados gerais e suas diferenças em relação aos modelos específicos para agências.</li></ol><ol type="1" id="1f868338-221a-811b-971a-d6963cf8d509" class="numbered-list" start="4"><li>Realizar benchmarks e pesquisas sobre arquiteturas de referência.</li></ol><ol type="1" id="1f868338-221a-81f7-b440-e761af2a7faf" class="numbered-list" start="5"><li>Elaborar um documento inicial com propostas de arquitetura para cada solução.</li></ol></li></ul><ul id="1f868338-221a-81d0-93a9-e2bcd763b447" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação</strong>:<ol type="1" id="1f868338-221a-817d-beac-ed346b5f0004" class="numbered-list" start="1"><li>Validação do documento de propostas de arquitetura com stakeholders.</li></ol><ol type="1" id="1f868338-221a-81fa-a98f-f8bd10b32700" class="numbered-list" start="2"><li>Alinhar as propostas com as metas de longo prazo da organização.</li></ol><ol type="1" id="1f868338-221a-8172-8d9a-e934ffcade4f" class="numbered-list" start="3"><li>Realizar uma revisão técnica para validar a viabilidade das propostas apresentadas.</li></ol></li></ul><hr id="1f868338-221a-81b0-915d-d2a15c7bca5e"/><h2 id="1f868338-221a-81d6-b80b-f3014cb745ca" class=""><strong>Seção: Monitoramento e Métricas de Produto</strong></h2><h3 id="1f868338-221a-8161-85d3-d0cd5a561e9a" class=""><strong>História: [Delivery] Documentação e Guia de Uso da Dashboard</strong></h3><ul id="1f868338-221a-81d6-bfda-c2eabd5ad86f" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f868338-221a-81cb-b4a2-fa50cded17ea" class="">Nós acreditamos que <strong>documentando e estruturando um guia de uso para a dashboard de produto</strong>, para <strong>os stakeholders e o time de produto do IBS 360 e Planejamento de Pessoas</strong>, resultará em <strong>uma melhor compreensão e utilização da ferramenta, garantindo que as métricas sejam interpretadas corretamente e utilizadas para tomadas de decisão estratégicas</strong>. Saberemos que isso é verdade através de <strong>feedbacks dos usuários e análise do engajamento na utilização da dashboard</strong>.</p></li></ul><ul id="1f868338-221a-819e-bd1a-fe9c1ab0ab9d" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f868338-221a-8159-b65e-c5a419124769" class="">Como <strong>time de produto</strong>, queremos <strong>criar uma documentação completa da dashboard no QuickSight</strong>, incluindo <strong>explicação detalhada dos KPIs, regras de negócio e um storytelling refinado</strong>, garantindo que os stakeholders possam <strong>navegar e interpretar os dados de maneira intuitiva</strong>.</p></li></ul><ul id="1f868338-221a-81cd-862d-c8da09ca8909" class="bulleted-list"><li style="list-style-type:disc"><strong>Principais Tarefas:</strong><ol type="1" id="1f868338-221a-815c-87a6-fc6332c48258" class="numbered-list" start="1"><li>Criar uma documentação técnica explicando os KPIs e as regras de negócio da dashboard.</li></ol><ol type="1" id="1f868338-221a-8139-bd43-dc1bae1109f0" class="numbered-list" start="2"><li>Elaborar um guia prático de navegação e uso da dashboard para os stakeholders.</li></ol><ol type="1" id="1f868338-221a-810c-8118-ddd875304b0c" class="numbered-list" start="3"><li>Ajustar o storytelling da dashboard para que a narrativa das métricas seja clara e compreensível.</li></ol><ol type="1" id="1f868338-221a-81c6-91be-d4bf6ff171fb" class="numbered-list" start="4"><li>Disponibilizar a documentação para consulta de stakeholders e times técnicos.</li></ol><ol type="1" id="1f868338-221a-8104-83cb-f18470a798d5" class="numbered-list" start="5"><li>Coletar feedbacks sobre possíveis dúvidas e complementar a documentação conforme necessário.</li></ol></li></ul><ul id="1f868338-221a-8119-9297-f279e5951b3c" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f868338-221a-8186-9a2b-c3e090a1c405" class="numbered-list" start="1"><li>Validar a compreensão dos conceitos com usuários chave.</li></ol><ol type="1" id="1f868338-221a-81d0-bf2a-f7a5c2acaec8" class="numbered-list" start="2"><li>Avaliar a facilidade de navegação do guia.</li></ol><ol type="1" id="1f868338-221a-8144-96ba-f1b26a99abca" class="numbered-list" start="3"><li>Coletar sugestões de melhoria e incorporar ajustes.</li></ol></li></ul><ul id="1f868338-221a-811b-a647-e41a73444552" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong><ul id="1f868338-221a-8143-ae0f-c707e622603f" class="bulleted-list"><li style="list-style-type:circle">Maior autonomia dos usuários ao utilizar a dashboard.</li></ul><ul id="1f868338-221a-81ed-bc39-e48e2d3c7dae" class="bulleted-list"><li style="list-style-type:circle">Redução de dúvidas recorrentes sobre as métricas.</li></ul><ul id="1f868338-221a-8181-9ff6-dae9c0cedd9e" class="bulleted-list"><li style="list-style-type:circle">Fortalecimento da cultura data-driven dentro do time.</li></ul></li></ul><h3 id="1f868338-221a-812e-bdea-dc3173d7f24e" class=""><strong>História: [Delivery] Automatização da Atualização da Dashboard no QuickSight</strong></h3><ul id="1f868338-221a-81c2-9e81-d1fb9463a55f" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f868338-221a-81d5-8266-e1cdc7591c24" class="">Nós acreditamos que <strong>automatizando o processo de atualização da dashboard de produto no QuickSight</strong>, para <strong>o time de produto e os usuários que monitoram métricas no IBS 360</strong>, resultará em <strong>uma redução do esforço manual e um aumento na confiabilidade das informações exibidas na dashboard</strong>. Saberemos que isso é verdade através da <strong>eliminação da necessidade de atualizações manuais e melhoria na frequência de atualização dos dados</strong>.</p></li></ul><ul id="1f868338-221a-8199-b637-c16c94583d32" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f868338-221a-81e7-a0e4-c6d51bb997b4" class="">Como <strong>time de produto</strong>, queremos <strong>automatizar a atualização dos dados no QuickSight</strong>, utilizando <strong>Glue e Athena dentro da conta QE6</strong>, garantindo que <strong>as métricas sejam sempre atualizadas em tempo real ou em períodos programados, sem a necessidade de intervenção manual</strong>.</p></li></ul><ul id="1f868338-221a-81dd-9bc6-d164683b79a9" class="bulleted-list"><li style="list-style-type:disc"><strong>Principais Tarefas:</strong><ol type="1" id="1f868338-221a-8184-b22f-ee856e1c0869" class="numbered-list" start="1"><li>Configurar o Glue para ingerir e processar os dados automaticamente.</li></ol><ol type="1" id="1f868338-221a-81d5-bcd6-e5dcaddb1351" class="numbered-list" start="2"><li>Implementar queries no Athena para disponibilizar os dados formatados no QuickSight.</li></ol><ol type="1" id="1f868338-221a-8192-8f03-e43fca176fc2" class="numbered-list" start="3"><li>Criar um fluxo automatizado de atualização dos dashboards.</li></ol><ol type="1" id="1f868338-221a-817a-bffd-d7c0edfda210" class="numbered-list" start="4"><li>Testar e validar o funcionamento da automação, garantindo que os dados estejam atualizados corretamente.</li></ol></li></ul><ul id="1f868338-221a-81b4-874e-fd6136133f6f" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio:</strong><p id="1f868338-221a-8107-84b3-dbe57afc1987" class="">Atualmente, parte do processo de atualização das métricas da dashboard é manual, o que pode <strong>levar a atrasos e inconsistências nos dados</strong>. Com a automação, o time de produto <strong>aumentará a eficiência operacional e a confiabilidade das análises</strong>.</p></li></ul><ul id="1f868338-221a-8104-a9b2-cdf33364aa0f" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f868338-221a-81d6-9e73-d4e6c1e391ef" class="numbered-list" start="1"><li>As fontes de dados estão disponíveis e com permissão de leitura via Glue e Athena.</li></ol><ol type="1" id="1f868338-221a-81a2-a8b4-f69fe45fff36" class="numbered-list" start="2"><li>O acesso ao QuickSight está configurado corretamente com as permissões necessárias.</li></ol><ol type="1" id="1f868338-221a-818e-8509-c6ab19775a65" class="numbered-list" start="3"><li>As queries no Athena já estão validadas para uso.</li></ol></li></ul><ul id="1f868338-221a-81f8-8c36-cb07aa2b8cb9" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f868338-221a-81ad-b15e-c7d92e33f2ed" class="numbered-list" start="1"><li>Os dados devem ser atualizados ao menos uma vez por dia útil.</li></ol><ol type="1" id="1f868338-221a-8125-ab47-eb651210408b" class="numbered-list" start="2"><li>O processo de automação não deve impactar a performance do ambiente QE6.</li></ol><ol type="1" id="1f868338-221a-8149-8304-d1263bbb7ef2" class="numbered-list" start="3"><li>A estrutura do Glue e do Athena deve ser validada com arquitetura.</li></ol></li></ul><ul id="1f868338-221a-810c-945f-f248bd256835" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ol type="1" id="1f868338-221a-8107-aa87-d76eba4f85b3" class="numbered-list" start="1"><li>Glue será responsável pela ingestão e transformação dos dados.</li></ol><ol type="1" id="1f868338-221a-8194-9981-caa1edbdaa0c" class="numbered-list" start="2"><li>Athena será utilizado como camada de consulta para o QuickSight.</li></ol><ol type="1" id="1f868338-221a-8160-a21e-e3cda9afcd3a" class="numbered-list" start="3"><li>O QuickSight será configurado para apontar para as views atualizadas automaticamente.</li></ol></li></ul><ul id="1f868338-221a-81ce-976b-c93d88962bf6" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f868338-221a-81af-80a4-d5fe008958c6" class="numbered-list" start="1"><li>Configurar jobs no Glue para extração e transformação dos dados.</li></ol><ol type="1" id="1f868338-221a-81c4-a81a-d9b9f34e3f11" class="numbered-list" start="2"><li>Criar views no Athena para consumo no QuickSight.</li></ol><ol type="1" id="1f868338-221a-8119-8319-deb5998c0d00" class="numbered-list" start="3"><li>Testar o pipeline de dados completo (ingestão, transformação, visualização).</li></ol><ol type="1" id="1f868338-221a-81f1-88f7-d2e1922e4cb4" class="numbered-list" start="4"><li>Monitorar a primeira semana de execução para garantir estabilidade.</li></ol></li></ul><ul id="1f868338-221a-81c2-a5e7-d96b192da3a1" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f868338-221a-817a-9ffb-cf2edaa24a67" class="numbered-list" start="1"><li>Validar que os dados atualizam automaticamente sem necessidade de intervenção.</li></ol><ol type="1" id="1f868338-221a-814e-8afa-d938878270c8" class="numbered-list" start="2"><li>Conferir se os dados exibidos são consistentes com os dados de origem.</li></ol><ol type="1" id="1f868338-221a-81c0-9f88-d917807199f3" class="numbered-list" start="3"><li>Monitorar tempo de execução dos jobs e possíveis falhas.</li></ol></li></ul><ul id="1f868338-221a-815c-affd-fb871af0a8d7" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong><ul id="1f868338-221a-8196-a233-fd4e4720a8a2" class="bulleted-list"><li style="list-style-type:circle">Redução significativa de trabalho manual para atualização da dashboard.</li></ul><ul id="1f868338-221a-8195-bfa0-c4311f40de95" class="bulleted-list"><li style="list-style-type:circle">Dados sempre atualizados e confiáveis para os usuários.</li></ul><ul id="1f868338-221a-816b-8015-eff0fc41e0de" class="bulleted-list"><li style="list-style-type:circle">Escalabilidade da solução conforme novas métricas forem adicionadas.</li></ul></li></ul><h3 id="1f868338-221a-81cd-b567-fe03d007c8f0" class=""><strong>História: [Discovery] Visão de Funil de Adoção no QuickSight</strong></h3><ul id="1f868338-221a-8145-a951-c1eddf88fc15" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f868338-221a-81dd-881e-e4fc10308690" class="">Nós acreditamos que <strong>incluindo um funil de adoção (AAARR) dentro da dashboard de produto no QuickSight</strong>, para <strong>os stakeholders do IBS 360</strong>, resultará em <strong>uma visão clara sobre a jornada do usuário, permitindo um monitoramento mais detalhado do engajamento e adoção do produto</strong>. Saberemos que isso é verdade através de <strong>análises que permitam identificar oportunidades de melhoria na ativação e retenção dos usuários</strong>.</p></li></ul><ul id="1f868338-221a-812f-9a59-f09feae97731" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f868338-221a-81b4-ab4c-ffafa6354855" class="">Como <strong>time de produto</strong>, queremos <strong>implementar uma visão de funil no QuickSight</strong>, utilizando a metodologia <strong>AAARR (Aquisição, Ativação, Retenção, Receita e Referência)</strong>, garantindo que <strong>o comportamento dos usuários dentro do IBS 360 seja monitorado de forma estruturada e analítica</strong>.</p></li></ul><ul id="1f868338-221a-8159-9643-f3cff1af33b4" class="bulleted-list"><li style="list-style-type:disc"><strong>Definições do Funil:</strong><ul id="1f868338-221a-819c-81b9-db74f672365a" class="bulleted-list"><li style="list-style-type:circle"><strong>Aquisição:</strong> Total de pessoas distintas que acessaram o IBS.</li></ul><ul id="1f868338-221a-8164-9c03-fc968ee7aff0" class="bulleted-list"><li style="list-style-type:circle"><strong>Ativação:</strong> Total de pessoas que solicitaram acesso ao produto.</li></ul><ul id="1f868338-221a-8106-bcdc-edacd5fd0a90" class="bulleted-list"><li style="list-style-type:circle"><strong>Retenção:</strong> Total de pessoas que acessaram o IBS pelo menos uma vez por mês nos últimos três meses.</li></ul></li></ul><ul id="1f868338-221a-818e-97e0-dcf56f2bc950" class="bulleted-list"><li style="list-style-type:disc"><strong>Principais Tarefas:</strong><ol type="1" id="1f868338-221a-81bf-8654-e37e6609ad36" class="numbered-list" start="1"><li>Definir os critérios exatos para cada etapa do funil (Aquisição, Ativação e Retenção).</li></ol><ol type="1" id="1f868338-221a-8117-a3d4-f81eee734261" class="numbered-list" start="2"><li>Integrar os dados necessários para alimentar a visão de funil no QuickSight.</li></ol><ol type="1" id="1f868338-221a-8105-a11d-df3f3a494ead" class="numbered-list" start="3"><li>Criar visualizações que mostrem o fluxo de usuários ao longo do tempo.</li></ol><ol type="1" id="1f868338-221a-8113-b8c8-f4622723c016" class="numbered-list" start="4"><li>Validar os dados do funil com os stakeholders e ajustar as definições conforme necessário.</li></ol></li></ul><hr id="1f968338-221a-80da-9ddf-cc55aa41f6e4"/><h2 id="1f968338-221a-80dd-9d0c-edc2c3bb4c3e" class=""><strong>Seção: AWSCloudBridge</strong></h2><h3 id="1f968338-221a-808f-acd5-ccee20c1b0a7" class=""><strong>História: [Delivery] Integração da Biblioteca de Registro de Reuso Corporativo ao Projeto AWSCloudBridge</strong></h3><ul id="1f968338-221a-80e2-8d62-e46c7f383fbc" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="1f968338-221a-8090-8bfd-e92d0841c68a" class="">Acreditamos que, ao <strong>integrar a biblioteca corporativa de registro de reuso de projetos ao AWSCloudBridge</strong>, para <strong>automatizar o rastreamento de componentes reutilizados em pipelines e soluções desenvolvidas com a biblioteca</strong>, resultará em <strong>maior governança, rastreabilidade e valorização do impacto da solução no ecossistema do banco</strong>. Saberemos que isso é verdade quando <strong>os usos forem registrados automaticamente via mecanismo oficial de reuso, sem necessidade de manutenção adicional pelo time do AWSCloudBridge</strong>.</p><ul id="1f968338-221a-80a3-a9e4-cdbdebc60da0" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="1f968338-221a-80f6-9852-ecb596cb4a6a" class="">Como time responsável pelo <strong>AWSCloudBridge</strong>, queremos <strong>integrar a biblioteca oficial de rastreio de reusos disponibilizada pelo time de reuso corporativo</strong>, garantindo que <strong>a cada execução relevante de um componente da biblioteca (ex: leitura, escrita, transformação), seja registrado automaticamente o reuso no padrão definido pelo banco</strong>.</p><p id="1f968338-221a-8081-b713-d47d1b840e81" class="">Essa integração permitirá que o <strong>AWSCloudBridge contribua com as métricas corporativas de reuso</strong>, sem esforço manual, e viabilize <strong>análises futuras sobre o impacto da biblioteca, áreas consumidoras e oportunidades de evolução</strong>.</p><ul id="1f968338-221a-80ea-b43e-d52727d4a2d9" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="1f968338-221a-80d4-8023-d073824f5d22" class="">Os <strong>times que utilizam o AWSCloudBridge</strong> continuarão com a mesma experiência, sem mudanças visíveis, enquanto o <strong>registro de reuso acontecerá em segundo plano, seguindo as diretrizes corporativas</strong>. O time do produto, por sua vez, <strong>passará a contar com uma trilha de auditoria e visibilidade sobre como, onde e por quem a biblioteca está sendo usada</strong>.</p><ul id="1f968338-221a-8077-a05f-fc7441407d93" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio:</strong></li></ul><p id="1f968338-221a-80a2-9075-e72f19f1e910" class="">O Itaú já disponibiliza uma <strong>biblioteca oficial para registro de reusos de componentes e soluções técnicas</strong>, como parte da <strong>estratégia de governança e valorização de produtos reutilizáveis</strong>. No entanto, o <strong>AWSCloudBridge ainda não está integrado a essa biblioteca</strong>, dificultando <strong>a rastreabilidade de sua adoção e o reconhecimento do valor gerado em escala</strong>. Esta entrega visa <strong>resolver esse gap com mínimo esforço de desenvolvimento</strong>, utilizando o mecanismo já homologado e suportado internamente.</p><ul id="1f968338-221a-8031-aca1-cc0335873a92" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="1f968338-221a-80ba-9081-f8c9eaf8d696" class="numbered-list" start="1"><li>A biblioteca de reuso oficial já está <strong>publicada, documentada e homologada pelo time de reusos do banco</strong>.</li></ol><ol type="1" id="1f968338-221a-8059-b37e-f39e49256f12" class="numbered-list" start="2"><li>O time do AWSCloudBridge <strong>possui autonomia para incluir dependências externas em sua biblioteca</strong>.</li></ol><ol type="1" id="1f968338-221a-80f7-b6ba-dd6d6c121ea6" class="numbered-list" start="3"><li>Os principais pontos de uso da biblioteca (como funções de leitura, escrita e transformação) <strong>suportam a inclusão de chamadas de logging sem impacto funcional</strong>.</li></ol></li></ul><ul id="1f968338-221a-80fd-929b-e7e6534e6f7a" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="1f968338-221a-805b-be60-dd54c52964af" class="numbered-list" start="1"><li>A biblioteca de reuso deve ser chamada <strong>sempre que um componente principal do AWSCloudBridge for executado</strong>.</li></ol><ol type="1" id="1f968338-221a-8085-9054-fa338d08ff24" class="numbered-list" start="2"><li>O registro deve incluir os parâmetros obrigatórios definidos pelo time de reuso, como:<ul id="1f968338-221a-8052-b832-fb0ca808c6c5" class="bulleted-list"><li style="list-style-type:disc"><code>componente_reutilizado</code></li></ul><ul id="1f968338-221a-8025-9b5b-fc7b2f77e844" class="bulleted-list"><li style="list-style-type:disc"><code>squad_responsável</code></li></ul><ul id="1f968338-221a-801c-886d-ef07a87f19eb" class="bulleted-list"><li style="list-style-type:disc"><code>timestamp</code></li></ul><ul id="1f968338-221a-805b-b504-f9d76b30f9c6" class="bulleted-list"><li style="list-style-type:disc"><code>serviço ou pipeline</code></li></ul></li></ol><ol type="1" id="1f968338-221a-80b3-9729-e1831551f519" class="numbered-list" start="3"><li>O mecanismo de reuso deve ser <strong>resiliente</strong>: falhas na chamada não devem afetar a execução do processo principal.</li></ol></li></ul><ul id="1f968338-221a-80ed-b682-d426c1bdacc1" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ol type="1" id="1f968338-221a-802d-8da7-ee2c4c54e7f1" class="numbered-list" start="1"><li>A biblioteca oficial será <strong>adicionada como dependência do projeto AWSCloudBridge</strong> (via repositório Git interno ou PyPI privado).</li></ol><ol type="1" id="1f968338-221a-80da-8d0f-e9cd1a999cf8" class="numbered-list" start="2"><li>O registro será feito <strong>via função padrão fornecida pelo time de reusos</strong>, que aceita um payload com os dados mínimos obrigatórios.</li></ol><ol type="1" id="1f968338-221a-8018-885f-ca9b0be857db" class="numbered-list" start="3"><li>Os registros serão <strong>armazenados centralmente</strong> pelo time de reuso, sem necessidade de persistência local.</li></ol><ol type="1" id="1f968338-221a-80e4-8035-c771542cce6b" class="numbered-list" start="4"><li>As chamadas poderão ser <strong>validadas via logs (ex: CloudWatch) durante a fase de testes</strong>.</li></ol></li></ul><ul id="1f968338-221a-8028-b946-f2cbb4cc1890" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="1f968338-221a-80f6-a695-fd0fd8907342" class="numbered-list" start="1"><li><strong>Levantamento Técnico com o Time de Reusos</strong><ul id="1f968338-221a-808e-b4ff-cb49741b8e99" class="bulleted-list"><li style="list-style-type:disc">Validar qual biblioteca oficial utilizar.</li></ul><ul id="1f968338-221a-8096-8f98-ff7509f8dd7a" class="bulleted-list"><li style="list-style-type:disc">Alinhar parâmetros obrigatórios do payload.</li></ul></li></ol><ol type="1" id="1f968338-221a-800e-9cbc-c9079be303c7" class="numbered-list" start="2"><li><strong>Integração da Biblioteca ao Projeto</strong><ul id="1f968338-221a-80fb-b887-fdd058f92d82" class="bulleted-list"><li style="list-style-type:disc">Adicionar dependência no projeto.</li></ul><ul id="1f968338-221a-80bf-9fe1-d01fc49c3425" class="bulleted-list"><li style="list-style-type:disc">Inserir chamadas da função de registro nos principais pontos de reuso.</li></ul></li></ol><ol type="1" id="1f968338-221a-80c6-8f6f-cbbe08974786" class="numbered-list" start="3"><li><strong>Testes de Integração</strong><ul id="1f968338-221a-8058-8992-cb2f0c636a49" class="bulleted-list"><li style="list-style-type:disc">Simular uso da biblioteca e validar que os reusos estão sendo registrados corretamente.</li></ul><ul id="1f968338-221a-804e-bdf1-e37ee8bba402" class="bulleted-list"><li style="list-style-type:disc">Garantir que falhas de rede ou autenticação não impactem os processos principais.</li></ul></li></ol><ol type="1" id="1f968338-221a-809e-975a-d897d714734e" class="numbered-list" start="4"><li><strong>Documentação</strong><ul id="1f968338-221a-80f3-9099-d58e3992d205" class="bulleted-list"><li style="list-style-type:disc">Atualizar documentação da AWSCloudBridge com instrução de uso e rastreabilidade.</li></ul></li></ol><ol type="1" id="1f968338-221a-8053-a59d-e19a0e29bf44" class="numbered-list" start="5"><li><strong>Validação com Governança</strong><ul id="1f968338-221a-804e-bdbc-e92733a75d9b" class="bulleted-list"><li style="list-style-type:disc">Confirmar com o time de reusos que os registros estão entrando corretamente na base corporativa.</li></ul></li></ol></li></ul><ul id="1f968338-221a-806f-a9ce-e024302ccda2" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f968338-221a-8006-9950-c82b7042789d" class="numbered-list" start="1"><li>Utilizar um componente do AWSCloudBridge em um pipeline e verificar o registro do reuso.</li></ol><ol type="1" id="1f968338-221a-80d3-bdab-d6f7fc51b455" class="numbered-list" start="2"><li>Simular falhas de rede e validar que a biblioteca continua funcionando normalmente.</li></ol><ol type="1" id="1f968338-221a-805a-bb7a-f852c022f929" class="numbered-list" start="3"><li>Confirmar com o time de reuso que o componente está aparecendo nos relatórios de reusabilidade.</li></ol><ol type="1" id="1f968338-221a-8062-810c-ec5bd858a5e1" class="numbered-list" start="4"><li>Verificar se os logs são emitidos no padrão esperado (ex: CloudWatch, Kibana).</li></ol></li></ul><ul id="1f968338-221a-80a2-8b27-f367bc3a0885" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong><ul id="1f968338-221a-8064-b1c4-c9313982e043" class="bulleted-list"><li style="list-style-type:circle"><strong>Governança completa sobre o uso da biblioteca AWSCloudBridge.</strong></li></ul><ul id="1f968338-221a-8070-b0e7-d73b28f62b86" class="bulleted-list"><li style="list-style-type:circle"><strong>Reconhecimento formal do reuso nos relatórios corporativos.</strong></li></ul><ul id="1f968338-221a-8035-bb38-f538a475aeb5" class="bulleted-list"><li style="list-style-type:circle"><strong>Maior visibilidade para priorização de melhorias baseadas em uso real.</strong></li></ul><ul id="1f968338-221a-800b-b68c-e60ae67be9ae" class="bulleted-list"><li style="list-style-type:circle"><strong>Contribuição com métricas de reutilização como pilar da eficiência técnica.</strong></li></ul><ul id="1f968338-221a-800a-9e4c-cfb62fd58415" class="bulleted-list"><li style="list-style-type:circle"><strong>Rastreabilidade alinhada aos padrões de auditoria de TI.</strong></li></ul></li></ul><ul id="1f968338-221a-8027-9e70-d0fcbb0bcb7e" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão</strong><ul id="1f968338-221a-8097-bd90-f6a8ed7fc67c" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="1f968338-221a-8085-8198-ec86f07aa06a" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R2 S4 2025</li></ul><ul id="1f968338-221a-80a7-ab32-db06ce8dd42b" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> R2 S4 2025</li></ul></li></ul><ul id="1f968338-221a-800b-af2b-ee1235514f94" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="1f968338-221a-80e7-a8e0-fd73f11bd909" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S2 2025</li></ul><ul id="1f968338-221a-8038-ba0f-d8e8b85a8275" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong></li></ul></li></ul><ul id="1f968338-221a-8017-96d2-c4a961cce42f" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong></li></ul></li></ul><h3 id="1f968338-221a-8056-bbcb-e4f426fe21e4" class=""><strong>História: [Discovery] Visão de Funil de Adoção no QuickSight</strong></h3><ul id="1f968338-221a-80e7-8431-f5be505e0646" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f968338-221a-8023-89be-d48d833671db" class="">Nós acreditamos que <strong>incluindo um funil de adoção (AAARR) dentro da dashboard de produto no QuickSight</strong>, para <strong>os stakeholders do IBS 360</strong>, resultará em <strong>uma visão clara sobre a jornada do usuário, permitindo um monitoramento mais detalhado do engajamento e adoção do produto</strong>. Saberemos que isso é verdade através de <strong>análises que permitam identificar oportunidades de melhoria na ativação e retenção dos usuários</strong>.</p></li></ul><ul id="1f968338-221a-8024-af03-e2224efcb431" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f968338-221a-80cb-8d1b-ed27a8c8dc07" class="">Como <strong>time de produto</strong>, queremos <strong>implementar uma visão de funil no QuickSight</strong>, utilizando a metodologia <strong>AAARR (Aquisição, Ativação, Retenção, Receita e Referência)</strong>, garantindo que <strong>o comportamento dos usuários dentro do IBS 360 seja monitorado de forma estruturada e analítica</strong>.</p></li></ul><ul id="1f968338-221a-8071-8e50-dbf1f9a71720" class="bulleted-list"><li style="list-style-type:disc"><strong>Definições do Funil:</strong><ul id="1f968338-221a-80ad-b1ef-f22e8a3004ab" class="bulleted-list"><li style="list-style-type:circle"><strong>Aquisição:</strong> Total de pessoas distintas que acessaram o IBS.</li></ul><ul id="1f968338-221a-8096-be54-d5b5d817018f" class="bulleted-list"><li style="list-style-type:circle"><strong>Ativação:</strong> Total de pessoas que solicitaram acesso ao produto.</li></ul><ul id="1f968338-221a-80dd-b0f3-d208e3f6b8a2" class="bulleted-list"><li style="list-style-type:circle"><strong>Retenção:</strong> Total de pessoas que acessaram o IBS pelo menos uma vez por mês nos últimos três meses.</li></ul></li></ul><ul id="1f968338-221a-800b-a71d-e1a3cc5c31e6" class="bulleted-list"><li style="list-style-type:disc"><strong>Principais Tarefas:</strong><ol type="1" id="1f968338-221a-8025-951f-d22e3507a7c6" class="numbered-list" start="1"><li>Definir os critérios exatos para cada etapa do funil (Aquisição, Ativação e Retenção).</li></ol><ol type="1" id="1f968338-221a-80cf-a45c-f52f0c5498a8" class="numbered-list" start="2"><li>Integrar os dados necessários para alimentar a visão de funil no QuickSight.</li></ol><ol type="1" id="1f968338-221a-8079-a42e-e86cfcd163fd" class="numbered-list" start="3"><li>Criar visualizações que mostrem o fluxo de usuários ao longo do tempo.</li></ol><ol type="1" id="1f968338-221a-80f4-8e3e-ca8d9b18338e" class="numbered-list" start="4"><li>Validar os dados do funil com os stakeholders e ajustar as definições conforme necessário.</li></ol></li></ul><h3 id="1f968338-221a-809a-82c5-cea2d33db1d7" class=""><strong>História: [Delivery] Documentação e Guia de Uso da Dashboard</strong></h3><ul id="1f968338-221a-8059-80e6-dad82f17a71f" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong><p id="1f968338-221a-806e-8c14-c34061de2268" class="">Nós acreditamos que <strong>documentando e estruturando um guia de uso para a dashboard de produto</strong>, para <strong>os stakeholders e o time de produto do IBS 360 e Planejamento de Pessoas</strong>, resultará em <strong>uma melhor compreensão e utilização da ferramenta, garantindo que as métricas sejam interpretadas corretamente e utilizadas para tomadas de decisão estratégicas</strong>. Saberemos que isso é verdade através de <strong>feedbacks dos usuários e análise do engajamento na utilização da dashboard</strong>.</p></li></ul><ul id="1f968338-221a-80f2-bf4a-d2fc6c7a6c13" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="1f968338-221a-8023-a1db-f1e07ea9e2f6" class="">Como <strong>time de produto</strong>, queremos <strong>criar uma documentação completa da dashboard no QuickSight</strong>, incluindo <strong>explicação detalhada dos KPIs, regras de negócio e um storytelling refinado</strong>, garantindo que os stakeholders possam <strong>navegar e interpretar os dados de maneira intuitiva</strong>.</p></li></ul><ul id="1f968338-221a-8079-a4b2-d3a1e904a9e1" class="bulleted-list"><li style="list-style-type:disc"><strong>Principais Tarefas:</strong><ol type="1" id="1f968338-221a-80b9-8d3b-ced6d224fc37" class="numbered-list" start="1"><li>Criar uma documentação técnica explicando os KPIs e as regras de negócio da dashboard.</li></ol><ol type="1" id="1f968338-221a-80e5-9417-e07453b57e93" class="numbered-list" start="2"><li>Elaborar um guia prático de navegação e uso da dashboard para os stakeholders.</li></ol><ol type="1" id="1f968338-221a-80d9-a5ad-c3d228871495" class="numbered-list" start="3"><li>Ajustar o storytelling da dashboard para que a narrativa das métricas seja clara e compreensível.</li></ol><ol type="1" id="1f968338-221a-8016-9e66-c1d44494fbfe" class="numbered-list" start="4"><li>Disponibilizar a documentação para consulta de stakeholders e times técnicos.</li></ol><ol type="1" id="1f968338-221a-8056-bc77-edd5feab46f9" class="numbered-list" start="5"><li>Coletar feedbacks sobre possíveis dúvidas e complementar a documentação conforme necessário.</li></ol></li></ul><ul id="1f968338-221a-80c2-b6c6-e6d10584a2a2" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="1f968338-221a-8054-9c76-dc515c0ba61f" class="numbered-list" start="1"><li>Validar a compreensão dos conceitos com usuários chave.</li></ol><ol type="1" id="1f968338-221a-80ea-8f88-cf7baa5c5595" class="numbered-list" start="2"><li>Avaliar a facilidade de navegação do guia.</li></ol><ol type="1" id="1f968338-221a-8096-b262-c67c584b882d" class="numbered-list" start="3"><li>Coletar sugestões de melhoria e incorporar ajustes.</li></ol></li></ul><ul id="1f968338-221a-8073-a489-fb8c0b3c152b" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong><ul id="1f968338-221a-80fa-af06-e09b91af9a71" class="bulleted-list"><li style="list-style-type:circle">Maior autonomia dos usuários ao utilizar a dashboard.</li></ul><ul id="1f968338-221a-80ed-8087-d48e18a9eb45" class="bulleted-list"><li style="list-style-type:circle">Redução de dúvidas recorrentes sobre as métricas.</li></ul><ul id="1f968338-221a-80a1-8499-ea598e519ab9" class="bulleted-list"><li style="list-style-type:circle">Fortalecimento da cultura data-driven dentro do time.</li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
