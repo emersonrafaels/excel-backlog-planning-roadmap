@@ -1,0 +1,734 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Soluções Cross Dados - R3 S3 2025</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 99, 174, 0.172); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="22968338-221a-809c-9f1a-c21af7b779e0" class="page sans"><header><h1 class="page-title">Soluções Cross Dados - R3 S3 2025</h1><p class="page-description"></p></header><div class="page-body"><h1 id="22968338-221a-8120-9fd9-ca6899bc353b" class=""><strong>Seção: Ferramenta Única de Ocorrências - COPF - MVP</strong></h1><h2 id="25b68338-221a-803b-9d39-e10a191b0d32" class=""><strong>História: [Foundation][Dados] Carga da Base 360 e Base de Equipamentos no RDS da COPF</strong></h2><ul id="25b68338-221a-80ec-b7ba-ea3de9f0a585" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25b68338-221a-80cf-b980-de7f0541b3b9" class="">Acreditamos que, ao <strong>carregar no RDS da COPF as bases complementares — Base 360 (IBS 360) e a Base de Equipamentos</strong>, com estrutura padronizada e pronta para cruzamento com a base de ocorrências pendentes, <strong>garantiremos a continuidade do MVP mesmo antes da democratização oficial dessas bases</strong>, permitindo que as funcionalidades do produto sejam sustentadas com dados confiáveis, mesmo que ainda sob carga manual.</p><p id="25b68338-221a-8071-94ef-fdc39f417880" class="">Saberemos que isso é verdade quando <strong>as tabelas estiverem disponíveis no RDS da COPF, com os campos necessários para enriquecer as análises e alimentar as regras de negócio do produto</strong>.</p><hr id="25b68338-221a-8073-9ffa-cafaff6b7101"/><ul id="25b68338-221a-807f-ba9a-f529add950c7" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="25b68338-221a-802e-ab09-ffcf4f621e13" class="">Como time de dados da COPF, queremos <strong>carregar e manter atualizadas no RDS as duas bases complementares fundamentais para o funcionamento do produto</strong>:</p><ul id="25b68338-221a-803d-832f-dbe2c61a6407" class="bulleted-list"><li style="list-style-type:disc"><strong>Base 360</strong>: Traz contexto sobre os pontos de atendimento do banco.</li></ul><ul id="25b68338-221a-8014-88d5-cd8c23f98c61" class="bulleted-list"><li style="list-style-type:disc"><strong>Base de Equipamentos</strong>: Fornecida com apoio do time do Painel Operacional, é essencial para entender os equipamentos vinculados às ocorrências.</li></ul><p id="25b68338-221a-8087-a182-d3d0a1efff7c" class="">Essas duas bases permitirão o enriquecimento da base de ocorrências pendentes, viabilizando a priorização e análise com base em atributos complementares.</p><hr id="25b68338-221a-8031-80e5-c0b609641a54"/><ul id="25b68338-221a-802e-9a3f-df385a66a46a" class="bulleted-list"><li style="list-style-type:disc"><strong>Dados Necessários:</strong></li></ul><ol type="1" id="25b68338-221a-8059-86f4-ec86565025d8" class="numbered-list" start="1"><li><strong>Base 360</strong>:<ul id="25b68338-221a-80f7-ad08-e84bae8ae8e5" class="bulleted-list"><li style="list-style-type:disc">CD_PONTO</li></ul><ul id="25b68338-221a-805a-8e0f-dc737d86ad40" class="bulleted-list"><li style="list-style-type:disc">Nome do ponto (agência)</li></ul><ul id="25b68338-221a-80a6-a078-c8e62fb96e14" class="bulleted-list"><li style="list-style-type:disc">Estado (UF)</li></ul><ul id="25b68338-221a-8014-b8c1-d7da05b1b786" class="bulleted-list"><li style="list-style-type:disc">Município</li></ul><ul id="25b68338-221a-8056-8b31-efbf0086967c" class="bulleted-list"><li style="list-style-type:disc">DINEG</li></ul><ul id="25b68338-221a-8081-9018-cc90921ab5af" class="bulleted-list"><li style="list-style-type:disc">SUPT</li></ul><ul id="25b68338-221a-8046-928e-f767c3e438b4" class="bulleted-list"><li style="list-style-type:disc">Tipo do Ponto (ex: Agência, Espaço Itaú, PAB, PAE)</li></ul><ul id="25b68338-221a-80fc-b559-c69bee409b2a" class="bulleted-list"><li style="list-style-type:disc">Categoria para o COPF:<ul id="25b68338-221a-808a-a1f4-d0533e5150b2" class="bulleted-list"><li style="list-style-type:circle">Convencional (AG)</li></ul><ul id="25b68338-221a-8040-8f48-d2fce5d8b1bd" class="bulleted-list"><li style="list-style-type:circle">Convencional (PAB)</li></ul><ul id="25b68338-221a-80e1-9c6e-fb43b951fb5f" class="bulleted-list"><li style="list-style-type:circle">Terceirizada (Espaço Itaú)</li></ul><ul id="25b68338-221a-804e-acbf-c4ee7d78ab57" class="bulleted-list"><li style="list-style-type:circle">Terceirizada (PAB)</li></ul><ul id="25b68338-221a-8029-8806-f76cc2737654" class="bulleted-list"><li style="list-style-type:circle">Terceirizada (PAE)</li></ul><ul id="25b68338-221a-8056-b319-f1654c597681" class="bulleted-list"><li style="list-style-type:circle">Terceirizada (Phygital)</li></ul></li></ul></li></ol><ol type="1" id="25b68338-221a-804d-8548-f4cb2ba48288" class="numbered-list" start="2"><li><strong>Base de Equipamentos</strong>:<ul id="25b68338-221a-80e4-a998-d58f24fb6751" class="bulleted-list"><li style="list-style-type:disc">Identificador único do equipamento</li></ul><ul id="25b68338-221a-8028-9d03-cff34762ebbe" class="bulleted-list"><li style="list-style-type:disc">Nome do equipamento</li></ul></li></ol><hr id="25b68338-221a-80cc-abd2-c7aa1fc759d6"/><ul id="25b68338-221a-80ab-b95a-e5580f56e6d8" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25b68338-221a-800f-9d3d-c4406967152a" class="">Usuários do COPF, incluindo <strong>analistas de operação e gestores de produto</strong>, precisam de dados enriquecidos sobre agências e equipamentos para:</p><ul id="25b68338-221a-801f-b3bb-fec1169f609b" class="bulleted-list"><li style="list-style-type:disc">Priorizar ocorrências críticas com base no tipo de ponto e equipamento afetado.</li></ul><ul id="25b68338-221a-805a-9106-e18faa0c29fb" class="bulleted-list"><li style="list-style-type:disc">Diferenciar pontos convencionais e terceirizados, orientando ações de SLA e tratativas com fornecedores.</li></ul><ul id="25b68338-221a-8013-949c-c1e8ab33f0f8" class="bulleted-list"><li style="list-style-type:disc">Viabilizar análises estruturadas e visualizações agregadas nas telas operacionais.</li></ul><hr id="25b68338-221a-80db-9e56-eddaf85faffc"/><ul id="25b68338-221a-801e-9cce-d4c0aadb1dc9" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto / Narrativa de Negócio:</strong></li></ul><p id="25b68338-221a-80df-a8dc-cb26e9c6caf7" class="">Atualmente, essas bases <strong>não estão democratizadas via catálogo</strong>, o que impede o acesso automatizado e obriga o uso de versões manuais. Carregá-las no RDS da COPF <strong>é uma solução provisória estratégica</strong> que garante a continuidade operacional, testes de funcionalidades e validações de regras de negócio essenciais para o avanço do produto.</p><hr id="25b68338-221a-8091-908b-efe70a469709"/><ul id="25b68338-221a-80c0-9dd1-e861332845c2" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong></li></ul><ol type="1" id="25b68338-221a-80ba-8cba-cfefd26f93b0" class="numbered-list" start="1"><li>Os arquivos mais recentes dessas bases estão disponíveis por extração manual junto aos times responsáveis (Base 360 e Painel Operacional).</li></ol><ol type="1" id="25b68338-221a-8026-b36c-ff19fd1304b2" class="numbered-list" start="2"><li>A ingestão no RDS será feita com estrutura padronizada, mesmo que sob atualização manual.</li></ol><ol type="1" id="25b68338-221a-80d1-a4cd-c5eca7e1dd43" class="numbered-list" start="3"><li>Essas cargas são temporárias até a formalização da democratização e ingestão automatizada.</li></ol><hr id="25b68338-221a-8075-abc5-d6d4c8ab02c5"/><ul id="25b68338-221a-8086-af99-c0504d97917d" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong></li></ul><ol type="1" id="25b68338-221a-800a-8619-e5f267c76c1c" class="numbered-list" start="1"><li>As tabelas carregadas devem conter os campos mínimos necessários para cruzamento com a base de ocorrências.</li></ol><ol type="1" id="25b68338-221a-809a-a00f-da30cf150d9e" class="numbered-list" start="2"><li>Cada versão carregada deve conter uma coluna <code>data_base</code> informando sua referência temporal.</li></ol><ol type="1" id="25b68338-221a-8047-a26a-d22606d2be89" class="numbered-list" start="3"><li>A periodicidade mínima de atualização deve ser definida até o processo ser automatizado.</li></ol><hr id="25b68338-221a-8098-a520-d262b068831f"/><ul id="25b68338-221a-80ab-870d-d76d593256df" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong></li></ul><ul id="25b68338-221a-80cb-bbf3-c4307e11ed36" class="bulleted-list"><li style="list-style-type:disc">Local de ingestão: <strong>RDS da COPF (VO3)</strong>.</li></ul><ul id="25b68338-221a-80b1-b403-d17d180e8bdd" class="bulleted-list"><li style="list-style-type:disc">Tabelas:<ul id="25b68338-221a-80a3-8fd3-fca5c2d8de9e" class="bulleted-list"><li style="list-style-type:circle"><code>tbl_agências</code></li></ul><ul id="25b68338-221a-8006-b9d9-e9d284da336d" class="bulleted-list"><li style="list-style-type:circle"><code>tbl_equipamentos</code></li></ul></li></ul><ul id="25b68338-221a-804b-8138-cfc869c07571" class="bulleted-list"><li style="list-style-type:disc">Atualização via script Python com execução manual (inicialmente).</li></ul><hr id="25b68338-221a-801a-9782-e7f877f292ed"/><ul id="25b68338-221a-809b-bdd5-dcc75c0f5789" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong></li></ul><ol type="1" id="25b68338-221a-8094-ad87-e70039a39cb6" class="numbered-list" start="1"><li>Solicitar e validar os arquivos atualizados com os times do IBS 360 e Painel Operacional.</li></ol><ol type="1" id="25b68338-221a-80aa-9167-f36834054b75" class="numbered-list" start="2"><li>Realizar a carga inicial e validar os dados inseridos.</li></ol><ol type="1" id="25b68338-221a-8088-bba7-e2c61bf1f0ee" class="numbered-list" start="3"><li>Testar o cruzamento com a base de ocorrências.</li></ol><hr id="25b68338-221a-8091-aec7-f3f6c3e8d3d4"/><ul id="25b68338-221a-802c-85c6-cb31ae43eff7" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong></li></ul><ol type="1" id="25b68338-221a-80d8-b5ad-d251e8f10fbc" class="numbered-list" start="1"><li>As tabelas são populados com os campos esperados e tipagem adequada.</li></ol><ol type="1" id="25b68338-221a-80c7-9e01-f5c853947b4d" class="numbered-list" start="2"><li>Os dados cruzam corretamente com a base de ocorrências (testar joins e filtros).</li></ol><ol type="1" id="25b68338-221a-80da-b53a-e8c61912e9de" class="numbered-list" start="3"><li>O volume e a integridade dos dados são mantidos durante a carga.</li></ol><ol type="1" id="25b68338-221a-80e8-b8f0-ea212c42c30b" class="numbered-list" start="4"><li>As colunas <code>data_base</code> estão corretamente preenchidas.</li></ol><hr id="25b68338-221a-80b1-a51a-d379d897df83"/><ul id="25b68338-221a-8091-aacc-e43e799ff4ed" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong></li></ul><ul id="25b68338-221a-8050-b1e0-de295b6bcea3" class="bulleted-list"><li style="list-style-type:disc">Continuidade das funcionalidades já construídas no MVP.</li></ul><ul id="25b68338-221a-80fd-917b-ff8bd90d0dbf" class="bulleted-list"><li style="list-style-type:disc">Capacidade de análise enriquecida e orientada por contexto.</li></ul><ul id="25b68338-221a-80c1-9594-facdba2459e7" class="bulleted-list"><li style="list-style-type:disc">Redução de riscos associados à falta de democratização oficial no curto prazo.</li></ul><hr id="25b68338-221a-8083-97c6-f83c5558075d"/><ul id="25b68338-221a-80ab-96ac-cf3d1c864792" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão:</strong><ul id="25b68338-221a-801f-b074-d0db7826f80c" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="25b68338-221a-8037-853b-d4df354f6e2d" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25b68338-221a-80a1-b4df-dd39dfe39160" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> R3 S3 2025</li></ul></li></ul><ul id="25b68338-221a-80d4-8874-c4a2d609fe76" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="25b68338-221a-80f9-9ab0-f167b1c663cf" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25b68338-221a-8087-911c-c21b5fac9491" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><ul id="25b68338-221a-8041-9645-dbfc3d4c814f" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><h2 id="25768338-221a-80df-b2f6-d64a06898330" class=""><strong>História: [Delivery][Frontend] Desenvolvimento dos big numbers (cards) da tela de Home Page (dashboard) (Frontend)</strong></h2><ul id="25768338-221a-8070-9c10-f9410bcb6e9f" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25768338-221a-80a0-ae84-f882424852f8" class="">Acreditamos que, ao <strong>exibir Big Numbers (indicadores resumidos e de alto impacto visual) na tela inicial do COPF (dashboard)</strong>, página visível apenas para a<strong>nalistas operacionais e gestores (não estará visível para fornecedores)</strong>, resultará em <strong>uma visão imediata da situação geral das ocorrências e permitirá priorizações rápidas e orientadas por dados</strong>.</p><p id="25768338-221a-80d0-9435-df1b12e3a291" class="">Saberemos que isso é verdade quando <strong>os usuários conseguirem, com apenas uma olhada na dashboard, entender a gravidade do cenário atual, como número de ocorrências críticas, agências VIPs afetadas e equipamentos inoperantes.</strong></p><hr id="25768338-221a-8096-b19a-f4270cb365a9"/><ul id="25768338-221a-8011-a3bf-e40564b2d78c" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="25768338-221a-8035-b49a-f72a6ddd2e0d" class="">Como time de frontend da COPF, queremos <strong>desenvolver e disponibilizar na tela inicial do produto os Big Numbers</strong>, com destaque visual e navegabilidade, para que <strong>os times operacionais possam ter uma leitura rápida e objetiva dos principais KPIs da ferramenta</strong>.</p><p id="25768338-221a-80e5-850d-ed89018f7156" class="">Indicadores exibidos:</p><ol type="1" id="25768338-221a-8059-b085-eb08b9892c47" class="numbered-list" start="1"><li><strong>Ocorrências pendentes</strong></li></ol><ol type="1" id="25768338-221a-808a-a8f6-ce12f81f9127" class="numbered-list" start="2"><li><strong>Ocorrências críticas</strong></li></ol><ol type="1" id="25768338-221a-8050-8fbe-ca9b51bb88e3" class="numbered-list" start="3"><li><strong>Agências afetadas</strong> (com destaque para VIPs)</li></ol><ol type="1" id="25768338-221a-802f-99db-c1b069a0dd7c" class="numbered-list" start="4"><li><strong>Equipamentos inoperantes</strong></li></ol><p id="25768338-221a-8065-8ec3-fda727f6f1db" class="">Cada indicador contará com:</p><ul id="25768338-221a-8044-8ca9-ca7c10c4729c" class="bulleted-list"><li style="list-style-type:disc">Valor absoluto atualizado a cada vez que o usuário clicar no botão de atualizar.</li></ul><ul id="25768338-221a-8011-84b3-cffd6e2c0b91" class="bulleted-list"><li style="list-style-type:disc">Acesso a &quot;Detalhes&quot; com redirecionamento para as telas de listagem e filtros aplicados.</li></ul><hr id="25768338-221a-8098-a38c-da81464cab16"/><ul id="25768338-221a-809b-a6bb-fca370643ab9" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25768338-221a-809f-b26f-dec25a71092e" class="">Usuários operacionais e gestores precisam visualizar os principais indicadores de status logo ao acessar a ferramenta, para tomar decisões rápidas, priorizar ações e distribuir esforços da equipe com base na gravidade do cenário atual.</p><hr id="25768338-221a-8020-a0f8-c527bef02032"/><ul id="25768338-221a-80c7-8aab-e2f1c521236b" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto / Narrativa de Negócio:</strong></li></ul><p id="25768338-221a-800b-a13d-c8e63ff06697" class="">Antes da exibição desses indicadores, os times precisavam abrir várias telas ou consultar painéis externos para entender a situação da rede. Isso dificultava reações rápidas em contextos críticos. Os Big Numbers oferecem uma leitura executiva e operacional da situação em tempo real.</p><hr id="25768338-221a-8008-82bf-ed97b3c086d4"/><ul id="25768338-221a-8036-bf48-d0e5b88c4e39" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong></li></ul><ol type="1" id="25768338-221a-80b7-8ffd-cf415ed8ff5d" class="numbered-list" start="1"><li>Os indicadores são calculados com base em views ou queries já existentes.</li></ol><ol type="1" id="25768338-221a-802f-a2c5-fcb58272d599" class="numbered-list" start="2"><li>Os dados utilizados são os mesmos da tela de ocorrências, garantindo consistência.</li></ol><ol type="1" id="25768338-221a-804b-865c-ddd73410f31e" class="numbered-list" start="3"><li>A navegação para &quot;Detalhes&quot; aplica filtros correspondentes ao indicador clicado.</li></ol><hr id="25768338-221a-808f-bb77-d4a7510530d5"/><ul id="25768338-221a-80d8-a62b-f766e76f6233" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong></li></ul><ol type="1" id="25768338-221a-8034-82bc-c802a01fbf4b" class="numbered-list" start="1"><li><strong>Ocorrências pendentes</strong>: Total de ocorrências abertas.<ol type="a" id="25768338-221a-80e5-bf29-cac88d4d48d2" class="numbered-list" start="1"><li>Status da ocorrência: A iniciar + Em Andamento + Com impedimentos</li></ol></li></ol><ol type="1" id="25768338-221a-806f-8478-e904968dfc85" class="numbered-list" start="2"><li><strong>Ocorrências críticas</strong>: Subconjunto das pendentes, marcadas como críticas.<ol type="a" id="25768338-221a-8099-b9cb-f26a5b67392c" class="numbered-list" start="1"><li>Status da ocorrência: A iniciar + Em Andamento + Com impedimentos</li></ol><ol type="a" id="25768338-221a-80a8-bffd-daf0a9567d18" class="numbered-list" start="2"><li>Criticidade: Críticas</li></ol></li></ol><ol type="1" id="25768338-221a-804a-8bfd-eb02ba68422a" class="numbered-list" start="3"><li><strong>Agências afetadas</strong>: Contagem de agências com ao menos uma ocorrência pendente; VIPs devem aparecer em destaque.</li></ol><ol type="1" id="25768338-221a-806d-84cc-dcb53578944a" class="numbered-list" start="4"><li><strong>Equipamentos inoperantes</strong>: Contagem de equipamentos com status de indisponibilidade operacional.<ol type="a" id="25768338-221a-8028-97fc-f8b582c2ebb6" class="numbered-list" start="1"><li>Status da ocorrência: A iniciar + Em Andamento + Com impedimentos</li></ol><ol type="a" id="25768338-221a-803a-accd-c4d8cca5c609" class="numbered-list" start="2"><li>Status do equipamento: Inoperantes</li></ol></li></ol><hr id="25768338-221a-80fb-b9df-f9e26e3f8405"/><ul id="25768338-221a-8002-92d5-f47638cc5769" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong></li></ul><ul id="25768338-221a-80f3-aba9-ee5c10503993" class="bulleted-list"><li style="list-style-type:disc">Os valores devem ser renderizados com destaque visual (ex: fonte grande, ícones se aplicável).</li></ul><ul id="25768338-221a-8000-81df-ee08d4610254" class="bulleted-list"><li style="list-style-type:disc">O componente de <strong>“Detalhes”</strong> deve permitir redirecionamento com filtros aplicados.</li></ul><ul id="25768338-221a-80a5-a048-f0c0f9d51d9b" class="bulleted-list"><li style="list-style-type:disc">Os dados devem ser atualizados de forma reativa com base no backend atual (streaming ou polling).</li></ul><hr id="25768338-221a-80f3-b0ea-f8f94858385a"/><ul id="25768338-221a-804a-8382-d8e008a1a8e4" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong></li></ul><ol type="1" id="25768338-221a-801a-8a04-c985132fda30" class="numbered-list" start="1"><li>Mapear os dados necessários para cada indicador.</li></ol><ol type="1" id="25768338-221a-806e-b266-fc72ed70470d" class="numbered-list" start="2"><li>Construir os componentes de Big Numbers no front-end.</li></ol><ol type="1" id="25768338-221a-80aa-871d-d9b94ff7e682" class="numbered-list" start="3"><li>Criar a navegação para as páginas de detalhe com os filtros aplicados.</li></ol><ol type="1" id="25768338-221a-80a1-8f43-f0135aa6749f" class="numbered-list" start="4"><li>Realizar testes de exibição e performance.</li></ol><hr id="25768338-221a-805f-8113-f935ffe8f9d9"/><ul id="25768338-221a-8079-8677-f0f131c98e98" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong></li></ul><ol type="1" id="25768338-221a-805c-926d-f62c07bee851" class="numbered-list" start="1"><li>A home carrega corretamente os quatro indicadores com dados atualizados.</li></ol><ol type="1" id="25768338-221a-8054-8de8-c390f9546101" class="numbered-list" start="2"><li>Cada botão &quot;Detalhes&quot; leva à tela correta com os filtros esperados.</li></ol><ol type="1" id="25768338-221a-807e-923a-f69596679f53" class="numbered-list" start="3"><li>Layout responsivo e legível em diferentes resoluções.</li></ol><ol type="1" id="25768338-221a-80cb-b409-d478bb0fedfc" class="numbered-list" start="4"><li>Os dados exibidos batem com as queries de base.</li></ol><hr id="25768338-221a-80ab-848a-e14490b3c6ea"/><ul id="25768338-221a-804a-9cda-e26750506fa6" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong></li></ul><ul id="25768338-221a-8040-8600-d5dd70951be3" class="bulleted-list"><li style="list-style-type:disc">Aumento da velocidade de análise e reação dos times operacionais.</li></ul><ul id="25768338-221a-80b0-83c0-d3e02ab5003d" class="bulleted-list"><li style="list-style-type:disc">Maior clareza do status geral da operação logo na entrada da ferramenta.</li></ul><ul id="25768338-221a-8045-b552-f07ee6d1776d" class="bulleted-list"><li style="list-style-type:disc">Redução de cliques e tempo para identificar prioridades.</li></ul><hr id="25768338-221a-8052-87d8-fc6aaefabc6a"/><ul id="25768338-221a-801d-bbf4-d04acf11307e" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão:</strong><ul id="25768338-221a-807a-b1ca-e2f5c79a6bef" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="25768338-221a-8051-96c7-fdbc969b2ede" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25768338-221a-80e7-bf25-e403400db831" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> R3 S3 2025</li></ul></li></ul><ul id="25768338-221a-803f-b059-fc6a86df237f" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="25768338-221a-80ee-9e84-f774525e5a69" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25768338-221a-80c5-8ab0-eb4035c99247" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><ul id="25768338-221a-8076-9967-f99ddb0260f2" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><h2 id="25768338-221a-808f-9750-d1e185e8a8e3" class=""><strong>História: [Delivery][Backend] Desenvolvimento da Lambda de agregação para Big Numbers da Home Page (dashboard)</strong></h2><ul id="25768338-221a-8053-9bbd-fa7a32cdbafa" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25768338-221a-8042-a7b2-e9417d578559" class="">Acreditamos que, ao <strong>desenvolver uma Lambda responsável por consolidar e entregar os indicadores que compõem os Big Numbers da Home (Dashboard) do COPF</strong>, será possível <strong>garantir atualização eficiente, performance e consistência dos dados que sustentam a experiência de leitura rápida e tomada de decisão por parte dos usuários</strong>.</p><p id="25768338-221a-808b-8af1-c6acaf3769d0" class="">Saberemos que isso é verdade quando <strong>os Big Numbers forem exibidos com informações atualizadas, consistentes com os dados operacionais, e com tempo de resposta adequado para uso no dia a dia operacional</strong>.</p><hr id="25768338-221a-80b3-af48-f1929e2a04e8"/><ul id="25768338-221a-80f2-a27c-c9a9eefa70c3" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="25768338-221a-80e3-8b0a-e64c0ae189ce" class="">Como time de engenharia de dados/backend da COPF, queremos <strong>implementar uma função Lambda em AWS que agregue e exponha os dados necessários para os indicadores principais da Home (Big Numbers)</strong>, para que o frontend possa consumi-los de forma simples e performática.</p><p id="25768338-221a-800f-911c-cb983e2435e7" class="">A função deve:</p><ul id="25768338-221a-8090-af6e-ff1188a92b77" class="bulleted-list"><li style="list-style-type:disc">Ser acionada sob demanda (ex: clique no botão de atualizar).</li></ul><ul id="25768338-221a-801a-987e-db19b4ff3dee" class="bulleted-list"><li style="list-style-type:disc">Realizar as agregações conforme as regras de negócio.</li></ul><ul id="25768338-221a-80e4-968b-d617667584f9" class="bulleted-list"><li style="list-style-type:disc">Retornar um JSON contendo os valores dos quatro indicadores.</li></ul><ul id="25768338-221a-80c8-8725-d49e03272a43" class="bulleted-list"><li style="list-style-type:disc">Ser acessada via API Gateway com autenticação apropriada.</li></ul><hr id="25768338-221a-800d-9577-d74e89841087"/><ul id="25768338-221a-80b0-b8ff-c6b84e67e8b8" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25768338-221a-805f-b90b-df9b401b2857" class="">Embora invisível para o usuário final, essa Lambda viabiliza que os dados dos Big Numbers estejam sempre consistentes com a base atual, com performance adequada e baixo custo de infraestrutura.</p><hr id="25768338-221a-802f-86c6-d2c50b4066ef"/><ul id="25768338-221a-80c4-bb5a-fe4be0ea4648" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto / Narrativa de Negócio:</strong></li></ul><p id="25768338-221a-8024-a028-f8836fe74ade" class="">A Lambda centraliza o processo de agregação com regras de negócio bem definidas, garantindo dados confiáveis e encapsulados para o dashboard.</p><hr id="25768338-221a-8065-8b18-c32210966443"/><ul id="25768338-221a-80a3-a0f0-e416ae5cfcf1" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong></li></ul><ol type="1" id="25768338-221a-807f-985d-fa7da6075a37" class="numbered-list" start="1"><li>As tabelas e views utilizadas já estão disponíveis no ambiente da VO3 - COPF.</li></ol><ol type="1" id="25768338-221a-8085-8edc-d32a38ed036d" class="numbered-list" start="2"><li>A Lambda será protegida por autenticação e autorizada apenas ao front da COPF. Além de validar se quem está chamando, é da operação, pois somente a operação deve conseguir obter esses valores.</li></ol><ol type="1" id="25768338-221a-8088-9842-e9b3c77128d6" class="numbered-list" start="3"><li>O deploy será realizado via pipeline automatizado.</li></ol><hr id="25768338-221a-8093-9a8b-d84340f98e5a"/><ul id="25768338-221a-8007-be96-da62e65ce332" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio (para cálculo dos indicadores):</strong></li></ul><ol type="1" id="25768338-221a-809f-bf88-fc0c6372a3d3" class="numbered-list" start="1"><li><strong>Ocorrências pendentes</strong>: Contar todas com status:<ul id="25768338-221a-8025-bbc6-e273529cad42" class="bulleted-list"><li style="list-style-type:disc"><code>A iniciar</code>, <code>Em Andamento</code>, <code>Com impedimentos</code></li></ul></li></ol><ol type="1" id="25768338-221a-80f0-a937-ed4996c7df20" class="numbered-list" start="2"><li><strong>Ocorrências críticas</strong>: Subconjunto das pendentes com <code>criticidade = Crítica</code>.</li></ol><ol type="1" id="25768338-221a-807e-81b7-ef4fa4b8cb3b" class="numbered-list" start="3"><li><strong>Agências afetadas</strong>: Contagem de agências com ao menos uma ocorrência pendente. Indicar também quantas são VIPs.</li></ol><ol type="1" id="25768338-221a-80aa-8b5d-c222f47269b3" class="numbered-list" start="4"><li><strong>Equipamentos inoperantes</strong>:<ul id="25768338-221a-801e-b9a7-d06fcf6546b3" class="bulleted-list"><li style="list-style-type:disc">Ocorrências com status <code>A iniciar</code>, <code>Em Andamento</code>, <code>Com impedimentos</code></li></ul><ul id="25768338-221a-8016-a5b4-f04d70c94d4b" class="bulleted-list"><li style="list-style-type:disc">E equipamentos com status = <code>Inoperante</code></li></ul></li></ol><hr id="25768338-221a-8085-a1de-fee74feff12f"/><ul id="25768338-221a-8069-82b4-e5a75fa0d177" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong></li></ul><ul id="25768338-221a-807a-9de0-cea48ea9bee8" class="bulleted-list"><li style="list-style-type:disc">Linguagem sugerida: Python 3.11</li></ul><ul id="25768338-221a-809b-8ab3-d1737e0c6a30" class="bulleted-list"><li style="list-style-type:disc">Infra: AWS Lambda + API Gateway</li></ul><ul id="25768338-221a-802f-8878-f92678f875c5" class="bulleted-list"><li style="list-style-type:disc">Output (JSON):</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="25768338-221a-80e3-baee-da173076926c" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;ocorrencias_pendentes&quot;: 747,
+  &quot;ocorrencias_criticas&quot;: 254,
+  &quot;agencias_afetadas&quot;: {
+    &quot;total&quot;: 211,
+    &quot;vips&quot;: 41
+  },
+  &quot;equipamentos_inoperantes&quot;: 326
+}</code></pre><hr id="25768338-221a-80a5-8511-e9b7648e0511"/><ul id="25768338-221a-807e-bbb4-c0e2f7e9d7af" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong></li></ul><ol type="1" id="25768338-221a-80eb-aa43-cee65530b140" class="numbered-list" start="1"><li>Especificar as queries de agregação para cada indicador.</li></ol><ol type="1" id="25768338-221a-805e-b71b-eeeef4672788" class="numbered-list" start="2"><li>Implementar a Lambda com controle de erros e logging.</li></ol><ol type="1" id="25768338-221a-80a3-bd00-e6deee4b2fa8" class="numbered-list" start="3"><li>Realizar testes unitários e de performance.</li></ol><hr id="25768338-221a-80d3-be40-ebdb45e2232d"/><ul id="25768338-221a-80ca-88cc-ebdafd40b2fd" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong></li></ul><ol type="1" id="25768338-221a-80a5-b9bf-def46da23f58" class="numbered-list" start="1"><li>Lambda retorna todos os indicadores com dados consistentes.</li></ol><ol type="1" id="25768338-221a-80f8-9027-dce4354779d3" class="numbered-list" start="2"><li>Manipulação de falhas (ex: erro na query, retorno vazio).</li></ol><ol type="1" id="25768338-221a-80ed-bfab-d34fdbab7bd2" class="numbered-list" start="3"><li>Integração validada com o front-end (mock ou ambiente real).</li></ol><ol type="1" id="25768338-221a-801e-8d93-e50455c814f1" class="numbered-list" start="4"><li>Logs gerados para cada execução.</li></ol><hr id="25768338-221a-80ec-beb4-ced091235bef"/><ul id="25768338-221a-8089-9592-fed6f3bc9270" class="bulleted-list"><li style="list-style-type:disc"><strong>Critérios de Aceite:</strong></li></ul><ul id="25768338-221a-8017-80b7-ea7589677f5d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">A Lambda está disponível em endpoint autenticado.</span><div class="indented"></div></li></ul><ul id="25768338-221a-80a2-aaa3-f54250335d4a" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">O retorno segue o padrão de JSON acordado.</span><div class="indented"></div></li></ul><ul id="25768338-221a-80b4-b2e2-c6f794014372" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Os dados retornados batem com as views de origem.</span><div class="indented"></div></li></ul><ul id="25768338-221a-80c8-996e-e59f641af968" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">O código está versionado e integrado no repositório da COPF.</span><div class="indented"></div></li></ul><hr id="25768338-221a-8079-9da1-e3b220325680"/><ul id="25768338-221a-80eb-bc43-c268bb003eb0" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong></li></ul><ul id="25768338-221a-8060-889f-c2c32b9d82dd" class="bulleted-list"><li style="list-style-type:disc">Consolidação da lógica de negócio em um ponto único.</li></ul><ul id="25768338-221a-805c-9724-ca5bedf98e81" class="bulleted-list"><li style="list-style-type:disc">Maior confiabilidade e consistência dos dados apresentados no dashboard.</li></ul><hr id="25768338-221a-80f9-8e62-c2bbdcdc50c2"/><ul id="25768338-221a-80ee-bf17-f10fd818bb15" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão:</strong><ul id="25768338-221a-8043-aa7a-f6538c6550bf" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="25768338-221a-8071-a601-db5b1eaf24b7" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25768338-221a-8013-8ab2-cca00679a07a" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> R3 S3 2025</li></ul></li></ul><ul id="25768338-221a-8089-afcc-f8c2f57619a1" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="25768338-221a-8051-995a-d5ba6b436568" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25768338-221a-8033-9067-ed97dbd55dd1" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><ul id="25768338-221a-80ba-b120-d5e99f61e41c" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><h2 id="25a68338-221a-8048-9fd2-efd097b8205e" class=""><strong>História: [Delivery][Frontend] Desenvolvimento dos gráficos da dashboard da Home Page (COPF)</strong></h2><ul id="25a68338-221a-802f-8dbc-f0b60cd3509a" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25a68338-221a-807e-8f10-f882b059133e" class="">Acreditamos que, ao <strong>exibir gráficos de análise na Home Page (Dashboard) do COPF</strong>, como <strong>status de equipamentos</strong>, <strong>agências mais afetadas</strong>, <strong>aging de ocorrências</strong>, <strong>motivos mais frequentes</strong> e <strong>fornecedores e a relação previsão de atendimento e sla</strong>, <strong>os times operacionais poderão identificar rapidamente padrões, tendências e gargalos</strong>, otimizando decisões e melhorando a eficiência da atuação.</p><p id="25a68338-221a-8064-8c9a-c7fadd565098" class="">Saberemos que isso é verdade quando <strong>os usuários conseguirem tomar decisões ou priorizar ações com base apenas nos gráficos exibidos, sem precisar acessar outras telas ou relatórios externos</strong>.</p><hr id="25a68338-221a-80ec-a9c3-d792ed365bbd"/><ul id="25a68338-221a-80cf-88fd-d2ce8a3c82a0" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="25a68338-221a-80a8-bc99-f84e535dbc95" class="">Como time de frontend da COPF, queremos <strong>implementar os gráficos principais da Home Page</strong>, com visual limpo, responsivo e de fácil leitura, para que os usuários tenham uma <strong>visão analítica resumida</strong> das ocorrências e equipamentos monitorados.</p><p id="25a68338-221a-80db-8e4a-c10a2a62a9a7" class="">Gráficos a serem desenvolvidos:</p><ol type="1" id="25a68338-221a-8022-a045-f96f91748feb" class="numbered-list" start="1"><li><strong>Status dos Equipamentos</strong></li></ol><ol type="1" id="25a68338-221a-8040-80f5-f306f516072d" class="numbered-list" start="2"><li><strong>Top 10 pontos por volume de ocorrências</strong></li></ol><ol type="1" id="25a68338-221a-8056-af21-d270835603a2" class="numbered-list" start="3"><li><strong>Gráfico de Aging</strong></li></ol><ol type="1" id="25a68338-221a-80be-b8d8-d849451eb1ed" class="numbered-list" start="4"><li><strong>Long Tail - Sintomas das Ocorrências</strong><ol type="a" id="25a68338-221a-8044-b9fe-e73cca2e2e2d" class="numbered-list" start="1"><li>Sem o eixo duplo (gráfico de linha acumulada)</li></ol></li></ol><ol type="1" id="25a68338-221a-80a8-ab75-ecc1c7092a34" class="numbered-list" start="5"><li><strong>Fornecedor x Previsão x SLA</strong></li></ol><p id="25a68338-221a-805c-9e6c-ec16600e7d13" class="">Cada gráfico deve:</p><ul id="25a68338-221a-80a0-8e65-f50a22d93348" class="bulleted-list"><li style="list-style-type:disc">Ser reativo à atualização manual da página</li></ul><hr id="25a68338-221a-803b-8d90-da6a5d616343"/><ul id="25a68338-221a-803d-9739-f8093da994bc" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25a68338-221a-8016-b0e6-f7227b6fb572" class="">Usuários operacionais e gestores precisam <strong>entender rapidamente os focos de atenção</strong>, como agências mais impactadas, principais motivos de falhas e o tempo médio de resolução, de forma visual e acessível logo na Home (Dashboard).</p><hr id="25a68338-221a-8067-8744-c018e8af6c12"/><ul id="25a68338-221a-806f-b673-ca426ae67a73" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto / Narrativa de Negócio:</strong></li></ul><p id="25a68338-221a-808f-b87b-dbbc2731eb02" class="">Antes desses gráficos, as análises eram feitas manualmente a partir de planilhas ou painéis separados. Ao integrar os gráficos na Home Page do COPF, tornamos o monitoramento mais inteligente e proativo, especialmente em situações críticas.</p><hr id="25a68338-221a-80b7-ad13-e8aadbf40c37"/><ul id="25a68338-221a-809a-acb7-fdcca4deb47d" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong></li></ul><ol type="1" id="25a68338-221a-8094-9b3c-cde4f19513ad" class="numbered-list" start="1"><li>As bibliotecas gráficas utilizadas são compatíveis com o framework atual do COPF.</li></ol><ol type="1" id="25a68338-221a-80df-967f-c803270bb98a" class="numbered-list" start="2"><li>Os dados são consistentes com os já utilizados em outras telas da plataforma.</li></ol><hr id="25a68338-221a-8000-94de-d6cf9bd0b30b"/><ul id="25a68338-221a-804f-989c-fe0996a263dd" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ul id="25a68338-221a-808c-8645-d1a231a1e4ca" class="bulleted-list"><li style="list-style-type:circle"><strong>Status dos Equipamentos:</strong><ul id="25b68338-221a-80bf-b142-c711fc5e2d1b" class="bulleted-list"><li style="list-style-type:square">Agrupar por tipo de equipamento.</li></ul><ul id="25b68338-221a-80ae-99a6-df33ea08e810" class="bulleted-list"><li style="list-style-type:square">Contabilizar status &quot;operante&quot; e &quot;inoperante&quot;.</li></ul></li></ul><ol type="1" id="25b68338-221a-80a9-b118-dac562a9e03b" class="numbered-list" start="1"><li><strong>Top 10 pontos por volume de ocorrências</strong><ul id="25b68338-221a-80ae-86bb-ce4aae508d3f" class="bulleted-list"><li style="list-style-type:disc">Listar as 10 agências com maior volume de ocorrências pendentes.</li></ul><ul id="25b68338-221a-8014-b332-dfde32bbeabe" class="bulleted-list"><li style="list-style-type:disc">Incluir marcador para VIPs.</li></ul></li></ol><ol type="1" id="25b68338-221a-80fb-b9b8-eeb09b31230d" class="numbered-list" start="2"><li><strong>Aging das Ocorrências:</strong> Agrupar ocorrências abertas pelas faixas de dias:<ul id="25b68338-221a-80ea-9cef-e506ac2e9e2c" class="bulleted-list"><li style="list-style-type:disc">0 – 1 dia</li></ul><ul id="25b68338-221a-8062-a58a-cce70dbee6e4" class="bulleted-list"><li style="list-style-type:disc">1 – 2 dias</li></ul><ul id="25b68338-221a-8078-ba03-c592a67a6341" class="bulleted-list"><li style="list-style-type:disc">2 – 4 dias</li></ul><ul id="25b68338-221a-80a6-89e0-d88ca153caf9" class="bulleted-list"><li style="list-style-type:disc">≥ 5 dias</li></ul></li></ol><ol type="1" id="25b68338-221a-8076-97bc-c4cc4cd74856" class="numbered-list" start="3"><li><strong>Long Tail – Motivos:</strong> Agrupar ocorrências por motivo/sintoma e ordenar por frequência decrescente.</li></ol><ol type="1" id="25b68338-221a-8093-9aa0-ed5ef3c3679c" class="numbered-list" start="4"><li><strong>Fornecedor x Previsão x SLA:</strong><ul id="25b68338-221a-8048-a643-cc10381e9b31" class="bulleted-list"><li style="list-style-type:disc">Agrupar ocorrências por fornecedor.</li></ul><ul id="25b68338-221a-8007-9907-c5eeb4de86a1" class="bulleted-list"><li style="list-style-type:disc">Categorizar conforme:<ul id="25b68338-221a-8027-ab9c-fd1de2dda958" class="bulleted-list"><li style="list-style-type:circle">SLA vencido</li></ul><ul id="25b68338-221a-80aa-88c4-e1ca514d951d" class="bulleted-list"><li style="list-style-type:circle">Previsão maior que SLA</li></ul><ul id="25b68338-221a-80d2-8187-d10ca6f655ba" class="bulleted-list"><li style="list-style-type:circle">Sem previsão</li></ul></li></ul></li></ol></li></ul><hr id="25a68338-221a-805a-8948-d277247c20d4"/><ul id="25a68338-221a-80b3-bc99-f4bec5216b8a" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong></li></ul><ol type="1" id="25a68338-221a-8040-9643-eaaf30563d53" class="numbered-list" start="1"><li>Implementar componentes de gráficos no frontend.</li></ol><ol type="1" id="25a68338-221a-802a-b6c7-d006e8c6f291" class="numbered-list" start="2"><li>Integrar com a API de backend (Lambda).</li></ol><ol type="1" id="25a68338-221a-806b-ac10-e37829ec3e34" class="numbered-list" start="3"><li>Garantir layout responsivo e acessibilidade.</li></ol><ol type="1" id="25a68338-221a-8090-8073-f6e8087d516f" class="numbered-list" start="4"><li>Realizar testes de usabilidade e performance.</li></ol><hr id="25a68338-221a-8030-b030-f48b05b28464"/><ul id="25a68338-221a-8068-8d8f-d8a8135c75ff" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong></li></ul><ol type="1" id="25a68338-221a-80fb-ac0e-df66e6dc84ba" class="numbered-list" start="1"><li>Os gráficos carregam corretamente com os dados da API.</li></ol><ol type="1" id="25a68338-221a-803a-97b4-c52b046c613a" class="numbered-list" start="2"><li>Os dados são atualizados ao clicar em “Atualizar”.</li></ol><ol type="1" id="25a68338-221a-8097-a9fb-c9c57d10005f" class="numbered-list" start="3"><li>Os gráficos são responsivos em diferentes dispositivos.</li></ol><ol type="1" id="25a68338-221a-80fb-bc57-e340395667d9" class="numbered-list" start="4"><li>O comportamento visual é consistente com os padrões da plataforma.</li></ol><hr id="25a68338-221a-8042-8b10-c9940f4a4b01"/><ul id="25a68338-221a-8099-a78a-c15460db726b" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong></li></ul><ul id="25a68338-221a-80ba-b815-df664938b053" class="bulleted-list"><li style="list-style-type:disc">Redução do tempo de análise das equipes.</li></ul><ul id="25a68338-221a-80c7-8800-c9976e9bea43" class="bulleted-list"><li style="list-style-type:disc">Aumento da assertividade nas decisões operacionais.</li></ul><ul id="25a68338-221a-80c6-8f0c-c8544c9b97a1" class="bulleted-list"><li style="list-style-type:disc">Proatividade no tratamento de falhas e gargalos.</li></ul><hr id="25a68338-221a-8060-8c03-e4b97a2e3966"/><ul id="25a68338-221a-8012-8c30-ceecbee5364b" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão:</strong></li></ul><ul id="25a68338-221a-804a-b611-e145f9cc3ee9" class="bulleted-list"><li style="list-style-type:disc"><strong>Início:</strong><ul id="25a68338-221a-800d-a30e-f2689fe89ee8" class="bulleted-list"><li style="list-style-type:circle"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25a68338-221a-808c-aadf-f1786b5ec194" class="bulleted-list"><li style="list-style-type:circle"><strong>Real:</strong> R3 S3 2025</li></ul></li></ul><ul id="25a68338-221a-80e1-9f20-d36cba9470e1" class="bulleted-list"><li style="list-style-type:disc"><strong>Fim:</strong><ul id="25a68338-221a-80c7-ae8e-e7f4a27f18a8" class="bulleted-list"><li style="list-style-type:circle"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25a68338-221a-8022-bc4b-f304373a94ad" class="bulleted-list"><li style="list-style-type:circle"><strong>Real:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><ul id="25a68338-221a-8039-a7b7-d877936c66e6" class="bulleted-list"><li style="list-style-type:disc"><strong>Resultado:</strong> <em>(preencher ao fim da sprint)</em></li></ul><h2 id="25b68338-221a-80c3-b99c-da280f0a7674" class=""><strong>História: [Delivery][Backend] Desenvolvimento da Lambda de agregação para os gráficos da Home Page (COPF)</strong></h2><ul id="25b68338-221a-8022-bb08-eec89e7b516b" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25b68338-221a-8059-bdae-cfdae0b824ad" class="">Acreditamos que, ao desenvolver uma <strong>função Lambda dedicada à agregação e disponibilização dos dados para os gráficos do dashboard do COPF</strong>, entregaremos <strong>rapidez, consistência e facilidade de manutenção</strong>, permitindo que o frontend se concentre apenas na visualização.</p><p id="25b68338-221a-80b1-b80f-f6bb5eb31b5e" class="">Saberemos que isso é verdade quando <strong>os gráficos da Home Page forem carregados com alta performance, refletindo dados consistentes e atualizados, sem depender de múltiplas queries dispersas ou lógicas fragmentadas.</strong></p><hr id="25b68338-221a-80de-858a-d55bffa81558"/><ul id="25b68338-221a-806a-b8f0-e2e0ce47a9c4" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="25b68338-221a-80a8-b868-f9f511203db9" class="">Como time de backend da COPF, queremos <strong>implementar uma Lambda que agregue e entregue os dados necessários para a renderização dos gráficos da Home Page</strong>, consumida via API Gateway autenticada.</p><p id="25b68338-221a-80a9-b3f9-db4427e8e5f1" class="">Essa Lambda será responsável por consolidar as regras de negócio dos seguintes gráficos:</p><ol type="1" id="25b68338-221a-8087-8e39-ef11d7ca3b4b" class="numbered-list" start="1"><li><strong>Status dos Equipamentos</strong></li></ol><ol type="1" id="25b68338-221a-809d-819f-e1e5ffdba621" class="numbered-list" start="2"><li><strong>Top 10 pontos por volume de ocorrências</strong></li></ol><ol type="1" id="25b68338-221a-8090-8106-d290a6970e00" class="numbered-list" start="3"><li><strong>Gráfico de Aging</strong></li></ol><ol type="1" id="25b68338-221a-80a2-8064-cec00e1f5ebe" class="numbered-list" start="4"><li><strong>Long Tail - Sintomas das Ocorrências</strong><ol type="a" id="25b68338-221a-804e-9629-f008367c3150" class="numbered-list" start="1"><li>Sem o eixo duplo (gráfico de linha acumulada)</li></ol></li></ol><ol type="1" id="25b68338-221a-8010-b767-fd7d72e31d8b" class="numbered-list" start="5"><li><strong>Fornecedor x Previsão x SLA</strong></li></ol><p id="25b68338-221a-80f7-8df4-f4a418294075" class="">A Lambda:</p><ul id="25b68338-221a-80e6-aa9c-d53392673fad" class="bulleted-list"><li style="list-style-type:disc">Será acionada sob demanda (via frontend).</li></ul><ul id="25b68338-221a-80ce-8bf5-ddf971f79198" class="bulleted-list"><li style="list-style-type:disc">Retornará os dados já agrupados, ordenados e no formato pronto para visualização.</li></ul><ul id="25b68338-221a-8062-8149-fe537f10fac2" class="bulleted-list"><li style="list-style-type:disc">Será protegida com autenticação e autorizada via API Gateway.</li></ul><ul id="25b68338-221a-8061-979e-d1be1e50dc7e" class="bulleted-list"><li style="list-style-type:disc">Permitirá desacoplamento da lógica de agregação do frontend.</li></ul><hr id="25b68338-221a-80a9-8caa-ef6362b3a980"/><ul id="25b68338-221a-80e8-b586-c055926ade7f" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25b68338-221a-80bf-a570-fb1e60f9fcf8" class="">Embora os usuários não acessem diretamente a Lambda, ela garante <strong>a entrega confiável dos dados</strong> que alimentam os gráficos analíticos da Home Page, <strong>proporcionando uma experiência ágil e fluida</strong> na navegação e análise dos dados.</p><hr id="25b68338-221a-8006-9eb2-dc1d5c297cad"/><ul id="25b68338-221a-803c-8bf3-c1d9e4e1d9d8" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong></li></ul><ol type="1" id="25b68338-221a-80f9-8920-ecf02b19d989" class="numbered-list" start="1"><li>Todos os dados necessários estão disponíveis no banco de dados do VO3 - COPF no RDS.</li></ol><ol type="1" id="25b68338-221a-80d9-8785-f324585d7b1d" class="numbered-list" start="2"><li>A Lambda será deployada com suporte ao pipeline CI/CD do COPF.</li></ol><ol type="1" id="25b68338-221a-80bb-affe-c5123cf4bf31" class="numbered-list" start="3"><li>O contrato de resposta da API será definido em conjunto com o time de frontend.</li></ol><ol type="1" id="25b68338-221a-80b6-a6a5-f5f679ab8ae0" class="numbered-list" start="4"><li>O controle de acesso será feito via autenticação no API Gateway.</li></ol><hr id="25b68338-221a-806b-9fb9-f0116c5c5e7f"/><ul id="25b68338-221a-80f5-8af2-de66d8547172" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong></li></ul><ol type="1" id="25b68338-221a-80b9-bb30-fb9a95be00f6" class="numbered-list" start="1"><li><strong>Status dos Equipamentos:</strong><ul id="25b68338-221a-8028-9504-d37c4f72b125" class="bulleted-list"><li style="list-style-type:disc">Agrupar por tipo de equipamento.</li></ul><ul id="25b68338-221a-80bd-9f34-c4c3ec42a987" class="bulleted-list"><li style="list-style-type:disc">Contabilizar status &quot;operante&quot; e &quot;inoperante&quot;.</li></ul></li></ol><ol type="1" id="25b68338-221a-804f-955d-ed49e8af73ea" class="numbered-list" start="2"><li><strong>Top 10 pontos por volume de ocorrências</strong><ul id="25b68338-221a-809f-b850-d02b43ccf6ba" class="bulleted-list"><li style="list-style-type:disc">Listar as 10 agências com maior volume de ocorrências pendentes.</li></ul><ul id="25b68338-221a-8052-ad97-ccc2362f61b4" class="bulleted-list"><li style="list-style-type:disc">Incluir marcador para VIPs.</li></ul></li></ol><ol type="1" id="25b68338-221a-8067-b6eb-fb22a9a52c6b" class="numbered-list" start="3"><li><strong>Aging das Ocorrências:</strong> Agrupar ocorrências abertas pelas faixas de dias:<ul id="25b68338-221a-80a7-9a39-c7b27f5b6957" class="bulleted-list"><li style="list-style-type:disc">0 – 1 dia</li></ul><ul id="25b68338-221a-80b7-a334-ef5ac9dd51e5" class="bulleted-list"><li style="list-style-type:disc">1 – 2 dias</li></ul><ul id="25b68338-221a-8040-bae1-c2fdb730b8a2" class="bulleted-list"><li style="list-style-type:disc">2 – 4 dias</li></ul><ul id="25b68338-221a-802c-a51e-c7c72eabec8d" class="bulleted-list"><li style="list-style-type:disc">≥ 5 dias</li></ul></li></ol><ol type="1" id="25b68338-221a-802f-b64f-e9f30a9cee94" class="numbered-list" start="4"><li><strong>Long Tail – Motivos:</strong> Agrupar ocorrências por motivo/sintoma e ordenar por frequência decrescente.</li></ol><ol type="1" id="25b68338-221a-8082-8d64-db193ab49ec1" class="numbered-list" start="5"><li><strong>Fornecedor x Previsão x SLA:</strong><ul id="25b68338-221a-803e-8614-eba682ed73b5" class="bulleted-list"><li style="list-style-type:disc">Agrupar ocorrências por fornecedor.</li></ul><ul id="25b68338-221a-8060-b049-fa78615c2d2e" class="bulleted-list"><li style="list-style-type:disc">Categorizar conforme:<ul id="25b68338-221a-8091-a7f2-c2d55b7fbab0" class="bulleted-list"><li style="list-style-type:circle">SLA vencido</li></ul><ul id="25b68338-221a-8013-9827-fbd39f1acf85" class="bulleted-list"><li style="list-style-type:circle">Previsão maior que SLA</li></ul><ul id="25b68338-221a-8035-965e-eaa46da2d3e7" class="bulleted-list"><li style="list-style-type:circle">Sem previsão</li></ul></li></ul></li></ol><hr id="25b68338-221a-80b0-b0c5-d60b0ee85812"/><ul id="25b68338-221a-8083-aa1c-e28567f75aa1" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong></li></ul><ul id="25b68338-221a-8026-b5d3-d23f08850303" class="bulleted-list"><li style="list-style-type:disc">Linguagem: Python</li></ul><ul id="25b68338-221a-802c-b06e-e6ea9d03982a" class="bulleted-list"><li style="list-style-type:disc">Infraestrutura: AWS Lambda + API Gateway</li></ul><ul id="25b68338-221a-80c4-a98d-ec7ebe00d11e" class="bulleted-list"><li style="list-style-type:disc">Monitoramento: Datadog com rastreamento de erro e performance</li></ul><ul id="25b68338-221a-8073-acd4-d83e61b3d0f5" class="bulleted-list"><li style="list-style-type:disc">Controle de versão: Repositório COPF no GitHub</li></ul><hr id="25b68338-221a-8098-a668-f4734e376f51"/><ul id="25b68338-221a-8021-9ea7-d30ca73307c1" class="bulleted-list"><li style="list-style-type:disc"><strong>Exemplo de Output:</strong></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="25b68338-221a-8035-a9e9-daccacb7188c" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;aging&quot;: [
+    { &quot;faixa&quot;: &quot;0-1 dias&quot;, &quot;quantidade&quot;: 32 },
+    { &quot;faixa&quot;: &quot;1-2 dias&quot;, &quot;quantidade&quot;: 21 },
+    { &quot;faixa&quot;: &quot;2-4 dias&quot;, &quot;quantidade&quot;: 18 },
+    { &quot;faixa&quot;: &quot;≥5 dias&quot;, &quot;quantidade&quot;: 9 }
+  ],
+  &quot;motivos&quot;: [
+    { &quot;motivo&quot;: &quot;ATM Quebrado&quot;, &quot;quantidade&quot;: 103 },
+    { &quot;motivo&quot;: &quot;Rede Inoperante&quot;, &quot;quantidade&quot;: 87 }
+  ],
+  &quot;status_equipamentos&quot;: [
+    { &quot;tipo&quot;: &quot;Notebook&quot;, &quot;operantes&quot;: 120, &quot;inoperantes&quot;: 12 },
+    { &quot;tipo&quot;: &quot;ATM&quot;, &quot;operantes&quot;: 50, &quot;inoperantes&quot;: 8 }
+  ],
+  &quot;top_agencias&quot;: [
+    { &quot;agencia&quot;: &quot;1234&quot;, &quot;ocorrencias&quot;: 17, &quot;vip&quot;: true },
+    { &quot;agencia&quot;: &quot;5678&quot;, &quot;ocorrencias&quot;: 15, &quot;vip&quot;: false }
+  ],
+  &quot;fornecedor_sla&quot;: [
+    { &quot;fornecedor&quot;: &quot;ABC&quot;, &quot;sla_vencido&quot;: 10, &quot;previsao_maior_sla&quot;: 5, &quot;sem_previsao&quot;: 3 }
+  ]
+}
+
+</code></pre><hr id="25b68338-221a-806e-bc06-d6c2daf8053f"/><ul id="25b68338-221a-808b-bac7-ce70a9edd93d" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong></li></ul><ol type="1" id="25b68338-221a-8081-8f04-f0b633818a11" class="numbered-list" start="1"><li>Definir queries SQL ou views para cada tipo de agregação.</li></ol><ol type="1" id="25b68338-221a-80ba-855f-c068c4762dd3" class="numbered-list" start="2"><li>Implementar a lógica de agregação na Lambda.</li></ol><ol type="1" id="25b68338-221a-8040-a824-c1b0ec0bb1d7" class="numbered-list" start="3"><li>Garantir logs detalhados para troubleshooting.</li></ol><hr id="25b68338-221a-806f-ad60-eee5ca22efce"/><ul id="25b68338-221a-80c1-a7d9-c17245e753cb" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong></li></ul><ol type="1" id="25b68338-221a-80cc-a815-c17b66ae2d76" class="numbered-list" start="1"><li>Lambda retorna os dados esperados em todos os formatos.</li></ol><ol type="1" id="25b68338-221a-800c-b990-ee2aa754f86b" class="numbered-list" start="2"><li>Todos os gráficos do frontend carregam corretamente com os dados da API.</li></ol><ol type="1" id="25b68338-221a-805d-8a5e-deaa3b611997" class="numbered-list" start="3"><li>Logs de erro e sucesso são registrados corretamente.</li></ol><ol type="1" id="25b68338-221a-80ee-9001-e7fc1316675f" class="numbered-list" start="4"><li>Segurança e autenticação funcionam conforme esperado.</li></ol><hr id="25b68338-221a-80ef-9b2d-fe0e4105e6d5"/><ul id="25b68338-221a-8066-a0f9-ee54ed8ad8dd" class="bulleted-list"><li style="list-style-type:disc"><strong>Critérios de Aceite:</strong></li></ul><ul id="25b68338-221a-8060-ae7a-e3197151f660" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Lambda responde com JSON formatado corretamente.</span><div class="indented"></div></li></ul><ul id="25b68338-221a-80ba-aaf4-e166689d6885" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Dados consistem com o que é exibido nas telas atuais.</span><div class="indented"></div></li></ul><ul id="25b68338-221a-80d7-bcc7-ee5db202da90" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Segurança via API Gateway implementada.</span><div class="indented"></div></li></ul><ul id="25b68338-221a-8075-8139-c1bfb93a688e" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Código versionado no repositório COPF.</span><div class="indented"></div></li></ul><ul id="25b68338-221a-8085-9f6b-c32a53d14ae1" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">CI/CD funcionando com sucesso.</span><div class="indented"></div></li></ul><hr id="25b68338-221a-80e4-9372-d391569fc887"/><ul id="25b68338-221a-8064-bf30-c5fb33739314" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong></li></ul><ul id="25b68338-221a-80b8-a76a-f3d87ee0b145" class="bulleted-list"><li style="list-style-type:disc">Redução da complexidade no frontend.</li></ul><ul id="25b68338-221a-8056-a001-fdee653435d2" class="bulleted-list"><li style="list-style-type:disc">Aumento da performance e responsividade do dashboard.</li></ul><ul id="25b68338-221a-8050-a76b-e93bfe88a0b2" class="bulleted-list"><li style="list-style-type:disc">Padronização e governança da lógica de agregação.</li></ul><ul id="25b68338-221a-8039-a99c-f080dcf56750" class="bulleted-list"><li style="list-style-type:disc">Redução de retrabalho em futuras evoluções dos gráficos.</li></ul><hr id="25b68338-221a-8077-b0a2-f699b445de78"/><ul id="25b68338-221a-8033-8e8f-efbe68104a36" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão:</strong><ul id="25b68338-221a-80f1-a9b6-edc8eb42fe12" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="25b68338-221a-8096-bff2-efe0d428e19b" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25b68338-221a-80ae-a27e-c2b57889eaaa" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> R3 S3 2025</li></ul></li></ul><ul id="25b68338-221a-805b-9c6b-d9cf12c52dca" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="25b68338-221a-8074-b4f1-ddc94497245b" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25b68338-221a-80a9-a050-f8468d65e820" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><ul id="25b68338-221a-8070-acc6-f0d8f7d8c317" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><h2 id="25b68338-221a-80c1-aad1-ed902a7201bf" class=""><strong>História: [Delivery][Backend] Lambda de cálculo de prioridade de ocorrências (COPF)</strong></h2><ul id="25b68338-221a-80ca-9ca6-c10cfd0956e1" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25b68338-221a-80f6-9ffe-d4d283f82896" class="">Acreditamos que, ao <strong>automatizar o cálculo de prioridade das ocorrências via Lambda</strong>, permitindo atribuir uma pontuação baseada em critérios objetivos e estratégicos, <strong>as áreas operacionais poderão priorizar de forma mais eficaz suas ações</strong>, concentrando esforços onde há maior impacto ou urgência.</p><p id="25b68338-221a-80a8-908a-f25299023ec6" class="">Saberemos que isso é verdade quando <strong>as ocorrências forem exibidas com uma pontuação de prioridade clara, consistente e alinhada às regras de negócio definidas — incluindo a classificação de criticidade (Crítica, Alta, Média, Baixa)</strong>.</p><hr id="25b68338-221a-80ec-a794-cddffd3ed613"/><ul id="25b68338-221a-80f6-8fb3-ee10a208d5c1" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="25b68338-221a-8039-ad9f-e94a9b561750" class="">Como time de backend da COPF, queremos <strong>desenvolver uma função Lambda que atribui uma pontuação de prioridade para cada ocorrência</strong>, com base em critérios como localização geográfica, pontos na lista de críticos para o negócio, aging e impacto na operação do ponto.</p><p id="25b68338-221a-80c3-91a6-ff2d02906587" class="">Essa Lambda será invocada em uma step function que contempla atualmente duas lambdas:</p><ul id="25b68338-221a-8033-894a-dc9a3487bcb1" class="bulleted-list"><li style="list-style-type:disc">Lambda de ocorrências pendentes</li></ul><ul id="25b68338-221a-80d8-b57f-fbef3fc53997" class="bulleted-list"><li style="list-style-type:disc">Lambda para calculo de priorização</li></ul><p id="25b68338-221a-8050-bacc-d0b79365a23c" class="">Calcular a <strong>prioridade (score entre 0 e 999)</strong>.</p><ul id="25b68338-221a-8021-9ed0-d0fd2c141f87" class="bulleted-list"><li style="list-style-type:disc">Atribuir uma <strong>criticidade categórica (Crítica, Alta, Média, Baixa)</strong> com base no score final.</li></ul><ul id="25b68338-221a-8081-a8ba-f69052329e74" class="bulleted-list"><li style="list-style-type:disc">Armazenar e retornar esse valor junto à ocorrência.</li></ul><ul id="25b68338-221a-805e-b923-d7915214c3ab" class="bulleted-list"><li style="list-style-type:disc">A API ser exposta via API Gateway com autenticação.</li></ul><hr id="25b68338-221a-8020-9883-c03a03929783"/><ul id="25b68338-221a-80ba-9fe7-cd49f5ed25fc" class="bulleted-list"><li style="list-style-type:disc"><strong>Pontos de atenção:</strong></li></ul><ul id="25b68338-221a-806b-8b3e-c78346c86193" class="bulleted-list"><li style="list-style-type:disc">A primeira versão dessa lambda, será apenas para ocorrências do segmento AA.</li></ul><ul id="25b68338-221a-80eb-b1fa-d987ebc4e581" class="bulleted-list"><li style="list-style-type:disc">Para ocorrências do segmento AB, os valores retornamos devem ser nulos.<ul id="25b68338-221a-8026-8f23-f931de4fc4c7" class="bulleted-list"><li style="list-style-type:circle">ranking = null</li></ul><ul id="25b68338-221a-80f2-830f-c8816c36d052" class="bulleted-list"><li style="list-style-type:circle">criticidade = null</li></ul></li></ul><hr id="25b68338-221a-802d-9822-ef853a424611"/><ul id="25b68338-221a-800e-9fc8-cdc03e4ecfe3" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25b68338-221a-80bd-bdbc-f8c7eb10fb00" class=""><strong>A prioridade e a criticidade calculadas serão usadas para ordenar (ranking), filtrar (criticidade) e destacar ocorrências</strong>, permitindo que analistas e gestores ajam primeiro nas situações mais críticas com base em critérios padronizados e transparentes.</p><hr id="25b68338-221a-80ba-b92b-efa309aaceac"/><ul id="25b68338-221a-8019-9d06-fd47b5df0b6f" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto / Narrativa de Negócio:</strong></li></ul><p id="25b68338-221a-80a2-aa15-d5025c765009" class="">Com essa Lambda, trazemos critérios claros e objetivos que permitem <strong>priorização inteligente e categorizada</strong>, mesmo antes de qualquer ação humana. Para o fornecedor, a criticidade será fundamental para determinar quais ocorrências ele irá priorizar.</p><hr id="25b68338-221a-80ae-ae82-cb61c83f8b00"/><ul id="25b68338-221a-8079-a148-d1cd4c3e4282" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong></li></ul><ol type="1" id="25b68338-221a-8077-87b7-e330732c4e3e" class="numbered-list" start="1"><li>As bases auxiliares (ex: Base 360 e Ceis_Válidos) estão disponíveis para consulta.</li></ol><ol type="1" id="25b68338-221a-801d-9491-d9bb7d167127" class="numbered-list" start="2"><li>As regras de negócio se baseiam no motor de priorização já desenvolvido pela operação da Gimea.</li></ol><hr id="25b68338-221a-80b3-ae3f-c39de79e6e82"/><ul id="25b68338-221a-8013-b3d7-c97bb05f825d" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong></li></ul><p id="25b68338-221a-806d-8654-ef365264aa78" class="">A pontuação final será a soma de critérios (pontuação total entre 0 e 999):</p><p id="25b68338-221a-80d3-8253-d2f0033094be" class="">Exemplo de critérios:</p><table id="25b68338-221a-80cd-8509-e470a758405c" class="simple-table"><thead class="simple-table-header"><tr id="25b68338-221a-80d4-8eee-cbb8aa8595c1"><th id="V^}Y" class="simple-table-header-color simple-table-header">Critério</th><th id="ItSg" class="simple-table-header-color simple-table-header">Descrição</th><th id="oq_w" class="simple-table-header-color simple-table-header">Pontuação</th></tr></thead><tbody><tr id="25b68338-221a-8069-b6c6-c5f536405a21"><td id="V^}Y" class=""><strong>UF = Maranhão</strong></td><td id="ItSg" class="">A ocorrência está em agência localizada no Maranhão</td><td id="oq_w" class="">+55</td></tr><tr id="25b68338-221a-807d-be2d-f0907619b655"><td id="V^}Y" class=""><strong>Agência VIP</strong></td><td id="ItSg" class="">A agência é marcada como VIP</td><td id="oq_w" class="">+20</td></tr><tr id="25b68338-221a-80b0-88a9-ca16e0001a9b"><td id="V^}Y" class=""><strong>Aging &gt; 5 dias</strong></td><td id="ItSg" class="">A ocorrência está aberta há mais de 5 dias</td><td id="oq_w" class="">+40</td></tr><tr id="25b68338-221a-8051-ac78-d7ee2d9f743a"><td id="V^}Y" class=""><strong>Impacto &gt; 50%</strong></td><td id="ItSg" class="">Mais de 50% dos equipamentos da agência estão inoperantes</td><td id="oq_w" class="">+30</td></tr></tbody></table><p id="25b68338-221a-803d-8836-d24573c22c08" class=""><strong>Cálculo do Impacto do Ponto:</strong></p><ul id="25b68338-221a-80a8-98f7-cdd7e1fb06c2" class="bulleted-list"><li style="list-style-type:disc"><code>impacto (%) = (qtde equipamentos impactados / qtde total equipamentos da agência)</code></li></ul><ul id="25b68338-221a-8006-a6fa-e5bd4e0bf634" class="bulleted-list"><li style="list-style-type:disc">A quantidade total de equipamentos será consultada na base<strong> CEIS_Válidos</strong>.</li></ul><ul id="25b68338-221a-805c-a8ca-f559d3994711" class="bulleted-list"><li style="list-style-type:disc">A quantidade de impactados virá da base atual de ocorrências.</li></ul><hr id="25b68338-221a-801f-a367-fd7fa5f5b196"/><ul id="25b68338-221a-800f-b5e7-e55450e65971" class="bulleted-list"><li style="list-style-type:disc"><strong>Critérios para classificação de criticidade:</strong></li></ul><table id="25b68338-221a-805c-8641-e795af0344e8" class="simple-table"><thead class="simple-table-header"><tr id="25b68338-221a-808a-a0fd-f71753afc669"><th id="yslr" class="simple-table-header-color simple-table-header">Score de Prioridade</th><th id="JC_F" class="simple-table-header-color simple-table-header">Criticidade</th></tr></thead><tbody><tr id="25b68338-221a-80d7-877e-f5a3e40e14a7"><td id="yslr" class="">800 a 999</td><td id="JC_F" class="">Crítica</td></tr><tr id="25b68338-221a-8020-955e-ca99e27a19f2"><td id="yslr" class="">600 a 799</td><td id="JC_F" class="">Alta</td></tr><tr id="25b68338-221a-807f-8537-cdafcb528d18"><td id="yslr" class="">400 a 599</td><td id="JC_F" class="">Média</td></tr><tr id="25b68338-221a-80ac-b1b4-d4b5a9a65f9d"><td id="yslr" class="">0 a 399</td><td id="JC_F" class="">Baixa</td></tr></tbody></table><hr id="25b68338-221a-8035-9ec8-f3313271219d"/><ul id="25b68338-221a-80da-ba5f-f094669f8c25" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong></li></ul><ul id="25b68338-221a-804d-be96-c500d73210a5" class="bulleted-list"><li style="list-style-type:disc"><strong>Linguagem:</strong> Python 3.11</li></ul><ul id="25b68338-221a-8015-bb10-ce072a3cf809" class="bulleted-list"><li style="list-style-type:disc"><strong>Serviços AWS:</strong> Lambda + API Gateway + DataDog</li></ul><ul id="25b68338-221a-805b-a271-f44cb8bfa69f" class="bulleted-list"><li style="list-style-type:disc"><strong>Bases envolvidas:</strong> VO3 (COPF), Ceis_Válidos, Base 360</li></ul><ul id="25b68338-221a-808b-881e-dd0e82545a54" class="bulleted-list"><li style="list-style-type:disc"><strong>Formato de retorno esperado:</strong></li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="25b68338-221a-801b-9ebd-da57b3e44236" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;ocorrencia_id&quot;: &quot;abc123&quot;,
+  &quot;prioridade&quot;: 145,
+  &quot;criticidade&quot;: &quot;Média&quot;,
+  &quot;componentes&quot;: {
+    &quot;ma&quot;: 55,
+    &quot;vip&quot;: 20,
+    &quot;aging&quot;: 40,
+    &quot;impacto&quot;: 30
+  }
+}</code></pre><hr id="25b68338-221a-8049-a604-dcbd26f09684"/><ul id="25b68338-221a-8050-a7c2-e33e1f5c9537" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong></li></ul><ol type="1" id="25b68338-221a-803e-8e8a-f1f537d98f63" class="numbered-list" start="1"><li>Validar regras de pontuação e faixas de criticidade com PM.</li></ol><ol type="1" id="25b68338-221a-809c-ac5e-cc6a4bc6e798" class="numbered-list" start="2"><li>Codificar a função Lambda.</li></ol><ol type="1" id="25b68338-221a-8010-9422-fb0bd29005cc" class="numbered-list" start="3"><li>Implementar cálculo de impacto.</li></ol><ol type="1" id="25b68338-221a-80bd-aed0-e7dc21ed22e6" class="numbered-list" start="4"><li>Expor endpoint via API Gateway.</li></ol><ol type="1" id="25b68338-221a-808c-85ea-f74e88efc913" class="numbered-list" start="5"><li>Testar com ocorrências reais e validar respostas.</li></ol><hr id="25b68338-221a-80a0-b9bc-c01c0a548111"/><ul id="25b68338-221a-8040-a9d0-f62399bc650e" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong></li></ul><ul id="25b68338-221a-80c1-b652-c1064dbf5ebe" class="bulleted-list"><li style="list-style-type:disc">Lambda retorna score correto com base nas características.</li></ul><ul id="25b68338-221a-803c-ae08-fb720edcf62c" class="bulleted-list"><li style="list-style-type:disc">Lambda atribui <strong>criticidade correta conforme faixa de score</strong>.</li></ul><ul id="25b68338-221a-8016-a33f-cd87264e4d8e" class="bulleted-list"><li style="list-style-type:disc">Cálculo de impacto da agência retorna valor esperado.</li></ul><ul id="25b68338-221a-80d0-af74-e7081bbb47d0" class="bulleted-list"><li style="list-style-type:disc">API responde em tempo adequado e com segurança aplicada.</li></ul><hr id="25b68338-221a-8045-b86a-f363a083a14f"/><ul id="25b68338-221a-80b2-a788-d1cafe827da3" class="bulleted-list"><li style="list-style-type:disc"><strong>Critérios de Aceite:</strong></li></ul><p id="25b68338-221a-80a6-951e-ca61a6c6efaf" class="">✅ Score de 0 a 999 corretamente calculado.</p><p id="25b68338-221a-8020-a85d-c5216833d90a" class="">✅ Criticidade classificada corretamente com base no score.</p><p id="25b68338-221a-805a-a3bf-fc02aa701d14" class="">✅ Endpoint funcional e integrado ao step function.</p><p id="25b68338-221a-8062-80e7-d6810caca0f8" class="">✅ Código versionado, com logs e testes unitários aplicados.</p><hr id="25b68338-221a-80b1-8604-d3463e5d32ad"/><ul id="25b68338-221a-8053-8874-e6d09efd8365" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong></li></ul><ul id="25b68338-221a-80b1-9428-dcfde27b3585" class="bulleted-list"><li style="list-style-type:disc">Aumento da assertividade nas ações operacionais.</li></ul><ul id="25b68338-221a-802e-b130-fa98966b462e" class="bulleted-list"><li style="list-style-type:disc">Priorização objetiva e alinhada à estratégia do COPF.</li></ul><ul id="25b68338-221a-80b0-8bb6-d92e12702e66" class="bulleted-list"><li style="list-style-type:disc">Redução de subjetividade e retrabalho em tratativas.</li></ul><hr id="25b68338-221a-80f6-aac7-fb33290132fc"/><ul id="25b68338-221a-801e-b81f-c15cdc4ec1b6" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão:</strong></li></ul><ul id="25b68338-221a-80a5-9532-f8c38fd83d2c" class="bulleted-list"><li style="list-style-type:disc"><strong>Início:</strong><ul id="25b68338-221a-80ba-8864-d72d044a6697" class="bulleted-list"><li style="list-style-type:circle"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25b68338-221a-80c9-97d6-ef88b66eb0dd" class="bulleted-list"><li style="list-style-type:circle"><strong>Real:</strong> R3 S3 2025</li></ul></li></ul><ul id="25b68338-221a-8096-aebd-c6414b6de8c2" class="bulleted-list"><li style="list-style-type:disc"><strong>Fim:</strong><ul id="25b68338-221a-809a-82f3-c51e4e66233d" class="bulleted-list"><li style="list-style-type:circle"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25b68338-221a-809b-aee8-d8391c73baab" class="bulleted-list"><li style="list-style-type:circle"><strong>Real:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><ul id="25b68338-221a-8006-8993-d859f01e7338" class="bulleted-list"><li style="list-style-type:disc"><strong>Resultado:</strong> <em>(preencher ao fim da sprint)</em></li></ul><h2 id="25b68338-221a-809e-be55-c5bb03db6e38" class=""><strong>História: [Delivery][Backend] Separação de código e nome do ponto + carregamento de código e descrição do sintoma via ETL e contrato da lambda</strong></h2><hr id="25b68338-221a-8022-9825-e1f5bf40f36b"/><ul id="25b68338-221a-8097-b18b-f5eb4b2f48ec" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25b68338-221a-80b6-aeed-d5c3646c8fbc" class="">Acreditamos que, ao <strong>separar as informações de código e nome do ponto, bem como código e descrição do sintoma da ocorrência</strong>, poderemos <strong>exibir essas informações com maior clareza e flexibilidade visual no front-end do COPF</strong>, tornando a interface mais limpa, navegável e útil para usuários operacionais.</p><p id="25b68338-221a-8088-b579-c05e945e79af" class="">Saberemos que isso é verdade quando <strong>os usuários visualizarem os dados corretamente segmentados (ex: código do ponto em destaque, nome ao lado; código do sintoma em cinza e descrição expandida), facilitando a leitura, priorização e identificação de ocorrências</strong>.</p><hr id="25b68338-221a-8041-9418-ee83d1338868"/><ul id="25b68338-221a-80da-b557-e69c9d091d7a" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="25b68338-221a-80e7-9a32-f796d6ad64bb" class="">Como time de backend e dados do COPF, queremos:</p><ol type="1" id="25b68338-221a-8086-acbe-e440f9032666" class="numbered-list" start="1"><li><strong>Separar o campo de código do ponto do nome do ponto</strong>, para que o front-end possa renderizar esses dados separadamente.</li></ol><ol type="1" id="25b68338-221a-809a-b731-d84e916b5879" class="numbered-list" start="2"><li><strong>Modificar a estrutura da carga via ETL</strong>, de forma que o sintoma da ocorrência traga <strong>o código do sintoma (ex: &quot;E102&quot;)</strong> e sua <strong>descrição (ex: &quot;Equipamento inoperante por falha elétrica&quot;)</strong> de forma separada.</li></ol><ol type="1" id="25b68338-221a-8021-9a5c-e1f688808869" class="numbered-list" start="3"><li><strong>Alterar a lambda de detalhe da ocorrência</strong>, que será responsável por retornar o <code>codigo_sintoma</code> e <code>descricao_sintoma</code> de forma estruturada.</li></ol><ol type="1" id="25b68338-221a-80dd-acd5-f83357edce80" class="numbered-list" start="4"><li><strong>Atualizar o contrato da API no API Gateway</strong>, refletindo as novas propriedades da resposta JSON da lambda.</li></ol><hr id="25b68338-221a-8092-855e-fb9baa2b1a5b"/><ul id="25b68338-221a-80c9-b5bc-d1fc43fcb948" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25b68338-221a-80ba-a092-f6856b601005" class="">Usuários operacionais e gestores precisam visualizar rapidamente <strong>qual ponto está afetado (via código) e onde (nome da agência)</strong>, bem como <strong>entender rapidamente o tipo de sintoma</strong>, sem depender de concatenações confusas ou de múltiplos cliques. A clareza na apresentação dessas informações acelera a análise e tomada de decisão.</p><hr id="25b68338-221a-809b-852c-fd11426639bf"/><ul id="25b68338-221a-80c3-8685-d6f96debfd8f" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto / Narrativa de Negócio:</strong></li></ul><p id="25b68338-221a-80b5-a6a1-c71f44814a46" class="">Atualmente, os campos de nome do ponto e sintoma vêm concatenados (ex: <code>&quot;3452 - Agência Paulista&quot;</code> ou <code>&quot;E102 - Equipamento inoperante&quot;</code>), o que <strong>dificulta a renderização customizada e destaca excessivamente textos longos</strong>, prejudicando a leitura.</p><p id="25b68338-221a-80ee-a302-ef4170f72895" class="">Essa separação permite uma <strong>melhor experiência visual</strong>, padronização de exibição nos cards, filtros e ordenações mais eficientes.</p><hr id="25b68338-221a-8039-b609-cc23a6b2546d"/><ul id="25b68338-221a-80da-9227-caae3c59997f" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ul id="25b68338-221a-801a-a3b0-f2cadcd4f7a6" class="bulleted-list"><li style="list-style-type:circle">O dado de código e nome do ponto já existe de forma estruturada na <strong>tabela </strong><code><strong>Agencias</strong></code>.<ul id="25b68338-221a-8085-ba57-d8f5650d680b" class="bulleted-list"><li style="list-style-type:square">Codigo Agencia</li></ul><ul id="25b68338-221a-804a-8f40-d39c5745fbd0" class="bulleted-list"><li style="list-style-type:square">Nome Agencia</li></ul></li></ul><ul id="25b68338-221a-806e-8ae0-f4cf44a26231" class="bulleted-list"><li style="list-style-type:circle">O dado de código e descrição do sintoma já existe de forma estruturada na <strong>tabela </strong><code><strong>Sintoma Ocorrência</strong></code>.<ul id="25b68338-221a-808f-9fad-d39a3435d9c8" class="bulleted-list"><li style="list-style-type:square">Codigo Sintoma Ocorrência</li></ul><ul id="25b68338-221a-80c1-9193-cf2ebf9705a3" class="bulleted-list"><li style="list-style-type:square">Descrição Sintoma</li></ul></li></ul><ul id="25b68338-221a-800f-9b5f-d536c5413634" class="bulleted-list"><li style="list-style-type:circle">A <strong>lambda de detalhe da ocorrência</strong> será ajustada para retornar esses campos de forma separada.</li></ul><ul id="25b68338-221a-8037-b363-e133e39ecce2" class="bulleted-list"><li style="list-style-type:circle">O contrato da API Gateway está versionado e pode ser atualizado.</li></ul><ul id="25b68338-221a-8005-abcd-fac98691f799" class="bulleted-list"><li style="list-style-type:circle">O front-end está apto a consumir os novos campos (<code>codigo_ponto</code>, <code>nome_ponto</code>, <code>codigo_sintoma</code>, <code>descricao_sintoma</code>).</li></ul></li></ul><hr id="25b68338-221a-8061-85c8-d328717651ed"/><ul id="25b68338-221a-80c3-8424-c540083f405f" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ul id="25b68338-221a-8035-aeb6-e665017dbda9" class="bulleted-list"><li style="list-style-type:circle"><strong>Código do ponto</strong>: deve conter os dígitos numéricos (ex: &quot;3452&quot;).</li></ul><ul id="25b68338-221a-80a2-9336-f7c078076a90" class="bulleted-list"><li style="list-style-type:circle"><strong>Nome do ponto</strong>: nome descritivo da agência (ex: &quot;Agência Paulista&quot;).</li></ul><ul id="25b68338-221a-8079-a1cc-de01793cd49b" class="bulleted-list"><li style="list-style-type:circle"><strong>Código do sintoma</strong>: parte inicial padronizada (ex: &quot;E102&quot;).</li></ul><ul id="25b68338-221a-808f-b79a-e3295dc4cdbe" class="bulleted-list"><li style="list-style-type:circle"><strong>Descrição do sintoma</strong>: parte textual (ex: &quot;Equipamento inoperante por falha elétrica&quot;).</li></ul></li></ul><hr id="25b68338-221a-8016-8cff-c27f8818ed4a"/><ul id="25b68338-221a-8084-8f51-e678866c9d74" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ul id="25b68338-221a-8053-bddb-e339392cbdfa" class="bulleted-list"><li style="list-style-type:circle"><strong>Banco de dados:</strong><ul id="25b68338-221a-80f5-8b9b-e1ac3fb44917" class="bulleted-list"><li style="list-style-type:square">A tabela <code>tbl_agencias</code> já possui <code>codigo_ponto</code> e <code>nome_ponto</code>.</li></ul><ul id="25b68338-221a-80e4-aead-c634207d9372" class="bulleted-list"><li style="list-style-type:square">Garantir que a view/tabela de ocorrências faça o join corretamente para expor esses campos.</li></ul></li></ul><ul id="25b68338-221a-8047-a6eb-e4e3b87e1cb8" class="bulleted-list"><li style="list-style-type:circle"><strong>ETL / pipeline de ingestão:</strong><ul id="25b68338-221a-801f-bfc4-fa50de3a37e6" class="bulleted-list"><li style="list-style-type:square">Adaptar transformação para popular <code>codigo_sintoma</code> e <code>descricao_sintoma</code>.</li></ul></li></ul><ul id="25b68338-221a-8017-a19b-d6f996b48ab4" class="bulleted-list"><li style="list-style-type:circle"><strong>Lambda:</strong><ul id="25b68338-221a-80fd-92c9-ff4188d7ded3" class="bulleted-list"><li style="list-style-type:square">A <strong>lambda de detalhe da ocorrência</strong> será atualizada para retornar os campos:</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="25b68338-221a-80c5-ad4b-db64d4e84c6b" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;codigo_sintoma&quot;: &quot;E102&quot;,
+  &quot;descricao_sintoma&quot;: &quot;Equipamento inoperante por falha elétrica&quot;
+}</code></pre></li></ul><ul id="25b68338-221a-80f5-93b3-c3f86836659e" class="bulleted-list"><li style="list-style-type:circle"><strong>API Gateway:</strong><ul id="25b68338-221a-80e5-8082-fecd6bf45e48" class="bulleted-list"><li style="list-style-type:square">O contrato da API que consome a lambda será atualizado para refletir os novos campos na resposta JSON.</li></ul><ul id="25b68338-221a-80d8-b65a-f25e25fa6455" class="bulleted-list"><li style="list-style-type:square">Será necessário atualizar o <strong>schema de resposta e mapeamentos de integração</strong> no API Gateway.</li></ul></li></ul></li></ul><hr id="25b68338-221a-805a-8a9e-c7b44313d193"/><ul id="25b68338-221a-80ef-8b46-e1d2714cb780" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="25b68338-221a-800d-b93e-cf99bbeef0a6" class="numbered-list" start="1"><li>Atualizar o modelo de dados e a view de ocorrências para buscar <code>codigo_ponto</code> e <code>nome_ponto</code> da <code>tbl_agencias</code>.</li></ol><ol type="1" id="25b68338-221a-801a-ab25-c9c594af7123" class="numbered-list" start="2"><li>Ajustar a transformação ETL para extrair <code>codigo_sintoma</code> e <code>descricao_sintoma</code>.</li></ol><ol type="1" id="25b68338-221a-80a7-a34c-c1efadb42da9" class="numbered-list" start="3"><li>Atualizar a lambda de detalhe da ocorrência para retornar os campos de sintoma separadamente.</li></ol><ol type="1" id="25b68338-221a-80ac-98f7-f207b4682826" class="numbered-list" start="4"><li>Atualizar o contrato da API no API Gateway.</li></ol><ol type="1" id="25b68338-221a-809b-b42c-d6ddfd95a51b" class="numbered-list" start="5"><li>Testar o consumo dos novos campos no front-end.</li></ol></li></ul><hr id="25b68338-221a-8034-b4f7-df9a07b0e774"/><ul id="25b68338-221a-804d-abfc-c7ec8f9fb14c" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong></li></ul><ol type="1" id="25b68338-221a-8031-af53-d36961302db3" class="numbered-list" start="1"><li>A lambda retorna <code>codigo_sintoma</code> e <code>descricao_sintoma</code> de forma separada.</li></ol><ol type="1" id="25c68338-221a-80d9-acf1-fff4fc1a1e23" class="numbered-list" start="2"><li>O front-end recebe <code>codigo_ponto</code> e <code>nome_ponto</code> separadamente.</li></ol><ol type="1" id="25b68338-221a-80db-8d92-f1af1c26a77e" class="numbered-list" start="3"><li>A resposta da API está conforme o novo contrato do API Gateway.</li></ol><ol type="1" id="25b68338-221a-8083-884d-c590cd7a0edd" class="numbered-list" start="4"><li>Os dados estão corretos, legíveis e sem quebras de compatibilidade.</li></ol><hr id="25b68338-221a-8075-9024-c185c88e916b"/><ul id="25b68338-221a-80ae-9a16-c9b9d8c28d70" class="bulleted-list"><li style="list-style-type:disc"><strong>Critérios de Aceite:</strong></li></ul><p id="25b68338-221a-801a-9ae0-cdf5283344c1" class="">✅ As respostas da API retornam os novos campos estruturados.</p><p id="25b68338-221a-80d7-9993-e67765b67a65" class="">✅ O contrato do API Gateway está atualizado e documentado.</p><p id="25b68338-221a-8015-bb3a-f3fd50e20f22" class="">✅ O front-end renderiza os campos separadamente, sem erro.</p><p id="25b68338-221a-8084-9481-fa86c308d1a3" class="">✅ O processo de ingestão (ETL) popula corretamente os campos de sintoma.</p><hr id="25b68338-221a-805a-96c4-e4ab29c9dac8"/><ul id="25b68338-221a-80fa-8256-fbc25d0428cb" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong></li></ul><ul id="25b68338-221a-8077-87d9-e49699ce534f" class="bulleted-list"><li style="list-style-type:disc"><strong>Melhoria na clareza das informações exibidas na ferramenta</strong>.</li></ul><ul id="25b68338-221a-809a-a3dd-ca2e590c5d55" class="bulleted-list"><li style="list-style-type:disc"><strong>Facilidade de leitura e tomada de decisão por parte dos operadores</strong>.</li></ul><ul id="25b68338-221a-80e4-8d8b-fae1d811c003" class="bulleted-list"><li style="list-style-type:disc"><strong>Possibilidade de personalizar visualmente os dados sem depender de parsing em front-end</strong>.</li></ul><hr id="25b68338-221a-8074-ae82-dd9989d682ff"/><ul id="25b68338-221a-8019-bf9e-e829604851b0" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão:</strong><ul id="25b68338-221a-80c3-b9b9-d07f0911e576" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="25b68338-221a-809f-8c43-e3869faf0a70" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25b68338-221a-80db-9c4c-d1df095056e2" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> R3 S3 2025</li></ul></li></ul><ul id="25b68338-221a-8008-99f9-d89965c29d01" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="25b68338-221a-80d7-8070-f972d7782316" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R3 S3 2025</li></ul><ul id="25b68338-221a-8047-89d3-ca99d8bc8988" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><ul id="25b68338-221a-80de-9a31-ed0102e08e50" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong> <em>(preencher ao fim da sprint)</em></li></ul></li></ul><h2 id="25c68338-221a-8077-aaf3-ca9db5dcf2a6" class=""><strong>Tarefa: [Discovery][Backend] Exploração dos dados de ocorrências no Signus</strong></h2><hr id="25c68338-221a-806e-8f04-e359a9125d6f"/><ul id="25c68338-221a-80d8-8538-f4f31e89abf6" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25c68338-221a-8029-9e3d-f59918d724d7" class="">Acreditamos que, ao <strong>explorar os dados brutos de ocorrências disponíveis no Data Mesh (sistema produto: Signus)</strong>, seremos capazes de <strong>estruturar os pipelines de ETL de forma robusta, performática e alinhada com os filtros e KPIs necessários no COPF</strong>, evitando retrabalhos e inconsistências em produção.</p><p id="25c68338-221a-804d-bce1-e887c7af8e5b" class="">Saberemos que isso é verdade quando tivermos clareza sobre as tabelas, campos, relacionamentos e filtros necessários para construir os pipelines de <strong>ocorrências pendentes</strong> e <strong>ocorrências encerradas</strong>.</p><hr id="25c68338-221a-801b-a340-c1fe280342b2"/><ul id="25c68338-221a-808f-a5a1-ec47d0608e24" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong><p id="25c68338-221a-80a3-ab30-d16729989592" class="">Como engenheiros responsáveis pela camada de ingestão e preparação de dados do COPF, queremos:</p><ul id="25c68338-221a-80e6-abeb-cae85f8143a2" class="bulleted-list"><li style="list-style-type:circle"><strong>Analisar os dados do Signus </strong>relacionados a ocorrências, com foco em:<ul id="25c68338-221a-80ff-9df8-de98ec83a9ad" class="bulleted-list"><li style="list-style-type:square">Diferenciar claramente as ocorrências <strong>pendentes</strong> das <strong>encerradas</strong>.</li></ul><ul id="25c68338-221a-8070-b124-fd66d5b40f2c" class="bulleted-list"><li style="list-style-type:square">Identificar as tabelas relevantes, suas <strong>chaves</strong>, <strong>status</strong>, <strong>datas</strong>, <strong>sintomas</strong>, <strong>relacionamento com agências</strong> e outros atributos críticos.</li></ul></li></ul><ul id="25c68338-221a-8055-8f0d-df1392459f8e" class="bulleted-list"><li style="list-style-type:circle">Identificar os campos que serão utilizados no ETL para permitir <strong>uso futuro no frontend</strong> e nas lambdas.</li></ul></li></ul><hr id="25c68338-221a-808c-9b8b-f57e3534ef3a"/><ul id="25c68338-221a-802c-8033-dd04939f4811" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25c68338-221a-806b-8b03-ce90db88645c" class="">O time técnico precisa ter domínio sobre quais tabelas, filtros e lógicas devem ser utilizadas para construir os pipelines de dados, garantindo consistência e performance na exibição das informações operacionais e históricas no COPF.</p><hr id="25c68338-221a-80ba-b634-c4a8bfbee3ec"/><ul id="25c68338-221a-80c5-8fd6-f2989b32ef42" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong></li></ul><p id="25c68338-221a-80cd-92bb-ddf4edc85a3b" class="">Os dados estão disponíveis no Mesh com acesso liberado.</p><hr id="25c68338-221a-804c-a9c5-e81155a0596f"/><ul id="25c68338-221a-80bf-ac2b-dd166acc1642" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong></li></ul><ol type="1" id="25c68338-221a-8096-9058-faae09b45316" class="numbered-list" start="1"><li>Mapear regras de negócios importantes para o ETL.</li></ol><ol type="1" id="25c68338-221a-8088-8263-d4fa36259574" class="numbered-list" start="2"><li>Identificar necessidade de joins com tabelas auxiliares (agências, sintomas, etc).</li></ol><ol type="1" id="25c68338-221a-804d-8376-e7ff3eafc4de" class="numbered-list" start="3"><li>Documentar resultados da exploração.</li></ol><hr id="25c68338-221a-8059-aa0c-f2c531013282"/><ul id="25c68338-221a-80b1-941b-f15f325264e2" class="bulleted-list"><li style="list-style-type:disc"><strong>Critérios de Aceite:</strong></li></ul><p id="25c68338-221a-8006-b9d5-e9e90205e86a" class="">✅ Mapeamento validado de tabelas, status e regras de negócio.</p><p id="25c68338-221a-8089-8123-ed2e8b99ae87" class="">✅ Documentação compartilhada com o time.</p><p id="25c68338-221a-8066-b690-fcb4db3a4bac" class="">✅ Lista clara de campos e filtros a serem usados no ETL.</p><h2 id="25d68338-221a-8050-b94c-c9bd0b561845" class="">História: [Delivery][Backend] Desenvolvimento do ETL de Ocorrências Pendentes - Insert</h2><hr id="25d68338-221a-806a-b8df-f4ae69d24c42"/><ul id="25d68338-221a-80f3-bb10-d87b9d32e99c" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto</strong></li></ul><p id="25d68338-221a-80ac-b8a2-c8c5112f1fe0" class="">Ter uma base confiável e atualizada de ocorrências em aberto é essencial para priorização e gestão eficiente. Este ETL garantirá a ingestão incremental das ocorrências pendentes diretamente do Signos.</p><hr id="25d68338-221a-8038-9691-f3fdab624503"/><ul id="25d68338-221a-806a-a0c3-c744eb3795b4" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição</strong></li></ul><p id="25d68338-221a-8024-ac93-e94b0cd1d542" class="">Como engenheiro(a) de dados, queremos construir um ETL que alimente as tabelas <code>cadastro_ocorrencia</code> e <code>acompanhamento_ocorrencia</code>, com foco exclusivo em ocorrências que ainda estão abertas no Signus.</p><hr id="25d68338-221a-8040-8b58-ec0f743b1aae"/><ul id="25d68338-221a-80c5-94e8-f64000d3b987" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio</strong></li></ul><ul id="25d68338-221a-8022-9aeb-f271490a6269" class="bulleted-list"><li style="list-style-type:disc">Inserir novas ocorrências em <code>cadastro_ocorrencia</code> com os campos definidos na modelagem.</li></ul><ul id="25d68338-221a-806f-92e1-c4d0a153e0c4" class="bulleted-list"><li style="list-style-type:disc">Para cada nova ocorrência, gerar um registro de abertura em <code>acompanhamento_ocorrencia</code>, com:<ul id="25d68338-221a-80c6-8713-e2f342c20f72" class="bulleted-list"><li style="list-style-type:circle"><code>tipo_evento</code>: &quot;Abertura&quot;</li></ul><ul id="25d68338-221a-80c5-91b1-f08cd7c4e76e" class="bulleted-list"><li style="list-style-type:circle"><code>descricao_evento</code>: &quot;Ocorrência identificada como nova&quot;</li></ul><ul id="25d68338-221a-80f6-906f-c5870d1cffde" class="bulleted-list"><li style="list-style-type:circle"><code>data_hora_comunicacao_enviada</code>: timestamp atual</li></ul></li></ul><ul id="25d68338-221a-8087-9b4e-fe6af3fb55fe" class="bulleted-list"><li style="list-style-type:disc">O campo <code>criticidade_ocorrencia</code> <strong>não permite valores nulos</strong>, conforme a modelagem.<ul id="25d68338-221a-8031-b364-f3d83bb489ab" class="bulleted-list"><li style="list-style-type:circle">Nesta primeira versão, todas as ocorrências pendentes serão inseridas com <strong>criticidade = &quot;Média&quot;</strong>.</li></ul><ul id="25d68338-221a-80be-a936-d079dfbd5301" class="bulleted-list"><li style="list-style-type:circle">Utilizar o <strong>código da criticidade &quot;Média&quot;</strong> da tabela <code>criticidade_ocorrencia</code> para preencher esse campo.</li></ul></li></ul><hr id="25d68338-221a-807b-b51d-cfdbe5b77f11"/><ul id="25d68338-221a-80b1-9615-c96e7682a2f5" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas</strong><ul id="25d68338-221a-80af-8159-f7e8ee822b59" class="bulleted-list"><li style="list-style-type:circle">Executado como Lambda.</li></ul><ul id="25d68338-221a-8078-9a59-e67af619e69d" class="bulleted-list"><li style="list-style-type:circle">Modelagem conforme imagem anexa:<ul id="25d68338-221a-8072-8602-ebc0485cded8" class="bulleted-list"><li style="list-style-type:square"><code>cadastro_ocorrencia</code></li></ul><ul id="25d68338-221a-8009-b59f-de4995ab0827" class="bulleted-list"><li style="list-style-type:square"><code>acompanhamento_ocorrencia</code></li></ul></li></ul><ul id="25d68338-221a-8089-b76d-da055e670327" class="bulleted-list"><li style="list-style-type:circle">O processamento incremental será por partição de dados (ano, mes, dia, hora, minuto).</li></ul><ul id="25d68338-221a-8039-80c5-cda7eefa5985" class="bulleted-list"><li style="list-style-type:circle">Validação de relacionamento com:<ul id="25d68338-221a-8025-8c13-fa5629986cf9" class="bulleted-list"><li style="list-style-type:square"><code>agencia</code></li></ul><ul id="25d68338-221a-8039-beef-d53a972c3298" class="bulleted-list"><li style="list-style-type:square"><code>equipamento</code></li></ul><ul id="25d68338-221a-802f-b16f-c0aa87b46822" class="bulleted-list"><li style="list-style-type:square"><code>sintoma_ocorrencia</code></li></ul><ul id="25d68338-221a-801e-b5d7-e1363e71b131" class="bulleted-list"><li style="list-style-type:square"><code>criticidade_ocorrencia</code></li></ul></li></ul></li></ul><hr id="25d68338-221a-80cf-b0e7-d2013728cf69"/><ul id="25d68338-221a-8094-91d5-d5e9d85d4b8b" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas</strong><ol type="1" id="25d68338-221a-8051-8892-e3e6cc57b2e6" class="numbered-list" start="1"><li>Mapear campos Signus → Modelagem COPF.</li></ol><ol type="1" id="25d68338-221a-80ce-8c45-c48b935086ec" class="numbered-list" start="2"><li>Criar função Lambda para ingestão incremental.</li></ol><ol type="1" id="25d68338-221a-803c-9da3-c610d8dc978a" class="numbered-list" start="3"><li>Popular <code>cadastro_ocorrencia</code> com novas pendências.</li></ol><ol type="1" id="25d68338-221a-801f-86ff-e0d97b9736eb" class="numbered-list" start="4"><li>Preencher o campo <code>criticidade_ocorrencia</code> com código da criticidade &quot;Média&quot; (por que atualmente demanda um valor (futuramente devemos mudar a modelagem para permitir valor nullable).</li></ol><ol type="1" id="25d68338-221a-80a5-945c-fd61cdad8b85" class="numbered-list" start="5"><li>Gerar entrada correspondente em <code>acompanhamento_ocorrencia</code>.</li></ol><ol type="1" id="25d68338-221a-80d9-8f51-f27c0c9cfacd" class="numbered-list" start="6"><li>Validar se dados relacionais (agência, equipamento, sintoma, criticidade) estão consistentes.</li></ol><ol type="1" id="25d68338-221a-80e7-9bb5-fd34137289fb" class="numbered-list" start="7"><li>Testar execução manual.</li></ol><ol type="1" id="25d68338-221a-808e-846d-c21ef0bb8351" class="numbered-list" start="8"><li>Garantir logging básico e rastreabilidade.</li></ol></li></ul><hr id="25d68338-221a-803b-97e2-d12c075b27f3"/><ul id="25d68338-221a-8082-a09b-f4992e4dab76" class="bulleted-list"><li style="list-style-type:disc"><strong>Critérios de Aceite</strong></li></ul><ul id="25d68338-221a-8083-b5cc-e8cc3e8a7182" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Ocorrências novas alimentam corretamente a tabela <code>cadastro_ocorrencia</code>.</span><div class="indented"></div></li></ul><ul id="25d68338-221a-80e4-a283-f5d4e218ed1d" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Cada nova ocorrência gera um evento de abertura em <code>acompanhamento_ocorrencia</code>.</span><div class="indented"></div></li></ul><ul id="25d68338-221a-80c1-b51c-fe80b7a16143" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Não há duplicidade em reprocessamentos.</span><div class="indented"></div></li></ul><ul id="25d68338-221a-807d-89c0-d4bf649fbba3" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Campo <code>criticidade_ocorrencia</code> é preenchido corretamente com código da criticidade &quot;Média&quot;.</span><div class="indented"></div></li></ul><ul id="25d68338-221a-800c-9151-c826c7db825c" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Logging simples está ativo.</span><div class="indented"></div></li></ul><h2 id="26068338-221a-8054-bc3c-dc37ca814aca" class="">História: [Delivery][Backend] Desenvolvimento do ETL de Ocorrências Pendentes - Update</h2><hr id="26068338-221a-805a-87a8-c483555800a7"/><ul id="26068338-221a-8032-aa7a-cbcadf1181cb" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto</strong></li></ul><p id="26068338-221a-805f-884e-e1a058736eb3" class="">Garantir que os dados das ocorrências em aberto estejam sempre atualizados é essencial para refletir a realidade operacional nas ferramentas de gestão. No ETL de Ocorrências Pendentes, há a capacidade de atualizar periodicamente alguns dos campos das ocorrências já inseridas, assegurando confiabilidade nas análises e nas decisões.</p><hr id="26068338-221a-80b0-bec7-d38b4714a6e0"/><ul id="26068338-221a-80ed-a9c2-eedb958edf91" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição</strong></li></ul><p id="26068338-221a-807e-a6dd-df8f31b89916" class="">Como engenheiro(a) de dados, queremos implementar uma etapa no ETL de Ocorrências Pendentes que atualize os campos relevantes das ocorrências que continuam abertas no Signus, assegurando que alterações de status, fornecedor, impedimentos, SLA e datas sejam refletidas nas tabelas <code>cadastro_ocorrencia</code> e <code>acompanhamento_ocorrencia</code>.</p><hr id="26068338-221a-80ae-acaa-cc3a6a47159a"/><ul id="26068338-221a-80ab-aac2-fcb89ecae718" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio</strong><ul id="26068338-221a-808e-bffd-eb59e3a386ff" class="bulleted-list"><li style="list-style-type:circle">Atualizar apenas ocorrências que já estejam registradas na tabela <code>cadastro_ocorrencia</code>.</li></ul><ul id="26068338-221a-808f-9349-d2150b24d20c" class="bulleted-list"><li style="list-style-type:circle">Atualizar os seguintes campos:<ul id="26068338-221a-8021-8e08-e5820784da6b" class="bulleted-list"><li style="list-style-type:square"><code>fornecedor_id</code></li></ul><ul id="26068338-221a-80f3-b96e-e6efe385abb4" class="bulleted-list"><li style="list-style-type:square"><code>status_ocorrencia</code></li></ul><ul id="26068338-221a-80c3-a89a-de02294fa8b5" class="bulleted-list"><li style="list-style-type:square"><code>sla_ocorrencia</code></li></ul><ul id="26068338-221a-807a-a0a2-fb79d61c1440" class="bulleted-list"><li style="list-style-type:square"><code>criticidade_ocorrencia</code> (não nula; manter coerência com classificação atualizada pelo motor de priorização)</li></ul><ul id="26068338-221a-80d2-a086-fb507add6dac" class="bulleted-list"><li style="list-style-type:square"><code>previsao_atendimento</code></li></ul><ul id="26068338-221a-808b-9ce5-d4e26f67fca6" class="bulleted-list"><li style="list-style-type:square"><code>possui_impedimento</code> e <code>motivo_impedimento</code></li></ul></li></ul><ul id="26068338-221a-80d4-837d-f2af03ec85d3" class="bulleted-list"><li style="list-style-type:circle">Atualizações que geram registro na tabela <code>acompanhamento_ocorrencia</code>:<ul id="26168338-221a-80aa-8070-cd6cd911484b" class="bulleted-list"><li style="list-style-type:square">Alteração de previsão de atendimento<ul id="26068338-221a-8086-996b-da30690a9d14" class="bulleted-list"><li style="list-style-type:disc"><code>tipo_evento</code>: &quot;Atualização Previsão de Atendimento&quot;</li></ul><ul id="26068338-221a-8010-81d5-eb5c429fdee0" class="bulleted-list"><li style="list-style-type:disc"><code>descricao_evento</code>: descrição do(s) campo(s) alterado(s)</li></ul><ul id="26068338-221a-804c-ac76-c63477cf9079" class="bulleted-list"><li style="list-style-type:disc"><code>data_hora_comunicacao_enviada</code>: timestamp atual</li></ul></li></ul><ul id="26168338-221a-805a-b631-ce95ceda230c" class="bulleted-list"><li style="list-style-type:square">Inclusão de impedimento/Alteração de impedimento/Remoção de impedimento<ul id="26168338-221a-80d2-ae63-fab3693c94b3" class="bulleted-list"><li style="list-style-type:disc"><code>tipo_evento</code>: &quot;Inclusão de Impedimento&quot;</li></ul><ul id="26168338-221a-8045-bfc4-db71b8e1b437" class="bulleted-list"><li style="list-style-type:disc"><code>descricao_evento</code>: descrição do(s) campo(s) alterado(s). Incluir motivo.</li></ul><ul id="26168338-221a-808d-9c76-e2ff4ced48d8" class="bulleted-list"><li style="list-style-type:disc"><code>data_hora_comunicacao_enviada</code>: timestamp atual</li></ul></li></ul></li></ul></li></ul><hr id="26068338-221a-80c2-8457-e6004d8996b4"/><ul id="26068338-221a-8098-8cdb-de9b05e77223" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas</strong><ul id="26068338-221a-80f5-b329-e9b2ee801bc0" class="bulleted-list"><li style="list-style-type:circle">Executado na Lambda do ‘ETL de Ocorrências Pendentes’.</li></ul><ul id="26068338-221a-8076-8bf0-eed37373d547" class="bulleted-list"><li style="list-style-type:circle">Atualização incremental por partição de dados (ano, mês, dia, hora, minuto).</li></ul><ul id="26068338-221a-8021-98f9-d651a0ce3dae" class="bulleted-list"><li style="list-style-type:circle">Leitura comparativa dos dados atuais no banco versus payload do Signus.</li></ul><ul id="26068338-221a-80d4-897d-c639850a4f66" class="bulleted-list"><li style="list-style-type:circle">Garantir integridade referencial com:<ul id="26068338-221a-806a-9a18-f8f5bd2d890d" class="bulleted-list"><li style="list-style-type:square"><code>agencia</code></li></ul><ul id="26068338-221a-8022-ab6a-f993675a7ef2" class="bulleted-list"><li style="list-style-type:square"><code>equipamento</code></li></ul><ul id="26068338-221a-80aa-a5cb-dc1b2feceae8" class="bulleted-list"><li style="list-style-type:square"><code>sintoma_ocorrencia</code></li></ul><ul id="26068338-221a-809e-9b4d-cc8ad92b286f" class="bulleted-list"><li style="list-style-type:square"><code>criticidade_ocorrencia</code></li></ul></li></ul></li></ul><hr id="26068338-221a-8025-9e89-cf9de58452ff"/><ul id="26068338-221a-8012-8b51-e42584c6b0eb" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas</strong><ol type="1" id="26068338-221a-801c-bfb0-da001d99307d" class="numbered-list" start="1"><li>Mapear campos do Signus que podem sofrer atualização. </li></ol><ol type="1" id="26068338-221a-800e-b016-dcf0eab25270" class="numbered-list" start="2"><li>Construir lógica de detecção de alterações campo a campo.</li></ol><ol type="1" id="26068338-221a-800e-b7ba-ea01129f290d" class="numbered-list" start="3"><li>Criar rotina incremental no Lambda com controle por timestamp.</li></ol><ol type="1" id="26068338-221a-80c8-88cf-eb20aebee39c" class="numbered-list" start="4"><li>Atualizar os dados em <code>cadastro_ocorrencia</code> apenas se houver alteração.</li></ol><ol type="1" id="26068338-221a-8012-8998-c5c3a23eca9b" class="numbered-list" start="5"><li>Gerar entrada em <code>acompanhamento_ocorrencia</code> com campos alterados.</li></ol><ol type="1" id="26068338-221a-8033-8b9d-ecca7a103c17" class="numbered-list" start="6"><li>Validar consistência de chaves estrangeiras.</li></ol><ol type="1" id="26068338-221a-800c-baab-e43b89426c1a" class="numbered-list" start="7"><li>Implementar logs de alterações para rastreabilidade.</li></ol><ol type="1" id="26068338-221a-8047-81e2-facbce567022" class="numbered-list" start="8"><li>Testar a execução com casos simulados de atualização.</li></ol></li></ul><hr id="26068338-221a-8084-b39b-cc43e2b54893"/><ul id="26068338-221a-806d-80b1-c9b2b236a27b" class="bulleted-list"><li style="list-style-type:disc"><strong>Critérios de Aceite</strong></li></ul><ul id="26068338-221a-8092-880f-ca029f8270bc" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Apenas ocorrências existentes são atualizadas (sem sobrescrever ocorrências encerradas).</span><div class="indented"></div></li></ul><ul id="26068338-221a-80c8-8e81-c47eb6c36735" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Algumas alteração geram eventos de atualizações em <code>acompanhamento_ocorrencia</code>.</span><div class="indented"></div></li></ul><ul id="26068338-221a-8003-842c-dee129583527" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Campos atualizados refletem as mudanças no Signus.</span><div class="indented"></div></li></ul><ul id="26068338-221a-8098-832e-d5d4297e0d51" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">Logs permitem rastrear quais ocorrências foram atualizadas e quais campos mudaram.</span><div class="indented"></div></li></ul><h2 id="26168338-221a-80c4-93aa-cc4cc2276cbe" class="">Tarefa: [Infraestrutura][EventBridge] Parametrização do cron para o gatilho de ocorrências pendentes</h2><p id="26168338-221a-802f-ac7f-f1ac3c676ea1" class=""><strong>Visão de Produto:</strong></p><p id="26168338-221a-80a0-b0f0-f77378f4d6af" class="">Orquestrar execução frequente da função de ingestão de ocorrências em aberto.</p><p id="26168338-221a-80b4-9083-cbd46ed26a6c" class=""><strong>Descrição:</strong></p><p id="26168338-221a-8061-a762-fa55d39d727a" class="">Criação de regra de cron do EventBridge para execução a cada 15 minutos da lambda de ocorrências pendentes.</p><p id="26168338-221a-809b-928d-fb3ee0b677e3" class=""><strong>Premissas:</strong></p><ul id="26168338-221a-8009-8c95-d72eb1d98242" class="bulleted-list"><li style="list-style-type:disc">Lambda já publicada.</li></ul><ul id="26168338-221a-8038-b1a1-f8509c998211" class="bulleted-list"><li style="list-style-type:disc">Permissões IAM criadas.</li></ul><p id="26168338-221a-8039-955a-c091b4ffc14e" class=""><strong>Tarefas:</strong></p><ul id="26168338-221a-8049-99ea-f19c210c50e6" class="bulleted-list"><li style="list-style-type:disc">Criar regra de cron.</li></ul><ul id="26168338-221a-808b-9e7e-eaec380c4936" class="bulleted-list"><li style="list-style-type:disc">Apontar para lambda.</li></ul><ul id="26168338-221a-80e2-97ad-f2186cf6325b" class="bulleted-list"><li style="list-style-type:disc">Validar execução automatizada.</li></ul><p id="26168338-221a-8039-81ea-c5bcec6a04b5" class=""><strong>Critérios de Aceite:</strong></p><ul id="26168338-221a-80c3-83f0-ce5ba36aacde" class="bulleted-list"><li style="list-style-type:disc">Lambda acionada periodicamente.</li></ul><ul id="26168338-221a-8090-a26a-c24cce82ffb1" class="bulleted-list"><li style="list-style-type:disc">Logs de execução disponíveis.</li></ul><p id="26168338-221a-8092-aecc-d9189ed1e8cf" class=""><strong>Impacto Esperado:</strong></p><p id="26168338-221a-801a-95c3-d8cb4007c616" class="">Atualização constante da base com baixa latência.</p><hr id="26168338-221a-8030-921d-c8238b9c9159"/><h2 id="26168338-221a-80e5-a9e3-d29bead58956" class="">Tarefa: [Deploy][Homologacao] Deploy da esteira de ocorrências pendentes</h2><p id="26168338-221a-8022-a8c1-e8f938ee29f8" class=""><strong>Visão de Produto:</strong></p><p id="26168338-221a-8057-999d-ce9227d21599" class="">Validar a esteira de ocorrências pendentes em ambiente de homolog para testes integrados.</p><p id="26168338-221a-807a-8ce6-d0054e124a48" class=""><strong>Descrição:</strong></p><p id="26168338-221a-8086-ad3a-def1a99e59c1" class="">Publicação de lambdas, variáveis, banco, EventBridge e testes em ambiente de homolog. Garantir que dados estão sendo processados corretamente.</p><p id="26168338-221a-8076-8d1f-f777869f6782" class=""><strong>Premissas:</strong></p><ul id="26168338-221a-8053-9382-d4d90b506f06" class="bulleted-list"><li style="list-style-type:disc">Todas as etapas anteriores finalizadas.</li></ul><p id="26168338-221a-8064-a709-ea2aef3ce733" class=""><strong>Tarefas:</strong></p><ul id="26168338-221a-80d6-8797-c1fa98c30d6b" class="bulleted-list"><li style="list-style-type:disc">Criar stack de homolog.</li></ul><ul id="26168338-221a-8004-bd31-d383c3a01483" class="bulleted-list"><li style="list-style-type:disc">Publicar lambdas e agendadores.</li></ul><ul id="26168338-221a-808f-8fed-c496b1ebabbf" class="bulleted-list"><li style="list-style-type:disc">Validar fluxo de ponta a ponta.</li></ul><p id="26168338-221a-808b-8b25-db1ab248232d" class=""><strong>Critérios de Aceite:</strong></p><ul id="26168338-221a-80fd-b5fd-dda2fef27a48" class="bulleted-list"><li style="list-style-type:disc">Todos os registros corretamente gerados.</li></ul><ul id="26168338-221a-805d-a51f-caa9a0b7001b" class="bulleted-list"><li style="list-style-type:disc">Logs e auditoria validados.</li></ul><p id="26168338-221a-80e4-bf50-e4aaa70eb346" class=""><strong>Impacto Esperado:</strong></p><p id="26168338-221a-8073-88b8-c49f67086e6b" class="">Pronto para avaliação do time funcional e stakeholders.</p><h2 id="26068338-221a-80c7-967c-eae43e30a9e0" class="">História: [Infraestrutura][Banco de Dados] Criar réplica de leitura para o RDS</h2><p id="26068338-221a-800d-8607-c7d8d8e89c23" class=""><strong>Visão de Produto:</strong></p><p id="26068338-221a-8054-805c-f5923d5edc3c" class="">Garantir separação entre escrita e leitura para evitar concorrência e gargalos de performance.</p><p id="26068338-221a-8060-b974-ffa9ec855f01" class=""><strong>Descrição:</strong></p><p id="26068338-221a-802c-b54b-f2399ce2fbfe" class="">Configuração de uma réplica read-only do RDS para consumo pelas lambdas de leitura e análise.</p><p id="26068338-221a-807d-bbe0-f9ac3c675a60" class=""><strong>Premissas:</strong></p><ul id="26068338-221a-802f-a18c-cc3896f95e10" class="bulleted-list"><li style="list-style-type:disc">Utilização de RDS MySQL.</li></ul><ul id="26068338-221a-803c-931b-c52bb8807208" class="bulleted-list"><li style="list-style-type:disc">Permissão de acesso via IAM configurada.</li></ul><p id="26068338-221a-80b9-8364-d0f3825ec103" class=""><strong>Tarefas:</strong></p><ul id="26068338-221a-8018-b096-c0cbcbb5f65a" class="bulleted-list"><li style="list-style-type:disc">Criar réplica.</li></ul><ul id="26068338-221a-8039-b050-c6b5ef790e7b" class="bulleted-list"><li style="list-style-type:disc">Garantir sincronização automatizada.</li></ul><ul id="26068338-221a-80c9-a5f3-e68b1bd0749d" class="bulleted-list"><li style="list-style-type:disc">Atualizar variáveis de ambiente das lambdas de leitura.</li></ul><p id="26068338-221a-804c-9390-f5c6c7df73c7" class=""><strong>Critérios de Aceite:</strong></p><ul id="26068338-221a-802b-9e85-e1a1c9ea4cdb" class="bulleted-list"><li style="list-style-type:disc">Réplica criada e funcional.</li></ul><ul id="26068338-221a-8034-aa44-e2799dc15cf8" class="bulleted-list"><li style="list-style-type:disc">Queries de leitura usando somente réplica.</li></ul><p id="26068338-221a-807a-8351-df6c59e56f7d" class=""><strong>Impacto Esperado:</strong></p><p id="26068338-221a-8000-89fd-eb3918aec4e6" class="">Aumento de performance e estabilidade.</p><hr id="22968338-221a-8165-b6a0-ee181acbe901"/><h1 id="22968338-221a-8191-a989-dc4291821262" class=""><strong>Seção: IBS 360 - Plataforma</strong></h1><hr id="22968338-221a-81a2-acec-d7ddbc686a90"/><h1 id="22968338-221a-81fb-8dfe-c141bf9f2e8c" class=""><strong>Seção: IBS 360 - Frontend</strong></h1><hr id="22968338-221a-81c5-a425-cfb7c06d0890"/><h1 id="22968338-221a-8169-a5e7-dc9194c99fb8" class=""><strong>Seção: IBS 360 - Gestão do Parque</strong></h1><hr id="22968338-221a-81e3-8789-c902df815164"/><h1 id="22968338-221a-817d-a829-f743ab36cfbe" class=""><strong>Seção: IBS 360 - Gestão do Parque - Acompanhamento de Esteiras</strong></h1><hr id="22968338-221a-81e4-95e7-fefed8d21847"/><h1 id="22968338-221a-8147-ade1-fa0239355233" class=""><strong>Seção: IBS 360 - Geocompasso</strong></h1><hr id="22968338-221a-817c-b612-d2b61b9ea1b0"/><h1 id="22968338-221a-810e-ae4a-e9c7f10bf275" class=""><strong>Seção: Radar Imobiliário</strong></h1><hr id="22968338-221a-817e-8125-f0cb6bc3d241"/><h1 id="22968338-221a-8111-a733-fd075d8aef7b" class=""><strong>Seção: Inteligência Imobiliária</strong></h1><h2 id="25368338-221a-80e8-89e4-e7f6b1f7e026" class=""><strong>História: [Delivery][Backend] Criação do ETL para Geração da Base Filtrada a partir dos Parâmetros do Planejamento de Negociações</strong></h2><ul id="25368338-221a-806e-8918-d5dd7ea28752" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão de Produto:</strong></li></ul><p id="25368338-221a-80f0-8a8b-f8c34e39ca58" class="">Acreditamos que, ao <strong>criar um processo de ETL para filtrar a base original de dados imobiliários com base nos parâmetros preenchidos no Frontend do Planejamento de Negociações</strong>, para <strong>preparar uma base específica e otimizada para uso pelo time de Advanced Analytics</strong>, resultará em <strong>um processo mais eficiente, seguro e rastreável para execução do modelo de otimização</strong>.</p><ul id="25368338-221a-805e-b85d-d5b5944039a1" class="bulleted-list"><li style="list-style-type:disc"><strong>Descrição:</strong></li></ul><p id="25368338-221a-804f-8d54-c529ea969e85" class="">Como time responsável pela engenharia do IBS 360, queremos <strong>desenvolver e operacionalizar um ETL que leia os dados recebidos pelo ETL1 (dados da GPA e Osiris)</strong>, filtre a base imobiliária consolidada no ETL1 e gere <strong>uma base reduzida, segura e rastreável</strong>, que será utilizada nas simulações feitas pelo time de Advanced Analytics.</p><ul id="25368338-221a-8059-b3ea-c966fe65bc68" class="bulleted-list"><li style="list-style-type:disc"><strong>Visão do Usuário:</strong></li></ul><p id="25368338-221a-8087-b789-cc96c7e72326" class="">O usuário não visualiza diretamente a base filtrada, mas se beneficia de <strong>simulações mais rápidas, coerentes com os filtros aplicados no painel, com rastreabilidade clara entre os dados preenchidos e os resultados retornados</strong>.</p><ul id="25368338-221a-804a-b1d8-e342afd3d1ae" class="bulleted-list"><li style="list-style-type:disc"><strong>Contexto/Narrativa de Negócio:</strong></li></ul><p id="25368338-221a-8037-a1bd-d6830fb64b55" class="">O ETL criará <strong>bases de trabalho específicas por simulação, permitindo rastreabilidade via UUID e promovendo um fluxo limpo para execução dos modelos</strong>.</p><ul id="25368338-221a-806b-b83a-dcb4e1d5a835" class="bulleted-list"><li style="list-style-type:disc"><strong>Premissas:</strong><ol type="1" id="25368338-221a-8047-948b-cc6f5835fac0" class="numbered-list" start="1"><li>A base consolidada de imóveis está disponível via ETL1.</li></ol><ol type="1" id="25368338-221a-8067-8ea4-f6904c2c1d19" class="numbered-list" start="2"><li>Os filtros preenchidos estão no frontend.</li></ol><ol type="1" id="25368338-221a-803c-9adc-ce27a102b8a7" class="numbered-list" start="3"><li>A arquitetura suporta a geração de arquivos versionados por simulação.</li></ol></li></ul><ul id="25368338-221a-80de-8017-d16ce3b8663d" class="bulleted-list"><li style="list-style-type:disc"><strong>Regras de Negócio:</strong><ol type="1" id="25368338-221a-80f2-9526-dfa787fde633" class="numbered-list" start="1"><li>A base deve conter somente os imóveis elegíveis conforme os filtros informados.</li></ol><ol type="1" id="25368338-221a-80cf-a198-d019f87fb4e2" class="numbered-list" start="2"><li>O arquivo final deve estar associado a um UUID de simulação.</li></ol></li></ul><ul id="25368338-221a-8085-8f38-d4f50a564776" class="bulleted-list"><li style="list-style-type:disc"><strong>Informações Técnicas:</strong><ol type="1" id="25368338-221a-8017-af09-fbcb23e47902" class="numbered-list" start="1"><li>Leitura da base ETL1 consolidada.</li></ol><ol type="1" id="25368338-221a-80a5-8726-d04ea726d0b6" class="numbered-list" start="2"><li>Aplicação dos filtros preenchidos pelo usuário.</li></ol><ol type="1" id="25368338-221a-8063-b9c6-d9e12914896b" class="numbered-list" start="3"><li>Logging estruturado no CloudWatch.</li></ol></li></ul><ul id="25368338-221a-8044-ace6-ee172d6d8c57" class="bulleted-list"><li style="list-style-type:disc"><strong>Tarefas:</strong><ol type="1" id="25368338-221a-80fd-abf6-c02876651a89" class="numbered-list" start="1"><li>Criar script de filtragem.</li></ol><ol type="1" id="25368338-221a-804e-819f-d4904d948d75" class="numbered-list" start="2"><li>Escrever base filtrada.</li></ol><ol type="1" id="25368338-221a-80b6-93a8-d269c04c9bb0" class="numbered-list" start="3"><li>Automatizar a execução com.</li></ol><ol type="1" id="25368338-221a-8053-af04-f595f55819d8" class="numbered-list" start="4"><li>Testar fluxos de ponta a ponta com múltiplos cenários.</li></ol><ol type="1" id="25368338-221a-8092-aa54-f1cdeeebd8c8" class="numbered-list" start="5"><li>Documentar estrutura de diretórios, nomenclatura de arquivos e regras aplicadas.</li></ol></li></ul><ul id="25368338-221a-8093-81f8-f2f18d79e6ff" class="bulleted-list"><li style="list-style-type:disc"><strong>Cenários para Teste e Homologação:</strong><ol type="1" id="25368338-221a-8019-bd30-de5ccae1a9ca" class="numbered-list" start="1"><li>Testar execução com diferentes conjuntos de filtros.</li></ol><ol type="1" id="25368338-221a-80f4-a5b7-fdd1d30ae432" class="numbered-list" start="2"><li>Validar que apenas registros elegíveis estão na base final.</li></ol><ol type="1" id="25368338-221a-80ce-9575-e5dd0dce15b4" class="numbered-list" start="3"><li>Verificar se o UUID aparece corretamente no nome/pasta.</li></ol><ol type="1" id="25368338-221a-8001-9046-d354adc019bf" class="numbered-list" start="4"><li>Confirmar que arquivos são legíveis por processos posteriores (ex: modelos em Python).</li></ol></li></ul><ul id="25368338-221a-80e2-b605-d5824ee25593" class="bulleted-list"><li style="list-style-type:disc"><strong>Impacto Esperado:</strong><ul id="25368338-221a-8018-a13e-d3022a3688f4" class="bulleted-list"><li style="list-style-type:circle">Base otimizada e segura para execução de modelos.</li></ul><ul id="25368338-221a-80cd-b556-d1f05dba62c3" class="bulleted-list"><li style="list-style-type:circle">Redução de tempo e custo de processamento nas simulações.</li></ul><ul id="25368338-221a-809b-a5f9-eb868fdb7a4c" class="bulleted-list"><li style="list-style-type:circle">Garantia de rastreabilidade entre preenchimento → base gerada → resultado.</li></ul></li></ul><ul id="25368338-221a-806b-a2e5-f36dae948ef7" class="bulleted-list"><li style="list-style-type:disc"><strong>Conclusão:</strong><ul id="25368338-221a-80a7-9c5a-dae717659bc8" class="bulleted-list"><li style="list-style-type:circle"><strong>Início:</strong><ul id="25368338-221a-809a-84a5-c84cbd4f98d1" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R2 S2 2025</li></ul><ul id="25368338-221a-80c0-9ba1-fe2e92b4bc10" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong> R2 S2 2025</li></ul></li></ul><ul id="25368338-221a-802f-a3a8-ddc3c5ba8713" class="bulleted-list"><li style="list-style-type:circle"><strong>Fim:</strong><ul id="25368338-221a-8073-8335-f12a6b58087c" class="bulleted-list"><li style="list-style-type:square"><strong>Desejado:</strong> R2 S2 2025</li></ul><ul id="25368338-221a-80d7-9b29-e3baf75efbdb" class="bulleted-list"><li style="list-style-type:square"><strong>Real:</strong></li></ul></li></ul><ul id="25368338-221a-80c3-abd0-d4ea7f72645f" class="bulleted-list"><li style="list-style-type:circle"><strong>Resultado:</strong><ul id="25368338-221a-8004-a513-c6b168f647df" class="bulleted-list"><li style="list-style-type:square">R3 S2 2025 - Desenvolvimento iniciado com a colaboradora Beatriz Moura.</li></ul></li></ul></li></ul><hr id="22968338-221a-8127-aac5-ed9af162ea18"/><h1 id="22968338-221a-8186-bfb3-ce6f7327ec1a" class=""><strong>Seção: Score de Agências</strong></h1><hr id="22968338-221a-8103-97c8-da5d39b50598"/><h1 id="22968338-221a-810d-ba20-e72a4014c33d" class=""><strong>Seção: App Planejamento de Pessoas</strong></h1><hr id="22968338-221a-81a9-8cff-e67c33abfb34"/><h1 id="22968338-221a-810c-9d74-e0ba92fc15ab" class=""><strong>Seção: Arquitetura Cross</strong></h1><hr id="22968338-221a-8186-924b-dd45241c3a10"/><h1 id="22968338-221a-8192-8625-f972cfacedb1" class=""><strong>Seção: Monitoramento e Métricas de Produto</strong></h1><hr id="22968338-221a-81c8-adc2-ce84e5617fe4"/><h1 id="22968338-221a-8133-9be5-ee718ccd8884" class=""><strong>Seção: AWSCloudBridge</strong></h1></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
